@@ -1,0 +1,14 @@
+{
+  "name": "smart-sales",
+  "version": "1.0.0",
+  "description": "for IMPACT Exhbition management as i intern.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maxmerock",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^5.0.7"
+  }
+}
