@@ -11,6 +11,7 @@ import ServicesPage from './pages/ServicesPage'
 import MenuPage from './pages/MenuPage'
 import PackagePage from './pages/PackagePage'
 import SummaryPage from './pages/SummaryPage'
+import './index.css'
 
 function App() {
   const [count, setCount] = useState(0)
