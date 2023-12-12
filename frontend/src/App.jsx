@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import style from './App.module.css'
 import Header from './components/Header'
 import GeneralForm from './components/GeneralForm'
 import ReactDOM from "react-dom/client";
@@ -17,15 +17,17 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<FormPage />} />
-          <Route path='/ServicesPage' element={<ServicesPage />} />
-          <Route path='/PackagePage' element={<PackagePage />} />
-          <Route path='/MenuPage' element={<MenuPage />} />
-          <Route path='/SummaryPage' element={<SummaryPage />} />
-        </Routes>
-      </BrowserRouter>
+      <div className={style.body}>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<FormPage />} />
+            <Route path='/ServicesPage' element={<ServicesPage />} />
+            <Route path='/PackagePage' element={<PackagePage />} />
+            <Route path='/MenuPage' element={<MenuPage />} />
+            <Route path='/SummaryPage' element={<SummaryPage />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
   )
 }

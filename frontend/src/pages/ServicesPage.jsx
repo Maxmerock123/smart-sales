@@ -1,8 +1,17 @@
 import React from 'react'
+import Header from '../components/Header'
+import style from './ServicesPage.module.css'
 
 const ServicesPage = () => {
   return (
-    <div>ServicesPage</div>
+   <>
+    <Header/>
+    <div>
+      <div className={style.cardContainer}>
+
+      </div>
+    </div>
+   </>
   )
 }
 

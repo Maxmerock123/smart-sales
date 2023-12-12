@@ -22,11 +22,11 @@ const GeneralForm = () => {
         <>
             <div className={style.formContainer}>
                 <form>
-                    <label htmlFor='name'>ชื่อ-นามสกุล</label><br />
+                    <label htmlFor='name'>ชื่อ-นามสกุล *</label><br />
                     <input type='text' id='name' name='name' onChange={handleChange} /><br />
-                    <label htmlFor='name'>เบอร์โทรศัพท์</label><br />
+                    <label htmlFor='name'>เบอร์โทรศัพท์ *</label><br />
                     <input type='number' id='number' name='number' onChange={handleChange} /><br />
-                    <label htmlFor='name'>LINE ID</label><br />
+                    <label htmlFor='name'>LINE ID (ไม่จำเป็นต้องกรอก)</label><br />
                     <input type='text' id='lineId' name='lineId' onChange={handleChange}/><br />
 
 
