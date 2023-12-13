@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, setState } from 'react'
 import style from './GeneralForm.module.css'
+import { Navigate, useNavigate } from "react-router-dom";
 
 const GeneralForm = () => {
 
@@ -18,6 +19,14 @@ const GeneralForm = () => {
         }
     }
 
+    const navigate = useNavigate();
+
+    const onClickHandler = () => {
+        navigate('ServicesPage')
+    }
+
+    
+
     return (
         <>
             <div className='bg-custom-yellow rounded-[15px] min-w-[80%] flex justify-center m-5 p-10'>
@@ -30,7 +39,7 @@ const GeneralForm = () => {
                     <input className='rounded-[15px] h-8' type='text' id='lineId' name='lineId' onChange={handleChange} /><br />
 
                     <div className='flex justify-end'>
-                        <button className='bg-custom-brown px-5 text-white rounded-[15px]'>ถัดไป</button>
+                        <button className='bg-custom-brown px-5 text-white rounded-[15px]' onClick={onClickHandler}>ถัดไป</button>
                     </div>
                 </form>
             </div>
