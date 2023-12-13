@@ -22,7 +22,7 @@ const GeneralForm = () => {
     const navigate = useNavigate();
 
     const onClickHandler = () => {
-        navigate('ServicesPage')
+        navigate('ServicesFormPage')
     }
 
     

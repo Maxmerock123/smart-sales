@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header';
-import style from './ServicesPage.module.css';
 import '../index.css';
 import { Navigate, useNavigate } from 'react-router-dom';
 
@@ -24,7 +23,6 @@ const ServicesPage = () => {
   return (
     <>
       <div className=''>
-        <Header />
         <div className='flex flex-col items-center gap-5'>
           <h3 className='m-8 font-bold text-center'>เลือกประเภทงาน</h3>
 

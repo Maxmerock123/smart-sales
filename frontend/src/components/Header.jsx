@@ -10,6 +10,13 @@ const Header = () => {
     const onBackHandler = () => {
         navigate(-1)
     }
+    const onHomepage = () => {
+        navigate("/")
+    }
+
+    const onCall = ()=>{
+        window.open("tel:0886123858");
+    }
 
     return (
         <>
@@ -17,8 +24,8 @@ const Header = () => {
                 <div className='mt-24 mb-8 flex justify-center items-center gap-[50px]'>
 
                     <IoIosArrowBack size={"40px"} onClick={onBackHandler} />
-                    <img className='w-[150px] ' src={logo}></img>
-                    <PiPhoneCallFill size={"40px"} />
+                    <img className='w-[150px] ' src={logo} onClick={onHomepage}></img>
+                    <PiPhoneCallFill size={"40px"} onClick={onCall} />
                 </div>
             </div>
         </>

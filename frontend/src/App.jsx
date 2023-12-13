@@ -12,17 +12,22 @@ import MenuPage from './pages/MenuPage'
 import PackagePage from './pages/PackagePage'
 import SummaryPage from './pages/SummaryPage'
 import './index.css'
+import ServicesFormPage from './pages/ServicesFormPage'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+
       <div className={style.body}>
         <BrowserRouter>
+          <Header/>
           <Routes>
             <Route path='/' element={<FormPage />} />
             <Route path='/ServicesPage' element={<ServicesPage />} />
+            <Route path='/ServicesFormPage' element={<ServicesFormPage />} />
             <Route path='/PackagePage' element={<PackagePage />} />
             <Route path='/MenuPage' element={<MenuPage />} />
             <Route path='/SummaryPage' element={<SummaryPage />} />
