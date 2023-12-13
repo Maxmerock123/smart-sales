@@ -31,6 +31,10 @@ const ServicesFormPage = () => {
     }
   }
 
+  function onElevator(e) {
+    setElevator(e.target.value)
+  }
+
   return (
     <>
       <div className='bg-custom-yellow rounded-[15px] min-w-[80%] flex justify-center m-5 p-10'>
@@ -43,7 +47,15 @@ const ServicesFormPage = () => {
           <input className='rounded-[15px] h-8' type='text' id='eventTime' name='eventTime' onChange={handleChange} /><br />
           <label className='' htmlFor='eatTime'>เวลาพร้อมทาน</label><br />
           <input className='rounded-[15px] h-8' type='text' id='eatTime' name='eatTime' onChange={handleChange} /><br />
+
           <label className='' htmlFor='elevator'>ลิฟท์ขนของ</label><br />
+          <div className='flex gap-2'>
+            <input type='radio' id='elevatorTrue' value='true' name='elevator' onChange={onElevator} />
+            <label htmlFor='elevatorTrue'>มี</label>
+            <input type='radio' id='elevatorFalse' value='false' name='elevator' onChange={onElevator} />
+            <label htmlFor='elevatorFalse'>ไม่มี</label>
+          </div>
+
 
           <div className='flex justify-end'>
             <button className='bg-custom-brown px-5 text-white rounded-[15px]' onClick={onClickHandler}>ถัดไป</button>
