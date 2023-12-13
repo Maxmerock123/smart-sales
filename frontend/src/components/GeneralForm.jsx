@@ -29,17 +29,17 @@ const GeneralForm = () => {
 
     return (
         <>
-            <div className='bg-custom-yellow rounded-[15px] min-w-[80%] flex justify-center m-5 p-10'>
+            <div className='bg-custom-yellow rounded-[15px] min-w-[80%] flex justify-center m-5 p-10 shadow-2xl'>
                 <form className='flex flex-col w-full'>
                     <label className='' htmlFor='name'>ชื่อ-นามสกุล *</label><br />
-                    <input className='rounded-[15px] h-8 ' type='text' id='name' name='name' onChange={handleChange} /><br />
+                    <input className='rounded-[15px] h-8 shadow-2xl' type='text' id='name' name='name' onChange={handleChange} /><br />
                     <label className='' htmlFor='name'>เบอร์โทรศัพท์ *</label><br />
-                    <input className='rounded-[15px] h-8' type='number' id='number' name='number' onChange={handleChange} /><br />
+                    <input className='rounded-[15px] h-8 shadow-2xl' type='number' id='number' name='number' onChange={handleChange} /><br />
                     <label className='' htmlFor='name'>LINE ID (ไม่จำเป็นต้องกรอก)</label><br />
-                    <input className='rounded-[15px] h-8' type='text' id='lineId' name='lineId' onChange={handleChange} /><br />
+                    <input className='rounded-[15px] h-8 shadow-2xl' type='text' id='lineId' name='lineId' onChange={handleChange} /><br />
 
                     <div className='flex justify-end'>
-                        <button className='bg-custom-brown px-5 text-white rounded-[15px]' onClick={onClickHandler}>ถัดไป</button>
+                        <button className='bg-custom-brown px-5 text-white rounded-[15px] shadow-2xl' onClick={onClickHandler}>ถัดไป</button>
                     </div>
                 </form>
             </div>
