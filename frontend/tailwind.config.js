@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        'sans':"Kanit"
+      },
       colors: {
         'custom-yellow': '#CFC1A0',
         'custom-brown': '#7E5832'

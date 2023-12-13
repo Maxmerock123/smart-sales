@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <>
             <div className='flex items-center justify-center gap-2 h-28 bg-gradient-to-b from-custom-yellow to-transparent' >
-                <div className='m-8 flex justify-center items-center gap-[50px]'>
+                <div className='mt-24 mb-8 flex justify-center items-center gap-[50px]'>
 
                     <IoIosArrowBack size={"40px"} />
                     <img className='w-[150px] ' src={logo}></img>

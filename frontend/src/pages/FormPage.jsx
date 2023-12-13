@@ -8,7 +8,7 @@ const FormPage = () => {
   return (
     <>
         <Header />
-      <h3 className={style.h3}>ข้อมูลทั่วไป</h3>
+      <h3 className='m-8 font-bold text-center'>ข้อมูลทั่วไป</h3>
       <div className={style.formContainer}>
         <GeneralForm />
       </div>
