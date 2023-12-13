@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'custom-yellow': '#CFC1A0'
+      }
+    },
   },
-  plugins: [],
+  plugins: ["prettier-plugin-tailwindcss"],
 }
