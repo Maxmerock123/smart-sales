@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, setState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -12,10 +13,14 @@ const ServicesFormPage = () => {
   const [eatTime, setEatTime] = useState('')
   const [elevator, setElevator] = useState('')
 
-
-  function onClickHandler() {
+  const navigate = useNavigate()
+  function onSubmit() {
+    navigate('/ServicesPage')
+  }
+  function onSkip() {
     return 0
   }
+  
   function handleChange(e) {
     switch (e.target.id) {
       case "place": { setPlace(e.target.value) }
@@ -56,9 +61,8 @@ const ServicesFormPage = () => {
             <label htmlFor='elevatorFalse'>ไม่มี</label>
           </div>
 
-
           <div className='flex justify-end'>
-            <button className='bg-custom-brown px-5 text-white rounded-[15px]' onClick={onClickHandler}>ถัดไป</button>
+            <button className='bg-custom-brown px-5 text-white rounded-[15px]' onClick={onSubmit}>ถัดไป</button>
           </div>
         </form>
       </div>
