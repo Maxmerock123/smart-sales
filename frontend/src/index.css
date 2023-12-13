@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Prompt&display=swap');
 
-body, html {
+* {
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Prompt', sans-serif;
+}
+
+body,
+html {
     margin: 0px;
+
+
 
 }

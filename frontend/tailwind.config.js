@@ -7,8 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        'custom-yellow': '#CFC1A0'
-      }
+        'custom-yellow': '#CFC1A0',
+        'custom-brown': '#7E5832'
+      },
     },
   },
   plugins: ["prettier-plugin-tailwindcss"],
