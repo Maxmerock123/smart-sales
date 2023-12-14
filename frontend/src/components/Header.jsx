@@ -20,12 +20,12 @@ const Header = () => {
 
     return (
         <>
-            <div className='flex items-center justify-center gap-2 h-28 bg-gradient-to-b from-custom-yellow to-transparent' >
+            <div className='flex items-center justify-center gap-2 h-28 bg-gradient-to-b from-custom-yellow to-transparent ' >
                 <div className='mt-24 mb-8 flex justify-center items-center gap-[50px]'>
 
                     <IoIosArrowBack size={"40px"} onClick={onBackHandler} />
                     <img className='w-[150px] ' src={logo} onClick={onHomepage}></img>
-                    <PiPhoneCallFill size={"40px"} onClick={onCall} />
+                    <PiPhoneCallFill className='p-2 bg-green-400 rounded-full fill- animate-pulse fill-white' size={"40px"} onClick={onCall} />
                 </div>
             </div>
         </>
