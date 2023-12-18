@@ -1,25 +1,10 @@
-import React from 'react'
-import { useState, setState } from 'react'
+import React, { useContext } from 'react'; // Add useContext
 import style from './GeneralForm.module.css'
 import { Navigate, useNavigate } from "react-router-dom";
 import FormDataContext from '../FormDataContext';
 
 const GeneralForm = () => {
-
-    const [formData, setFormData] = useState({
-        generalForm: {
-            name: '',
-            number: '',
-            email: ''
-        },
-        eventForm: {
-            place: '',
-            people: '',
-            date: '',
-
-
-        }
-    });
+    const { formData, setFormData } = useContext(FormDataContext); // Use context
 
     const handleChange = (e) => {
         setFormData({
@@ -28,8 +13,10 @@ const GeneralForm = () => {
                 ...formData.generalForm,
                 [e.target.name]: e.target.value
             }
-        })
-    }
+        });
+        console.log(formData.generalForm)
+    };
+
 
     const navigate = useNavigate();
 

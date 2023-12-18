@@ -13,26 +13,42 @@ import './index.css'
 import PlacePage from './pages/PlacePage'
 import InsideServices from './pages/InsideServices'
 import OutsideServices from './pages/OutsideServices'
+import Meeting from './pages/outside/Meeting'
+import FormDataContext from './FormDataContext'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [formData, setFormData] = useState({
+    generalForm: {
+      name: '',
+      number: '',
+      email: ''
+    },
+    eventForm: {
+      place: '',
+      people: '',
+      date: '',
+    }
+  });
 
+  
   return (
     <>
-
-      <div className={style.body}>
-        <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route path='/' element={<FormPage />} />
-            <Route path='/PlacePage' element={<PlacePage />} />
-            <Route path='PlacePage/InsideServices' element={<InsideServices />} />
-            <Route path='PlacePage/OutsideServices' element={<OutsideServices />} />
-            <Route path='/SummaryPage' element={<SummaryPage />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
+      <FormDataContext.Provider value={{ formData, setFormData }}>
+        <div className={style.body}>
+          <BrowserRouter>
+            <Header />
+            <Routes>
+              <Route path='/' element={<FormPage />} />
+              <Route path='/PlacePage' element={<PlacePage />} />
+              <Route path='PlacePage/InsideServices' element={<InsideServices />} />
+              <Route path='PlacePage/OutsideServices' element={<OutsideServices />} />
+              <Route path='PlacePage/OutsideServices/Meeting' element={<Meeting />} />
+              <Route path='PlacePage/OutsideServices/Meeting/SummaryPage' element={<SummaryPage />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </FormDataContext.Provider>
     </>
   )
 }
