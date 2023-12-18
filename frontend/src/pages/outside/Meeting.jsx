@@ -6,7 +6,7 @@ const Meeting = () => {
     
     function onClickHandler(e) {
         console.log(`clicked on ${e.target.id}`)
-        navigate('SummaryPage')
+        navigate('/SummaryPage')
         
     }
 

@@ -44,7 +44,7 @@ function App() {
               <Route path='PlacePage/InsideServices' element={<InsideServices />} />
               <Route path='PlacePage/OutsideServices' element={<OutsideServices />} />
               <Route path='PlacePage/OutsideServices/Meeting' element={<Meeting />} />
-              <Route path='PlacePage/OutsideServices/Meeting/SummaryPage' element={<SummaryPage />} />
+              <Route path='/SummaryPage' element={<SummaryPage />} />
             </Routes>
           </BrowserRouter>
         </div>
