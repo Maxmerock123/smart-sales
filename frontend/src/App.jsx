@@ -12,7 +12,6 @@ import MenuPage from './pages/MenuPage'
 import PackagePage from './pages/PackagePage'
 import SummaryPage from './pages/SummaryPage'
 import './index.css'
-import ServicesFormPage from './pages/ServicesFormPage'
 import PlacePage from './pages/PlacePage'
 
 
@@ -27,7 +26,6 @@ function App() {
           <Header/>
           <Routes>
             <Route path='/' element={<FormPage />} />
-            <Route path='/ServicesPage' element={<ServicesPage />} />
             <Route path='/PlacePage' element={<PlacePage />} />
             <Route path='/PackagePage' element={<PackagePage />} />
             <Route path='/MenuPage' element={<MenuPage />} />
