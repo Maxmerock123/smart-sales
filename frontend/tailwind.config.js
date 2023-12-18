@@ -11,7 +11,8 @@ export default {
       },
       colors: {
         'custom-yellow': '#CFC1A0',
-        'custom-brown': '#7E5832'
+        'custom-brown': '#7E5832',
+        'custom-orange': '#BE925A'
       },
     },
   },

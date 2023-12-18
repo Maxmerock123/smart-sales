@@ -13,6 +13,7 @@ import PackagePage from './pages/PackagePage'
 import SummaryPage from './pages/SummaryPage'
 import './index.css'
 import ServicesFormPage from './pages/ServicesFormPage'
+import PlacePage from './pages/PlacePage'
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
           <Routes>
             <Route path='/' element={<FormPage />} />
             <Route path='/ServicesPage' element={<ServicesPage />} />
-            <Route path='/ServicesFormPage' element={<ServicesFormPage />} />
+            <Route path='/PlacePage' element={<PlacePage />} />
             <Route path='/PackagePage' element={<PackagePage />} />
             <Route path='/MenuPage' element={<MenuPage />} />
             <Route path='/SummaryPage' element={<SummaryPage />} />
