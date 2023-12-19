@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate,Navigate } from 'react-router-dom'
+import FormDataContext from '../../FormDataContext';
 
 const Meeting = () => {
     const navigate = useNavigate()
+    const { formData, setFormData } = useContext(FormDataContext);
+    
+    
     
     function onClickHandler(e) {
         console.log(`clicked on ${e.target.id}`)
+        setFormData({
+            ...formData,eventForm: {
+                ...formData.eventForm,
+                eventType: e.target.id
+            }
+        })    
         navigate('/SummaryPage')
         
     }
@@ -15,23 +25,23 @@ const Meeting = () => {
             <h3 className='m-8 font-bold text-center'>เลือกประเภทอาหาร</h3>
             <div className='flex flex-wrap justify-center gap-10 mt-10'>
                 <div className='flex flex-col items-center'>
-                    <div id='Meeting' className='w-[130px] aspect-square bg-gray-300 rounded-[15px]' onClick={onClickHandler} />
+                    <div id='outsideCoffee' className='w-[130px] aspect-square bg-gray-300 rounded-[15px]' onClick={onClickHandler} />
                     <p>คอฟฟี่เบรค</p>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <div id='Party' className='w-[130px] aspect-square bg-gray-300 rounded-[15px]' onClick={onClickHandler} />
+                    <div id='outsideThaiBuffet' className='w-[130px] aspect-square bg-gray-300 rounded-[15px]' onClick={onClickHandler} />
                     <p>ไทยบุฟเฟ่ต์</p>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <div id='Wedding' className='w-[130px] aspect-square bg-gray-300 rounded-[15px]' onClick={onClickHandler} />
+                    <div id='outsideCocktail' className='w-[130px] aspect-square bg-gray-300 rounded-[15px]' onClick={onClickHandler} />
                     <p>ค็อกเทล</p>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <div id='Ceremony' className='w-[130px] aspect-square bg-gray-300 rounded-[15px]' onClick={onClickHandler} />
+                    <div id='outsideInternation' className='w-[130px] aspect-square bg-gray-300 rounded-[15px]' onClick={onClickHandler} />
                     <p>อาหารนานาชาติ</p>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <div className='w-[130px] aspect-square bg-gray-300 rounded-[15px]'></div>
+                    <div id='outsideChinese' className='w-[130px] aspect-square bg-gray-300 rounded-[15px]'></div>
                     <p>โต๊ะจีน (10 ท่าน)</p>
                 </div>
             </div>

@@ -26,6 +26,7 @@ function App() {
     },
     eventForm: {
       place: '',
+      eventType:'',
       people: '',
       date: '',
     }
