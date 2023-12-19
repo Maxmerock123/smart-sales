@@ -40,16 +40,16 @@ const GeneralForm = () => {
                     </div>
                     <div>
                         <label className='text-white' htmlFor='name'>E-mail</label><br />
-                        <input className='rounded-[15px] h-8 shadow-2xl' type='text' id='lineId' name='lineId' onChange={handleChange} /><br />
+                        <input className='rounded-[15px] h-8 shadow-2xl' type='text' id='email' name='email' onChange={handleChange} /><br />
                     </div>
                     <div className='flex justify-between gap-5'>
                         <div>
                             <label className='text-white' htmlFor='name'>จำนวนแขก</label><br />
-                            <input className='rounded-[15px] w-24 h-8 shadow-2xl' type='text' id='lineId' name='lineId' onChange={handleChange} /><br />
+                            <input className='rounded-[15px] w-24 h-8 shadow-2xl' type='text' id='people' name='people' onChange={handleChange} /><br />
                         </div>
                         <div>
                             <label className='text-white' htmlFor='name'>วันที่จัดงาน</label><br />
-                            <input className='rounded-[15px] h-8 w-24 shadow-2xl' type='text' id='lineId' name='lineId' onChange={handleChange} /><br />
+                            <input className='rounded-[15px] h-8 w-24 shadow-2xl' type='text' id='date' name='date' onChange={handleChange} /><br />
                         </div>
                     </div>
                     <div className='flex justify-end gap-5 mt-5'>

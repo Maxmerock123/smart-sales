@@ -1,16 +1,35 @@
-import React from 'react'
+import React , { useState,setState, useContext } from 'react'
 import { Navigate, useNavigate } from "react-router-dom";
+import FormDataContext from '../FormDataContext';
+
 
 const PlacePage = () => {
+    const { formData, setFormData } = useContext(FormDataContext)
+    
     const navigate = useNavigate()
     function onInside() {
         console.log("clicked inside")
+        setFormData({
+            ...formData,eventForm: {
+              ...formData.eventForm,
+              place: "inside"
+            }
+          });
+
+          
         navigate('InsideServices')
     }
 
     function onOutside (){
         console.log("clicked outside")
+        setFormData({
+            ...formData,eventForm: {
+                ...formData.eventForm,
+                place: "outside"
+            }
+        })
         navigate('OutsideServices')
+        
     }
 
 
