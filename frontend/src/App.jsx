@@ -15,6 +15,7 @@ import InsideServices from './pages/InsideServices'
 import OutsideServices from './pages/OutsideServices'
 import Meeting from './pages/outside/Meeting'
 import FormDataContext from './FormDataContext'
+import Party from './pages/outside/Party'
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
               <Route path='PlacePage/InsideServices' element={<InsideServices />} />
               <Route path='PlacePage/OutsideServices' element={<OutsideServices />} />
               <Route path='PlacePage/OutsideServices/Meeting' element={<Meeting />} />
+              <Route path='PlacePage/OutsideServices/Party' element={<Party />} />
               <Route path='/SummaryPage' element={<SummaryPage />} />
             </Routes>
           </BrowserRouter>
