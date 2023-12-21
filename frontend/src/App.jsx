@@ -17,6 +17,7 @@ import Meeting from './pages/outside/Meeting'
 import FormDataContext from './FormDataContext'
 import Party from './pages/outside/Party'
 import Wedding from './pages/outside/Wedding'
+import BhuddistCeremony from './pages/outside/BhuddistCeremony'
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
               <Route path='PlacePage/OutsideServices/Meeting' element={<Meeting />} />
               <Route path='PlacePage/OutsideServices/Party' element={<Party />} />
               <Route path='PlacePage/OutsideServices/Wedding' element={<Wedding />} />
+              <Route path='PlacePage/OutsideServices/BhuddistCeremony' element={<BhuddistCeremony />} />
               <Route path='/SummaryPage' element={<SummaryPage />} />
             </Routes>
           </BrowserRouter>

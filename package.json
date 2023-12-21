@@ -2,10 +2,13 @@
   "name": "smart-sales",
   "version": "1.0.0",
   "description": "for IMPACT Exhbition management as i intern.",
+  "homepage": "https://maxmerock123.github.io/smart-sales/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon backend/index.js"
+    "start": "nodemon backend/index.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Maxmerock",
   "license": "ISC",
@@ -15,5 +18,8 @@
     "mongoose": "^8.0.3",
     "nodemon": "^3.0.2",
     "vite": "^5.0.7"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
   }
 }

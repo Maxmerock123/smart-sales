@@ -32,7 +32,7 @@ const OutsideServices = () => {
                     <p>งานแต่งงาน</p>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <img id='Ceremony' src={ceremonyImg} className='w-[160px]' onClick={onClickHandler} />
+                    <img id='BhuddistCeremony' src={ceremonyImg} className='w-[160px]' onClick={onClickHandler} />
                     <p>งานทำบุญบ้าน / บริษัท</p>
                 </div>
                 <div className='flex flex-col items-center'>
