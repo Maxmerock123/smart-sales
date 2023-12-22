@@ -49,7 +49,7 @@ const GeneralForm = () => {
                         </div>
                         <div>
                             <label className='text-white' htmlFor='name'>วันที่จัดงาน</label><br />
-                            <input className='rounded-[15px] h-8 w-24 shadow-2xl' type='text' id='date' name='date' onChange={handleChange} /><br />
+                            <input className='rounded-[15px] h-8 w-[150px] shadow-2xl' type='date' id='date' name='date' onChange={handleChange} /><br />
                         </div>
                     </div>
                     <div className='flex justify-end gap-5 mt-5'>
