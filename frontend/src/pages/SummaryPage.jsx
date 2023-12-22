@@ -16,10 +16,10 @@ const SummaryPage = () => {
         </div>
         <div>
           <h3 className="mb-2 font-semibold">Event Form</h3>
-          <p>Place: {formData.eventForm.place}</p>
-          <p>People: {formData.eventForm.people}</p>
-          <p>Date: {formData.eventForm.date}</p>
-          <p>EventType: { formData.eventForm.eventType }</p>
+          <p>Place: {formData.generalForm.place}</p>
+          <p>People: {formData.generalForm.people}</p>
+          <p>Date: {formData.generalForm.date}</p>
+          <p>EventType: { formData.generalForm.eventType }</p>
         </div>
       </div>
     </div>

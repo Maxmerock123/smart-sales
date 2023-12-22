@@ -25,14 +25,13 @@ function App() {
     generalForm: {
       name: '',
       number: '',
-      email: ''
-    },
-    eventForm: {
+      email: '',
       place: '',
       eventType:'',
       people: '',
       date: '',
-    }
+    },
+
   });
 
   
