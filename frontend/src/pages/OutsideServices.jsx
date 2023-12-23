@@ -9,26 +9,29 @@ import { useNavigate } from 'react-router-dom'
 
 const OutsideServices = () => {
     const navigate = useNavigate()
-    
+
     function onClickHandler(e) {
         console.log(`clicked on ${e.target.id}`)
-        navigate(e.target.id)
-        
+        if (e.target.id == "OtherForm") {
+            navigate("/OtherForm");
+        } else {
+            navigate(e.target.id)
+        }
     }
 
     return (
         <>
             <div className='flex flex-wrap justify-center gap-10 mt-10'>
                 <div className='flex flex-col items-center'>
-                    <img id='Meeting' src={meetingImg}  className='w-[160px]' onClick={onClickHandler}/>
+                    <img id='Meeting' src={meetingImg} className='w-[160px]' onClick={onClickHandler} />
                     <p>งานประชุม / สัมมนา / อบรม</p>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <img id='Party' src={partyImg} className='w-[160px]'  onClick={onClickHandler}/>
+                    <img id='Party' src={partyImg} className='w-[160px]' onClick={onClickHandler} />
                     <p>งานเลี้ยงสังสรรค์</p>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <img id='Wedding' src={weddingImg}  className='w-[160px]' onClick={onClickHandler} />
+                    <img id='Wedding' src={weddingImg} className='w-[160px]' onClick={onClickHandler} />
                     <p>งานแต่งงาน</p>
                 </div>
                 <div className='flex flex-col items-center'>
@@ -36,7 +39,7 @@ const OutsideServices = () => {
                     <p>งานทำบุญบ้าน / บริษัท</p>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <div className='w-[150px] aspect-square bg-gray-300 rounded-[15px]'></div>
+                    <div id='OtherForm' className='w-[150px] aspect-square bg-gray-300 rounded-[15px]' onClick={onClickHandler}></div>
                     <p>อื่นๆ</p>
                 </div>
             </div>
