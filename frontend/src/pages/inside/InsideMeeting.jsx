@@ -6,8 +6,9 @@ import cocktailImg from '../../img/food/cocktail.jpg'
 import coffeeBreakImg from '../../img/food/coffeeBreak.jpg'
 import westernSetImg from '../../img/food/westernSet.jpg'
 import thaiBuffetImg from '../../img/food/thaiBuffet.jpg'
+import CardItem from '../../components/CardItem';
 
-const Meeting = () => {
+const InsideMeeting = () => {
     const navigate = useNavigate()
     const { formData, setFormData } = useContext(FormDataContext);
     
@@ -49,9 +50,10 @@ const Meeting = () => {
                     <img src={chineseTableImg} id='outsideChineseTable' className='object-cover w-[130px] aspect-square bg-gray-300 rounded-[15px]'/>
                     <p>โต๊ะจีน (10 ท่าน)</p>
                 </div>
+                <CardItem url="#" price='12dollar' body='lorem ipsum'/>
             </div>
         </>
     )
 }
 
-export default Meeting
+export default InsideMeeting

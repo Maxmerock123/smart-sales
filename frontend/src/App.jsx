@@ -19,6 +19,8 @@ import Party from './pages/outside/Party'
 import Wedding from './pages/outside/Wedding'
 import BhuddistCeremony from './pages/outside/BhuddistCeremony'
 import OtherForm from './pages/OtherForm'
+import InsideMeeting from './pages/inside/InsideMeeting'
+
 
 
 function App() {
@@ -28,14 +30,14 @@ function App() {
       number: '',
       email: '',
       place: '',
-      eventType:'',
+      eventType: '',
       people: '',
       date: '',
     },
 
   });
 
-  
+
   return (
     <>
       <FormDataContext.Provider value={{ formData, setFormData }}>
@@ -51,6 +53,7 @@ function App() {
               <Route path='PlacePage/OutsideServices/Party' element={<Party />} />
               <Route path='PlacePage/OutsideServices/Wedding' element={<Wedding />} />
               <Route path='PlacePage/OutsideServices/BhuddistCeremony' element={<BhuddistCeremony />} />
+              <Route path='PlacePage/InsideServices/Meeting' element={<InsideMeeting/>} />
               <Route path='/OtherForm' element={<OtherForm />} />
               <Route path='/SummaryPage' element={<SummaryPage />} />
             </Routes>
