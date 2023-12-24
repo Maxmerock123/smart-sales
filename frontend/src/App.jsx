@@ -22,6 +22,8 @@ import OtherForm from './pages/OtherForm'
 import InsideMeeting from './pages/inside/InsideMeeting'
 import InsideParty from './pages/inside/InsideParty'
 import InsideWedding from './pages/inside/InsideWedding'
+import EngagementCeremony from './pages/inside/EngagementCeremony'
+import WeddingCeremony from './pages/inside/WeddingCeremony'
 
 
 
@@ -60,6 +62,8 @@ function App() {
               <Route path='PlacePage/InsideServices/Meeting' element={<InsideMeeting/>} />
               <Route path='PlacePage/InsideServices/Party' element={<InsideParty/>}/>
               <Route path='PlacePage/InsideServices/Wedding' element={<InsideWedding/>}/>
+              <Route path='PlacePage/InsideServices/Wedding/EngagementCeremony' element={<EngagementCeremony/>}/>
+              <Route path='PlacePage/InsideServices/Wedding/WeddingCeremony' element={<WeddingCeremony/>}/>
               
               <Route path='/OtherForm' element={<OtherForm />} />
               <Route path='/SummaryPage' element={<SummaryPage />} />
