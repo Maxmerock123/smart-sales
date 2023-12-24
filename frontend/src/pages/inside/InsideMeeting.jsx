@@ -30,13 +30,11 @@ const InsideMeeting = () => {
         <>
             <h3 className='m-8 font-bold text-center'>เลือกประเภทอาหาร</h3>
             <div className='flex flex-wrap justify-center gap-10 mt-10'>
-                <CardItem id='outsideCoffee' url={coffeeBreakImg} body='คอฟฟี่เบรค' onClick={onClickHandler} />
-                <CardItem id='outsideThaiBuffet' url={thaiBuffetImg} body='ไทยบุฟเฟ่ต์' onClick={onClickHandler} />
-                <CardItem id='outsideCocktail' url={cocktailImg} body='ค็อกเทล' onClick={onClickHandler} />
-                <CardItem id='outsideWesternSet' url={westernSetImg} body='อาหารนานาชาติ' onClick={onClickHandler} />
-                <CardItem id='outsideChineseTable' url={chineseTableImg} body='โต๊ะจีน (10 ท่าน)' onClick={onClickHandler} />
+                <CardItem id='outsideCoffee' url='#' body='ประชุมพร้อมคอฟฟี่เบรค {hide 500}' onClick={onClickHandler} />
+                <CardItem id='outsideThaiBuffet' url='#' body='ประชุมครึ่งวัน คอฟฟี่เบรค 1 พร้อมอาหารกลางวัน {hide 950}' onClick={onClickHandler} />
+                <CardItem id='outsideCocktail' url='#' body='ประชุมเต็มวัน  คอฟฟี่เบรค 2 พร้อมอาหารกลางวัน {hide 1050}' onClick={onClickHandler} />
+
             </div>
-            <CardItem url="#" price='12dollar' body='lorem ipsum' />
         </>
     )
 }

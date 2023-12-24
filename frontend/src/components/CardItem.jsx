@@ -1,11 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const CardItem = ({id,url,body,price}) => {
-
-    function onClickHandler() {
-        return 0
+const CardItem = ({ id, url, body, price }) => {
+    const navigate = useNavigate()
+    function onClickHandler(e) {
+        if (e.target.id) {
+            navigate(e.target.id)
+        }
+        else {
+            console.log("element id not assigned")
+        }
     }
-    console.log("prop are: ",id,url,body,price)
+
     return (
         <>
             <div className='flex flex-col items-center w-[130px]'>
