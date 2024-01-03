@@ -10,12 +10,12 @@ const InsideMeeting = () => {
   const navigate = useNavigate();
   const { formData, setFormData } = useContext(FormDataContext);
 
-  function onClickHandler(e) {
+  function onClickHandlerTest(e) {
     console.log(`clicked on ${e.target.id}`);
     setFormData({
       ...formData,
-      eventForm: {
-        ...formData.eventForm,
+      generalForm: {
+        ...formData.generalForm,
         eventType: e.target.id,
       },
     });
@@ -24,26 +24,26 @@ const InsideMeeting = () => {
 
   return (
     <>
-      <h3 className="m-8 font-bold text-center">เลือกประเภทอาหาร</h3>
+      <h3 className="m-8 text-center font-bold">เลือกประเภทอาหาร</h3>
       <div className="flex justify-center">
-        <div className="flex flex-wrap justify-between gap-10 mt-10  w-[80%]">
+        <div className="mt-10 flex w-[80%] flex-wrap justify-between  gap-10">
           <CardItem
             id="insideCoffeeBreak1"
             url={coffeeBreak1}
             body="ประชุมพร้อมคอฟฟี่เบรค {hide 500}"
-            onClick={onClickHandler}
+            onClick={onClickHandlerTest}
           />
           <CardItem
             id="insideCoffeeBreak2"
             url={coffeeBreak2}
             body="ประชุมครึ่งวัน คอฟฟี่เบรค 1 พร้อมอาหารกลางวัน {hide 950}"
-            onClick={onClickHandler}
+            onClick={onClickHandlerTest}
           />
           <CardItem
             id="insideCoffeeBreak3"
             url={coffeeBreak3}
             body="ประชุมเต็มวัน  คอฟฟี่เบรค 2 พร้อมอาหารกลางวัน {hide 1050}"
-            onClick={onClickHandler}
+            onClick={onClickHandlerTest}
           />
         </div>
       </div>

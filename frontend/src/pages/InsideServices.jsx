@@ -9,6 +9,7 @@ const InsideServices = () => {
   const navigate = useNavigate();
 
   function onClickHandler(e) {
+    console.log(`clicked on ${e.target.id}`);
     if (e.target.id == "OtherForm") {
       navigate("/OtherForm");
     } else {

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import FormDataContext from "../../FormDataContext";
 import CardItem from "../../components/CardItem";
 import thaiBuffet from "../../img/inside/thai-chinese-table.jpg";
 import internationalBuffet from "../../img/inside/international-buffet.jpg";
@@ -6,9 +8,21 @@ import chineseTable from "../../img/inside/chinese-table.png";
 import cocktail from "../../img/food/cocktail.jpg";
 
 const WeddingCeremony = () => {
-  function onClickHandler() {
-    return 0;
+  const navigate = useNavigate();
+  const { formData, setFormData } = useContext(FormDataContext);
+
+  function onClickHandler(e) {
+    console.log(`clicked on ${e.target.id}`);
+    setFormData({
+      ...formData,
+      generalForm: {
+        ...formData.generalForm,
+        eventType: e.target.id,
+      },
+    });
+    navigate("/SummaryPage");
   }
+
   return (
     <>
       <h3 className="m-8 text-center font-bold">เลือกแพ็คเกจ</h3>

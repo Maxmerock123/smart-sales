@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import FormDataContext from "../FormDataContext";
 import { useNavigate } from "react-router-dom";
 
 const CardItem = ({ id, url, body, price }) => {
   const navigate = useNavigate();
+  const { formData, setFormData } = useContext(FormDataContext);
+
   function onClickHandler(e) {
-    if (e.target.id == "OtherForm") {
-      navigate("/OtherForm");
-    } else if (e.target.id) {
-      navigate(e.target.id);
-    } else {
-      console.log("element id not assigned");
-    }
+    console.log(`clicked on ${e.target.id}`);
+    setFormData({
+      ...formData,
+      generalForm: {
+        ...formData.generalForm,
+        eventType: e.target.id,
+      },
+    });
+    navigate("/SummaryPage");
   }
 
   return (
