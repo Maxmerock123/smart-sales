@@ -1,51 +1,45 @@
-import React from 'react'
-import meetingImg from '../img/img-btn-meeting.png'
-import partyImg from '../img/img-btn-party.png'
-import ceremonyImg from '../img/img-btn-bhudda.png'
-import weddingImg from '../img/img-btn-wedding.png'
-import { useNavigate } from 'react-router-dom'
-
-
+import React from "react";
+import meetingImg from "../img/img-btn-meeting.png";
+import partyImg from "../img/img-btn-party.png";
+import ceremonyImg from "../img/img-btn-bhudda.png";
+import weddingImg from "../img/img-btn-wedding.png";
+import { useNavigate } from "react-router-dom";
+import CardItem from "../components/CardItem";
 
 const OutsideServices = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
-    function onClickHandler(e) {
-        console.log(`clicked on ${e.target.id}`)
-        if (e.target.id == "OtherForm") {
-            navigate("/OtherForm");
-        } else {
-            navigate(e.target.id)
-        }
+  function onClickHandler(e) {
+    console.log(`clicked on ${e.target.id}`);
+    if (e.target.id == "OtherForm") {
+      navigate("/OtherForm");
+    } else {
+      navigate(e.target.id);
     }
+  }
 
-    return (
-        <>
-            <div className='flex flex-wrap justify-center gap-10 mt-10'>
-                <div className='flex flex-col items-center'>
-                    <img id='Meeting' src={meetingImg} className='w-[160px]' onClick={onClickHandler} />
-                    <p>งานประชุม / สัมมนา / อบรม</p>
-                </div>
-                <div className='flex flex-col items-center'>
-                    <img id='Party' src={partyImg} className='w-[160px]' onClick={onClickHandler} />
-                    <p>งานเลี้ยงสังสรรค์</p>
-                </div>
-                <div className='flex flex-col items-center'>
-                    <img id='Wedding' src={weddingImg} className='w-[160px]' onClick={onClickHandler} />
-                    <p>งานแต่งงาน</p>
-                </div>
-                <div className='flex flex-col items-center'>
-                    <img id='BhuddistCeremony' src={ceremonyImg} className='w-[160px]' onClick={onClickHandler} />
-                    <p>งานทำบุญบ้าน / บริษัท</p>
-                </div>
-                <div className='flex flex-col items-center'>
-                    <div id='OtherForm' className='w-[150px] aspect-square bg-gray-300 rounded-[15px]' onClick={onClickHandler}></div>
-                    <p>อื่นๆ</p>
-                </div>
-            </div>
+  return (
+    <>
+      <h3 className="m-8 text-center font-bold">เลือกประเภทอาหาร</h3>
+      <div className="flex justify-center">
+        <div className="mt-10 flex w-[80%] flex-wrap justify-between  gap-10">
+          <CardItem
+            id="Meeting"
+            url={meetingImg}
+            body={"ประชุม / สัมมนา / อบรม"}
+          />
+          <CardItem id="Party" url={partyImg} body={"งานเลี้ยงสังสรรค์"} />
+          <CardItem id="Wedding" url={weddingImg} body={"งานแต่งงาน "} />
+          <CardItem
+            id="BhuddistCeremony"
+            url={ceremonyImg}
+            body={"งานทำบุญ / พิธีสงฆ์ "}
+          />
+          <CardItem id="OtherForm" body="อื่นๆ" />
+        </div>
+      </div>
+    </>
+  );
+};
 
-        </>
-    )
-}
-
-export default OutsideServices
+export default OutsideServices;

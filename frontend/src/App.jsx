@@ -57,6 +57,7 @@ function App() {
               <Route path='PlacePage/OutsideServices/Party' element={<Party />} />
               <Route path='PlacePage/OutsideServices/Wedding' element={<Wedding />} />
               <Route path='PlacePage/OutsideServices/BhuddistCeremony' element={<BhuddistCeremony />} />
+              
 
               <Route path='PlacePage/InsideServices' element={<InsideServices />} />
               <Route path='PlacePage/InsideServices/Meeting' element={<InsideMeeting/>} />
