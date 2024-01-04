@@ -25,15 +25,27 @@ const OutsideServices = () => {
         <div className="mt-10 flex w-[80%] flex-wrap justify-between  gap-10">
           <CardItem
             id="Meeting"
-            url={meetingImg}
+            img={meetingImg}
             body={"ประชุม / สัมมนา / อบรม"}
+            url="Meeting"
           />
-          <CardItem id="Party" url={partyImg} body={"งานเลี้ยงสังสรรค์"} />
-          <CardItem id="Wedding" url={weddingImg} body={"งานแต่งงาน "} />
+          <CardItem
+            id="Party"
+            img={partyImg}
+            url="Party"
+            body={"งานเลี้ยงสังสรรค์"}
+          />
+          <CardItem
+            id="Wedding"
+            img={weddingImg}
+            url="Wedding"
+            body={"งานแต่งงาน "}
+          />
           <CardItem
             id="BhuddistCeremony"
-            url={ceremonyImg}
+            img={ceremonyImg}
             body={"งานทำบุญ / พิธีสงฆ์ "}
+            url="BhuddistCeremony"
           />
           <CardItem id="OtherForm" body="อื่นๆ" />
         </div>

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import FormDataContext from "../FormDataContext";
 import { useNavigate } from "react-router-dom";
 
-const CardItem = ({ id, url, body, price }) => {
+const CardItem = ({ id, url, img, body, price }) => {
   const navigate = useNavigate();
   const { formData, setFormData } = useContext(FormDataContext);
 
@@ -15,14 +15,14 @@ const CardItem = ({ id, url, body, price }) => {
         eventType: e.target.id,
       },
     });
-    navigate("/SummaryPage");
+    navigate(url);
   }
 
   return (
     <>
       <div className="flex w-[130px] flex-col items-center">
         <img
-          src={url}
+          src={img}
           id={id}
           className="aspect-square w-[130px] rounded-[15px] bg-gray-300 object-cover object-left"
           onClick={onClickHandler}

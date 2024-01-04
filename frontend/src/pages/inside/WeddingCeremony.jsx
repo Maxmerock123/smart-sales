@@ -8,52 +8,37 @@ import chineseTable from "../../img/inside/chinese-table.png";
 import cocktail from "../../img/food/cocktail.jpg";
 
 const WeddingCeremony = () => {
-  const navigate = useNavigate();
-  const { formData, setFormData } = useContext(FormDataContext);
-
-  function onClickHandler(e) {
-    console.log(`clicked on ${e.target.id}`);
-    setFormData({
-      ...formData,
-      generalForm: {
-        ...formData.generalForm,
-        eventType: e.target.id,
-      },
-    });
-    navigate("/SummaryPage");
-  }
-
   return (
     <>
       <h3 className="m-8 text-center font-bold">เลือกแพ็คเกจ</h3>
       <div className="mt-10 flex flex-wrap justify-center gap-10">
         <CardItem
           id="insideWeddingThaiChineseTable"
-          url={thaiBuffet}
+          img={thaiBuffet}
           price="#"
+          url={"/summaryPage"}
           body="โต๊ะไทยจีน {hide 10500}"
-          onClick={onClickHandler}
         />
         <CardItem
           id="insideWeddingCocktail"
-          url={cocktail}
+          img={cocktail}
+          url={"/summaryPage"}
           price="#"
           body="ค็อกเทล {hide 990}"
-          onClick={onClickHandler}
         />
         <CardItem
           id="insideWeddingInternationalBuffet"
-          url={internationalBuffet}
+          img={internationalBuffet}
+          url={"/summaryPage"}
           price="#"
           body="บุฟเฟต์อาหารไทยและเวสเทิร์น {hide 990}"
-          onClick={onClickHandler}
         />
         <CardItem
           id="insideWeddingChineseTable"
-          url={chineseTable}
+          img={chineseTable}
+          url={"/summaryPage"}
           price="#"
           body="โต๊ะจีน (สำหรับ 10 ท่าน) {hide 10900}"
-          onClick={onClickHandler}
         />
       </div>
     </>

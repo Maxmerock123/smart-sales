@@ -40,7 +40,7 @@ const SummaryPage = () => {
             <br></br>
             <tr>
               <td className="px-2 py-2 font-bold ">ราคาโดยประมาณ:</td>
-              <td className="px-2 py-2"></td>
+              <td className="px-2 py-2">{formData.generalForm.prices}</td>
             </tr>
           </tbody>
         </table>

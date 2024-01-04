@@ -25,53 +25,29 @@ const Meeting = () => {
 
   return (
     <>
-      <h3 className="m-8 text-center font-bold">เลือกประเภทอาหาร</h3>
+      <h3 className="m-8 text-center font-bold">เลือก Package</h3>
       <div className="flex justify-center">
-        <div className="mt-10 flex w-[80%] flex-wrap justify-between  gap-10">
-          <div className="flex flex-col items-center">
-            <img
-              src={coffeeBreakImg}
-              id="outsideCoffee"
-              className="aspect-square w-[130px] rounded-[15px] bg-gray-300 object-cover object-top"
-              onClick={onClickHandler}
-            />
-            <p>คอฟฟี่เบรค</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <img
-              src={thaiBuffetImg}
-              id="outsideThaiBuffet"
-              className="aspect-square w-[130px] rounded-[15px] bg-gray-300 object-cover"
-              onClick={onClickHandler}
-            />
-            <p>ไทยบุฟเฟ่ต์</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <img
-              src={cocktailImg}
-              id="outsideCocktail"
-              className="aspect-square w-[130px] rounded-[15px] bg-gray-300 object-cover"
-              onClick={onClickHandler}
-            />
-            <p>ค็อกเทล</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <img
-              src={westernSetImg}
-              id="outsideWesternSet"
-              className="aspect-square w-[130px] rounded-[15px] bg-gray-300 object-cover"
-              onClick={onClickHandler}
-            />
-            <p>อาหารนานาชาติ</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <img
-              src={chineseTableImg}
-              id="outsideChineseTable"
-              className="aspect-square w-[130px] rounded-[15px] bg-gray-300 object-cover"
-            />
-            <p>โต๊ะจีน (10 ท่าน)</p>
-          </div>
+        <div className="mt-10 flex w-[80%] flex-wrap justify-between gap-10">
+          <CardItem
+            id="insideEngage1"
+            body="พิธีหมั้น + ยกน้ำชา"
+            url={"/summaryPage"}
+          />
+          <CardItem
+            id="insideEngage1"
+            body="พิธีหมั้น + ยกน้ำชา"
+            url={"/summaryPage"}
+          />
+          <CardItem
+            id="insideEngage2"
+            body="พิธีหมั้น + ยกน้ำชา + หลั่งน้ำพระพุทธมนต์"
+            url={"/summaryPage"}
+          />
+          <CardItem
+            id="insideEngage3"
+            body="พิธีหมั้น + ยกน้ำชา + หลั่งน้ำพระพุทธมนต์ + พิธีสงฆ์"
+            url={"/summaryPage"}
+          />
         </div>
       </div>
     </>

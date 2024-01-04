@@ -29,28 +29,32 @@ const InsideParty = () => {
       <div className="mt-10 flex flex-wrap justify-center gap-10">
         <CardItem
           id="insideThaiBuffet"
-          url={thaiBuffet}
+          img={thaiBuffet}
+          url={"/summaryPage"}
           price="#"
           body="ไทยบุฟเฟต์ {hide 700}"
           onClick={onClickHandler}
         />
         <CardItem
           id="insideCocktail"
-          url={cocktail}
+          img={cocktail}
+          url={"/summaryPage"}
           price="#"
           body="ค็อกเทล {hide 720}"
           onClick={onClickHandler}
         />
         <CardItem
           id="insideInternationalBuffet"
-          url={internationalBuffet}
+          img={internationalBuffet}
+          url={"/summaryPage"}
           price="#"
           body="บุฟเฟต์อาหารไทยและเวสเทิร์น {hide 770}"
           onClick={onClickHandler}
         />
         <CardItem
           id="insideChineseTable"
-          url={chineseTable}
+          img={chineseTable}
+          url={"/summaryPage"}
           price="#"
           body="โต๊ะจีน (สำหรับ 10 ท่าน) {hide 8900}"
           onClick={onClickHandler}
