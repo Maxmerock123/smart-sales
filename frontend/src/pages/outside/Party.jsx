@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import privateParty from "../../img/food/privateParty.jpg";
 import FormDataContext from "../../FormDataContext";
 import { useNavigate } from "react-router-dom";
+import CardItem from "../../components/CardItem";
 
 const Party = () => {
   const navigate = useNavigate();
@@ -21,17 +22,16 @@ const Party = () => {
 
   return (
     <>
-      <h3 className="m-8 font-bold text-center">เลือกแพ็คเกจ</h3>
-      <div className="flex flex-wrap justify-center gap-10 mt-10">
-        <div className="flex w-[300px] flex-col items-center ">
-          <img
-            src={privateParty}
-            id="outsideParty"
-            className="h-[150px] rounded-[15px] bg-gray-300 object-cover"
-            onClick={onClickHandler}
+      <h3 className="m-8 text-center font-bold">เลือก Package</h3>
+      <div className="flex justify-center">
+        <div className="mt-10 flex w-[80%] flex-wrap justify-center gap-10">
+          <CardItem
+            id="outsideMeetingCoffeeBreak"
+            body="งานเลี้ยงสังสรรค์ + ค็อกเทลสำหรับแขก"
+            img={privateParty}
+            url={"/summaryPage"}
+            price="19900"
           />
-          <p>19,900 บาท</p>
-          <p>งานเลี้ยงสังสรรค์ + ค็อกเทลสำหรับแขก</p>
         </div>
       </div>
     </>
