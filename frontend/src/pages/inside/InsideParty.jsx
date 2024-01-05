@@ -31,33 +31,33 @@ const InsideParty = () => {
           id="insideThaiBuffet"
           img={thaiBuffet}
           url={"/summaryPage"}
-          price="#"
+          price={700}
           body="ไทยบุฟเฟต์ {hide 700}"
-          onClick={onClickHandler}
+          isFixedPackage={false}
         />
         <CardItem
           id="insideCocktail"
           img={cocktail}
           url={"/summaryPage"}
-          price="#"
+          price={720}
           body="ค็อกเทล {hide 720}"
-          onClick={onClickHandler}
+          isFixedPackage={false}
         />
         <CardItem
           id="insideInternationalBuffet"
           img={internationalBuffet}
           url={"/summaryPage"}
-          price="#"
+          price={770}
           body="บุฟเฟต์อาหารไทยและเวสเทิร์น {hide 770}"
-          onClick={onClickHandler}
+          isFixedPackage={false}
         />
         <CardItem
           id="insideChineseTable"
           img={chineseTable}
           url={"/summaryPage"}
-          price="#"
+          price={8900}
           body="โต๊ะจีน (สำหรับ 10 ท่าน) {hide 8900}"
-          onClick={onClickHandler}
+          isFixedPackage={false}
         />
       </div>
     </>

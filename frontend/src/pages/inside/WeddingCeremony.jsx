@@ -15,7 +15,8 @@ const WeddingCeremony = () => {
         <CardItem
           id="insideWeddingThaiChineseTable"
           img={thaiBuffet}
-          price="#"
+          price={10500}
+          isFixedPackage={true}
           url={"/summaryPage"}
           body="โต๊ะไทยจีน {hide 10500}"
         />
@@ -23,21 +24,24 @@ const WeddingCeremony = () => {
           id="insideWeddingCocktail"
           img={cocktail}
           url={"/summaryPage"}
-          price="#"
+          price={990}
+          isFixedPackage={false}
           body="ค็อกเทล {hide 990}"
         />
         <CardItem
           id="insideWeddingInternationalBuffet"
           img={internationalBuffet}
           url={"/summaryPage"}
-          price="#"
+          price={990}
+          isFixedPackage={false}
           body="บุฟเฟต์อาหารไทยและเวสเทิร์น {hide 990}"
         />
         <CardItem
           id="insideWeddingChineseTable"
           img={chineseTable}
           url={"/summaryPage"}
-          price="#"
+          price={10900}
+          isFixedPackage={true}
           body="โต๊ะจีน (สำหรับ 10 ท่าน) {hide 10900}"
         />
       </div>

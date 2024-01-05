@@ -16,18 +16,24 @@ const InsideMeeting = () => {
             id="insideCoffeeBreak1"
             img={coffeeBreak1}
             url={"/summaryPage"}
+            price={500}
             body="ประชุมพร้อมคอฟฟี่เบรค {hide 500}"
+            isFixedPackage={false}
           />
           <CardItem
             id="insideCoffeeBreak2"
             img={coffeeBreak2}
             url={"/summaryPage"}
+            price={950}
             body="ประชุมครึ่งวัน คอฟฟี่เบรค 1 พร้อมอาหารกลางวัน {hide 950}"
+            isFixedPackage={false}
           />
           <CardItem
             id="insideCoffeeBreak3"
             img={coffeeBreak3}
             url={"/summaryPage"}
+            price={1050}
+            isFixedPackage={false}
             body="ประชุมเต็มวัน  คอฟฟี่เบรค 2 พร้อมอาหารกลางวัน {hide 1050}"
           />
         </div>
