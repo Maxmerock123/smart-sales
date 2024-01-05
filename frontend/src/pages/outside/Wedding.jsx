@@ -17,7 +17,7 @@ const Wedding = () => {
             body="พิธีหมั้น + ยกน้ำชา"
             url={"/summaryPage"}
             price={29900}
-            isFixedPackage={false}
+            isFixedPackage={true}
           />
           <CardItem
             id="outsideWedding2"
@@ -25,7 +25,7 @@ const Wedding = () => {
             body="พิธีหมั้น + ยกน้ำชา + หลั่งน้ำพระพุทธมนต์"
             url={"/summaryPage"}
             price={39900}
-            isFixedPackage={false}
+            isFixedPackage={true}
           />
           <CardItem
             id="outsideWedding3"

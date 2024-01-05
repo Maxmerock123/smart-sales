@@ -13,16 +13,22 @@ const EngagementCeremony = () => {
             id="insideEngage1"
             body="พิธีหมั้น + ยกน้ำชา"
             url={"/summaryPage"}
+            price={34900}
+            isFixedPackage={true}
           />
           <CardItem
             id="insideEngage2"
             body="พิธีหมั้น + ยกน้ำชา + หลั่งน้ำพระพุทธมนต์"
             url={"/summaryPage"}
+            price={44900}
+            isFixedPackage={true}
           />
           <CardItem
             id="insideEngage3"
             body="พิธีหมั้น + ยกน้ำชา + หลั่งน้ำพระพุทธมนต์ + พิธีสงฆ์"
             url={"/summaryPage"}
+            price={54900}
+            isFixedPackage={true}
           />
         </div>
       </div>

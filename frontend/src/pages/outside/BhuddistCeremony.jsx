@@ -32,24 +32,32 @@ const BhuddistCeremony = () => {
             id="outsideBhuddistCeremony1"
             img={bhuddistCeremony1}
             url={"/summaryPage"}
+            price={6900}
+            isFixedPackage={true}
             body="อุปกรณ์พิธีสงฆ์ + ปิ่นโตถวายพระ "
           />
           <CardItem
             id="outsideBhuddistCeremony2"
             img={bhuddistCeremony2}
             url={"/summaryPage"}
+            price={7900}
+            isFixedPackage={true}
             body="อุปกรณ์พิธีสงฆ์ + ขันโตกถวายพระ  "
           />
           <CardItem
             id="outsideBhuddistCeremony3"
             img={bhuddistCeremony3}
             url={"/summaryPage"}
+            price={11900}
+            isFixedPackage={true}
             body="อุปกรณ์พิธีสงฆ์ + ขันโตกถวายพระ + ไทยบุฟเฟต์สำหรับแขก"
           />
           <CardItem
             id="outsideBhuddistCeremony4"
             img={bhuddistCeremony4}
             url={"/summaryPage"}
+            price={15900}
+            isFixedPackage={true}
             body="อุปกรณ์พิธีสงฆ์ + ปิ่นโตถวายพระ + ไทยบุฟเฟต์พรีเมี่ยมสำหรับแขก "
           />
         </div>

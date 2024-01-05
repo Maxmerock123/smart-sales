@@ -18,7 +18,8 @@ const Party = () => {
             body="งานเลี้ยงสังสรรค์ + ค็อกเทลสำหรับแขก"
             img={privateParty}
             url={"/summaryPage"}
-            price="19900"
+            price={19900}
+            isFixedPackage={true}
           />
         </div>
       </div>
