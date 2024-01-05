@@ -4,7 +4,7 @@ import FormDataContext from "../FormDataContext";
 const SummaryPage = () => {
   const { formData } = useContext(FormDataContext);
   function onClickHandler() {
-    console.log("clicked sent to sales");
+    alert("clicked sent to sales");
   }
 
   return (

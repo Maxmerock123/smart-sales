@@ -3,68 +3,46 @@ import wedding2 from "../../img/outside/wedding/wedding2.jpg";
 import wedding3 from "../../img/outside/wedding/wedding3.jpg";
 import wedding4 from "../../img/outside/wedding/wedding4.jpg";
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import FormDataContext from "../../FormDataContext";
+import CardItem from "../../components/CardItem";
 
 const Wedding = () => {
-  const navigate = useNavigate();
-  const { formData, setFormData } = useContext(FormDataContext);
-
-  function onClickHandler(e) {
-    console.log(`clicked on ${e.target.id}`);
-    setFormData({
-      ...formData,
-      generalForm: {
-        ...formData.generalForm,
-        eventType: e.target.id,
-      },
-    });
-    navigate("/SummaryPage");
-  }
-
   return (
     <>
-      <h3 className="m-8 font-bold text-center">เลือกแพ็คเกจ</h3>
-      <div className="flex flex-wrap justify-center gap-10 mt-10">
-        <div className="flex w-[130px] flex-col items-center">
-          <img
-            src={wedding1}
+      <h3 className="m-8 text-center font-bold">เลือก Package</h3>
+      <div className="flex justify-center">
+        <div className="mt-10 flex w-[80%] flex-wrap justify-between gap-10">
+          <CardItem
             id="outsideWedding1"
-            className="aspect-square w-[130px] rounded-[15px] bg-gray-300 object-cover object-left"
-            onClick={onClickHandler}
+            img={wedding1}
+            body="พิธีหมั้น + ยกน้ำชา"
+            url={"/summaryPage"}
+            price={29900}
+            isFixedPackage={false}
           />
-          <h3 className="">29,900 บาท</h3>
-          <p> พิธีหมั้น + ยกน้ำชา</p>
-        </div>
-        <div className="flex w-[130px] flex-col  items-center">
-          <img
-            src={wedding2}
+          <CardItem
             id="outsideWedding2"
-            className="aspect-square w-[130px] rounded-[15px] bg-gray-300 object-cover object-left"
-            onClick={onClickHandler}
+            img={wedding2}
+            body="พิธีหมั้น + ยกน้ำชา + หลั่งน้ำพระพุทธมนต์"
+            url={"/summaryPage"}
+            price={39900}
+            isFixedPackage={false}
           />
-          <h3>39,900 บาท</h3>
-          <p> พิธีหมั้น + ยกน้ำชา + หลั่งน้ำพระพุทธมนต์</p>
-        </div>
-        <div className="flex w-[130px] flex-col items-center">
-          <img
-            src={wedding3}
+          <CardItem
             id="outsideWedding3"
-            className="aspect-square w-[130px] rounded-[15px] bg-gray-300 object-cover object-left"
-            onClick={onClickHandler}
+            img={wedding3}
+            body="พิธีหมั้น + ยกน้ำชา + หลั่งน้ำพระพุทธมนต์ + ไทยบุฟเฟต์"
+            url={"/summaryPage"}
+            price={49900}
+            isFixedPackage={true}
           />
-          <h3>49,900 บาท</h3>
-          <p>พิธีหมั้น + ยกน้ำชา + หลั่งน้ำพระพุทธมนต์ + ไทยบุฟเฟต์</p>
-        </div>
-        <div className="flex w-[130px] flex-col items-center">
-          <img
-            src={wedding4}
+          <CardItem
             id="outsideWedding4"
-            className="aspect-square w-[130px] rounded-[15px] bg-gray-300 object-cover object-left"
-            onClick={onClickHandler}
+            img={wedding4}
+            body="พิธีฉลองมงคลสมรส + อาหารจัดเลี้ยง"
+            url={"/summaryPage"}
+            price={59900}
+            isFixedPackage={true}
           />
-          <h3>59,900 บาท</h3>
-          <p>พิธีฉลองมงคลสมรส + อาหารจัดเลี้ยง</p>
         </div>
       </div>
     </>

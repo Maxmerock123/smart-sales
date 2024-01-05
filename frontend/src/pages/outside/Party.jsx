@@ -8,18 +8,6 @@ const Party = () => {
   const navigate = useNavigate();
   const { formData, setFormData } = useContext(FormDataContext);
 
-  function onClickHandler(e) {
-    console.log(`clicked on ${e.target.id}`);
-    setFormData({
-      ...formData,
-      generalForm: {
-        ...formData.generalForm,
-        eventType: e.target.id,
-      },
-    });
-    navigate("/SummaryPage");
-  }
-
   return (
     <>
       <h3 className="m-8 text-center font-bold">เลือก Package</h3>
