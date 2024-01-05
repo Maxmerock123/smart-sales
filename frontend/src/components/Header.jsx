@@ -1,35 +1,38 @@
-import React from 'react'
-import style from './Header.module.css'
-import logo from '../../public/impact-logo.png'
+import React from "react";
+import style from "./Header.module.css";
+import logo from "../../public/impact-logo.png";
 import { IoIosArrowBack } from "react-icons/io";
 import { PiPhoneCallFill } from "react-icons/pi";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-    const navigate = useNavigate()
-    const onBackHandler = () => {
-        navigate(-1)
-    }
-    const onHomepage = () => {
-        navigate("/")
-    }
+  const navigate = useNavigate();
+  const onBackHandler = () => {
+    navigate(-1);
+  };
+  const onHomepage = () => {
+    navigate("/");
+  };
 
-    const onCall = ()=>{
-        window.open("tel:0886123858");
-    }
+  const onCall = () => {
+    window.open("tel:0886123858");
+  };
 
-    return (
-        <>
-            <div className='flex items-center justify-center gap-2 h-28 bg-gradient-to-b from-custom-yellow to-transparent ' >
-                <div className='mt-24 mb-8 flex justify-center items-center gap-[50px]'>
+  return (
+    <>
+      <div className="flex h-28 items-center justify-center gap-2 bg-gradient-to-b from-custom-yellow to-transparent ">
+        <div className="mb-8 mt-24 flex items-center justify-center gap-[50px]">
+          <p className="" onClick={onBackHandler}>
+            ย้อนกลับ
+          </p>
+          <img className="w-[150px] " src={logo} onClick={onHomepage}></img>
+          <p className="text-transparent" onClick={onBackHandler}>
+            ย้อนกลับ
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};
 
-                    <p className='' onClick={onBackHandler}>ย้อนกลับ</p>
-                    <img className='w-[150px] ' src={logo} onClick={onHomepage}></img>
-                    <p className='text-transparent' onClick={onBackHandler}>ย้อนกลับ</p>
-                </div>
-            </div>
-        </>
-    )
-}
-
-export default Header
+export default Header;
