@@ -23,7 +23,7 @@ const CardItem = ({ id, url, img, body, price, isFixedPackage }) => {
       generalForm: {
         ...formData.generalForm,
         eventType: e.target.id,
-
+        eventName: body,
         price: findPrice(price, people),
       },
     });
