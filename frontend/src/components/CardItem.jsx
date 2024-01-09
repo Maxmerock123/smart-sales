@@ -39,7 +39,9 @@ const CardItem = ({ id, url, img, body, price, isFixedPackage }) => {
           className="aspect-square min-w-[130px] rounded-[15px] bg-gray-300 object-cover object-left shadow-lg"
           onClick={onClickHandler}
         />
-        <h3>{price}</h3>
+        <h3>
+          {price} {price && <>บาท</>}
+        </h3>
         <p>{body}</p>
       </div>
     </>
