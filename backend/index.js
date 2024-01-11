@@ -9,59 +9,63 @@ const app = express();
 const env = dotenv.config().parsed;
 
 const flexMessageDemo = {
-  type: "bubble",
-  body: {
-    type: "box",
-    layout: "vertical",
-    contents: [
-      {
-        type: "text",
-        text: "IMPACT Catering",
-        weight: "bold",
-        size: "xl",
-      },
-      {
-        type: "text",
-        text: "สวัสดีค่ะ อิมแพ็ค เคเทอริ่ง บริการจัดเลี้ยงยินดีให้บริการ",
-        wrap: true,
-      },
-      {
-        type: "separator",
-      },
-      {
-        type: "text",
-        text: "- จัดเลี้ยงงานประชุม",
-      },
-      {
-        type: "text",
-        text: "- งานเปิดตัวสินค้า",
-      },
-    ],
-  },
-  footer: {
-    type: "box",
-    layout: "vertical",
-    spacing: "sm",
-    contents: [
-      {
-        type: "box",
-        layout: "vertical",
-        contents: [
-          {
-            type: "button",
-            action: {
-              type: "uri",
-              label: "ดูบริการทั้งหมด",
-              uri: "http://linecorp.com/",
+  type: "flex",
+  altText: "This is a Flex Message",
+  contents: {
+    type: "bubble",
+    body: {
+      type: "box",
+      layout: "vertical",
+      contents: [
+        {
+          type: "text",
+          text: "IMPACT Catering",
+          weight: "bold",
+          size: "xl",
+        },
+        {
+          type: "text",
+          text: "สวัสดีค่ะ อิมแพ็ค เคเทอริ่ง บริการจัดเลี้ยงยินดีให้บริการ",
+          wrap: true,
+        },
+        {
+          type: "separator",
+        },
+        {
+          type: "text",
+          text: "- จัดเลี้ยงงานประชุม",
+        },
+        {
+          type: "text",
+          text: "- งานเปิดตัวสินค้า",
+        },
+      ],
+    },
+    footer: {
+      type: "box",
+      layout: "vertical",
+      spacing: "sm",
+      contents: [
+        {
+          type: "box",
+          layout: "vertical",
+          contents: [
+            {
+              type: "button",
+              action: {
+                type: "uri",
+                label: "ดูบริการทั้งหมด",
+                uri: "http://linecorp.com/",
+              },
+              color: "#FFFFFF",
             },
-            color: "#FFFFFF",
-          },
-        ],
-        backgroundColor: "#BE925A",
-        cornerRadius: "lg",
-      },
-    ],
-    flex: 0,
+          ],
+          backgroundColor: "#BE925A",
+          cornerRadius: "lg",
+        },
+      ],
+      flex: 0,
+    },
   },
 };
 
@@ -87,10 +91,7 @@ app.post("/webhook", line.middleware(lineConfig), async (req, res) => {
 
 async function handleEvent(event, text) {
   console.log(event);
-  return client.replyMessage(event.replyToken, {
-    type: "text",
-    text: JSON.stringify(flexMessageDemo),
-  });
+  return client.replyMessage(event.replyToken, flexMessageDemo);
 }
 
 app.listen(4000, () => {

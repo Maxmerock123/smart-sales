@@ -46,6 +46,7 @@ function App() {
           <BrowserRouter>
             <Header />
             <Routes>
+              <Route path="/smart-sales" element={<FormPage />} />
               <Route path="/" element={<FormPage />} />
               <Route path="/PlacePage" element={<PlacePage />} />
 
