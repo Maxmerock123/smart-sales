@@ -21,7 +21,7 @@ const InsideServices = () => {
 
   return (
     <>
-      <h3 className="m-8 text-center font-bold">เลือกประเภทอาหาร</h3>
+      <h3 className="m-8 text-center font-bold">เลือกประเภทงาน</h3>
       <div className="flex justify-center">
         <div className="mt-10 flex w-[80%] flex-wrap justify-between  gap-10">
           <CardItem

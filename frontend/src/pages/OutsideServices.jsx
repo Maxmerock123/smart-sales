@@ -5,6 +5,7 @@ import ceremonyImg from "../img/img-btn-bhudda.png";
 import weddingImg from "../img/img-btn-wedding.png";
 import { useNavigate } from "react-router-dom";
 import CardItem from "../components/CardItem";
+import logo from "../img/impact-logo-other.png";
 
 const OutsideServices = () => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const OutsideServices = () => {
 
   return (
     <>
-      <h3 className="m-8 text-center font-bold">เลือกประเภทอาหาร</h3>
+      <h3 className="m-8 text-center font-bold">เลือกประเภทงาน</h3>
       <div className="flex justify-center">
         <div className="mt-10 flex w-[80%] flex-wrap justify-between  gap-10">
           <CardItem
@@ -47,7 +48,7 @@ const OutsideServices = () => {
             body={"งานทำบุญ / พิธีสงฆ์ "}
             url="BhuddistCeremony"
           />
-          <CardItem id="OtherForm" body="อื่นๆ" />
+          <CardItem id="OtherForm" body="อื่นๆ" img={logo} />
         </div>
       </div>
     </>
