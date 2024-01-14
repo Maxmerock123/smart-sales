@@ -36,7 +36,7 @@ const CardItem = ({ id, url, img, body, price, isFixedPackage }) => {
         <img
           src={img}
           id={id}
-          className="aspect-square min-w-[130px] rounded-[15px] bg-gray-300 object-cover object-left shadow-lg"
+          className="aspect-square min-w-[130px] rounded-[15px] bg-gray-300 object-scale-down object-left shadow-lg"
           onClick={onClickHandler}
         />
         <h3>

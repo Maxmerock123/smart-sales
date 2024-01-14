@@ -9,7 +9,7 @@ import coffeeBreak3 from "../../img/inside/coffee-break3.jpg";
 const InsideMeeting = () => {
   return (
     <>
-      <h3 className="m-8 text-center font-bold">เลือกประเภทอาหาร</h3>
+      <h3 className="m-8 font-bold text-center">เลือกประเภทอาหาร</h3>
       <div className="flex justify-center">
         <div className="mt-10 flex w-[80%] flex-wrap justify-between  gap-10">
           <CardItem
@@ -17,7 +17,7 @@ const InsideMeeting = () => {
             img={coffeeBreak1}
             url={"/summaryPage"}
             price={500}
-            body="ประชุมพร้อมคอฟฟี่เบรค {hide 500}"
+            body="ประชุมพร้อมคอฟฟี่เบรค"
             isFixedPackage={false}
           />
           <CardItem
@@ -25,7 +25,7 @@ const InsideMeeting = () => {
             img={coffeeBreak2}
             url={"/summaryPage"}
             price={950}
-            body="ประชุมครึ่งวัน คอฟฟี่เบรค 1 พร้อมอาหารกลางวัน {hide 950}"
+            body="ประชุมครึ่งวัน คอฟฟี่เบรค 1 พร้อมอาหารกลางวัน"
             isFixedPackage={false}
           />
           <CardItem
@@ -34,7 +34,7 @@ const InsideMeeting = () => {
             url={"/summaryPage"}
             price={1050}
             isFixedPackage={false}
-            body="ประชุมเต็มวัน  คอฟฟี่เบรค 2 พร้อมอาหารกลางวัน {hide 1050}"
+            body="ประชุมเต็มวัน  คอฟฟี่เบรค 2 พร้อมอาหารกลางวัน"
           />
         </div>
       </div>

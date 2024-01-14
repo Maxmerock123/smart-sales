@@ -5,6 +5,7 @@ import ceremonyImg from "../img/img-btn-bhudda.png";
 import weddingImg from "../img/img-btn-wedding.png";
 import { useNavigate } from "react-router-dom";
 import CardItem from "../components/CardItem";
+import logo from "../img/impact-logo-other.png";
 
 const InsideServices = () => {
   const navigate = useNavigate();
@@ -41,7 +42,7 @@ const InsideServices = () => {
             url="Wedding"
             body={"งานแต่งงาน "}
           />
-          <CardItem id="OtherForm" body="อื่นๆ" />
+          <CardItem id="OtherForm" body="อื่นๆ" img={logo} />
         </div>
       </div>
     </>

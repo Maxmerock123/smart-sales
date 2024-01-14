@@ -10,8 +10,8 @@ import cocktail from "../../img/food/cocktail.jpg";
 const WeddingCeremony = () => {
   return (
     <>
-      <h3 className="m-8 text-center font-bold">เลือกแพ็คเกจ</h3>
-      <div className="mt-10 flex flex-wrap justify-center gap-10">
+      <h3 className="m-8 font-bold text-center">เลือกแพ็คเกจ</h3>
+      <div className="flex flex-wrap justify-center gap-10 mt-10">
         <CardItem
           id="insideWeddingThaiChineseTable"
           img={thaiBuffet}
@@ -42,7 +42,7 @@ const WeddingCeremony = () => {
           url={"/summaryPage"}
           price={10900}
           isFixedPackage={true}
-          body="โต๊ะจีน (สำหรับ 10 ท่าน) {hide 10900}"
+          body="โต๊ะจีน (สำหรับ 10 ท่าน)"
         />
       </div>
     </>

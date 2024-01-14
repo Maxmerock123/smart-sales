@@ -32,7 +32,7 @@ const InsideParty = () => {
           img={thaiBuffet}
           url={"/summaryPage"}
           price={700}
-          body="ไทยบุฟเฟต์ {hide 700}"
+          body="ไทยบุฟเฟต์"
           isFixedPackage={false}
         />
         <CardItem
@@ -40,7 +40,7 @@ const InsideParty = () => {
           img={cocktail}
           url={"/summaryPage"}
           price={720}
-          body="ค็อกเทล {hide 720}"
+          body="ค็อกเทล"
           isFixedPackage={false}
         />
         <CardItem
@@ -48,7 +48,7 @@ const InsideParty = () => {
           img={internationalBuffet}
           url={"/summaryPage"}
           price={770}
-          body="บุฟเฟต์อาหารไทยและเวสเทิร์น {hide 770}"
+          body="บุฟเฟต์อาหารไทยและเวสเทิร์น"
           isFixedPackage={false}
         />
         <CardItem
@@ -56,7 +56,7 @@ const InsideParty = () => {
           img={chineseTable}
           url={"/summaryPage"}
           price={8900}
-          body="โต๊ะจีน (สำหรับ 10 ท่าน) {hide 8900}"
+          body="โต๊ะจีน (สำหรับ 10 ท่าน)"
           isFixedPackage={false}
         />
       </div>
