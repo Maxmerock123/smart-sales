@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import meetingImg from "../img/img-btn-meeting.png";
 import partyImg from "../img/img-btn-party.png";
 import ceremonyImg from "../img/img-btn-bhudda.png";
@@ -6,18 +6,12 @@ import weddingImg from "../img/img-btn-wedding.png";
 import { useNavigate } from "react-router-dom";
 import CardItem from "../components/CardItem";
 import logo from "../img/impact-logo-other.png";
+import FormDataContext from "../FormDataContext";
 
 const InsideServices = () => {
   const navigate = useNavigate();
 
-  function onClickHandler(e) {
-    console.log(`clicked on ${e.target.id}`);
-    if (e.target.id == "OtherForm") {
-      navigate("/OtherForm");
-    } else {
-      navigate(e.target.id);
-    }
-  }
+  const { formData, setFormData } = useContext(FormDataContext);
 
   return (
     <>
@@ -29,18 +23,21 @@ const InsideServices = () => {
             img={meetingImg}
             body={"ประชุม / สัมมนา / อบรม"}
             url="Meeting"
+            dataType="eventType"
           />
           <CardItem
             id="Party"
             img={partyImg}
             url="Party"
             body={"งานเลี้ยงสังสรรค์"}
+            dataType="eventType"
           />
           <CardItem
             id="Wedding"
             img={weddingImg}
             url="Wedding"
             body={"งานแต่งงาน "}
+            dataType="eventType"
           />
           <CardItem id="OtherForm" body="อื่นๆ" img={logo} />
         </div>

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import FormDataContext from "../FormDataContext";
 import { useNavigate } from "react-router-dom";
 
-const CardItem = ({ id, url, img, body, price, isFixedPackage }) => {
+const CardItem = ({ id, url, img, body, price, isFixedPackage, dataType }) => {
   const navigate = useNavigate();
   const { formData, setFormData } = useContext(FormDataContext);
 
@@ -22,11 +22,20 @@ const CardItem = ({ id, url, img, body, price, isFixedPackage }) => {
       ...formData,
       generalForm: {
         ...formData.generalForm,
-        eventType: e.target.id,
         eventName: body,
         price: findPrice(price, people),
       },
     });
+
+    if (dataType == "eventType") {
+      setFormData({
+        ...formData,
+        generalForm: {
+          ...formData.generalForm,
+          eventType: body,
+        },
+      });
+    }
     navigate(url);
   }
 

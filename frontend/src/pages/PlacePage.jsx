@@ -14,7 +14,7 @@ const PlacePage = () => {
       ...formData,
       eventForm: {
         ...formData.eventForm,
-        place: "inside",
+        place: "จัดงานในอิมแพ็ค เมืองทองธานี",
       },
     });
 
@@ -27,7 +27,7 @@ const PlacePage = () => {
       ...formData,
       eventForm: {
         ...formData.eventForm,
-        place: "outside",
+        place: "จัดงานนอกสถานที่",
       },
     });
     navigate("OutsideServices");

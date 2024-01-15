@@ -25,7 +25,7 @@ const GeneralForm = () => {
 
   return (
     <>
-      <div className="m-5 flex min-w-[80%] justify-center rounded-[15px] bg-custom-orange p-10 shadow-2xl">
+      <div className="m-5 flex w-[350px] justify-center rounded-[15px] bg-custom-orange p-10 shadow-2xl">
         <form className="flex w-full flex-col gap-5">
           <div>
             <label className="text-white" htmlFor="name">
@@ -33,7 +33,7 @@ const GeneralForm = () => {
             </label>
             <br />
             <input
-              className="h-8 rounded-[15px] shadow-2xl"
+              className="h-8 min-w-[250px] rounded-[15px] shadow-2xl"
               type="text"
               id="name"
               name="name"
@@ -47,7 +47,7 @@ const GeneralForm = () => {
             </label>
             <br />
             <input
-              className="h-8 rounded-[15px] shadow-2xl"
+              className="h-8 min-w-[250px] rounded-[15px] shadow-2xl"
               type="text"
               id="number"
               name="number"
@@ -61,7 +61,7 @@ const GeneralForm = () => {
             </label>
             <br />
             <input
-              className="h-8 rounded-[15px] shadow-2xl"
+              className="h-8 min-w-[250px] rounded-[15px] shadow-2xl"
               type="text"
               id="email"
               name="email"
