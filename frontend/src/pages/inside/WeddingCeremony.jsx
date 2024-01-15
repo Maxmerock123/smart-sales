@@ -18,7 +18,7 @@ const WeddingCeremony = () => {
           price={10500}
           isFixedPackage={true}
           url={"/summaryPage"}
-          body="โต๊ะไทยจีน {hide 10500}"
+          body="โต๊ะไทยจีน"
         />
         <CardItem
           id="insideWeddingCocktail"
@@ -26,7 +26,7 @@ const WeddingCeremony = () => {
           url={"/summaryPage"}
           price={990}
           isFixedPackage={false}
-          body="ค็อกเทล {hide 990}"
+          body="ค็อกเทล"
         />
         <CardItem
           id="insideWeddingInternationalBuffet"
@@ -34,7 +34,7 @@ const WeddingCeremony = () => {
           url={"/summaryPage"}
           price={990}
           isFixedPackage={false}
-          body="บุฟเฟต์อาหารไทยและเวสเทิร์น {hide 990}"
+          body="บุฟเฟต์อาหารไทยและเวสเทิร์น"
         />
         <CardItem
           id="insideWeddingChineseTable"
