@@ -37,6 +37,7 @@ const GeneralForm = () => {
               type="text"
               id="name"
               name="name"
+              value={formData.generalForm.name}
               onChange={handleChange}
             />
             <br />
@@ -51,6 +52,7 @@ const GeneralForm = () => {
               type="text"
               id="number"
               name="number"
+              value={formData.generalForm.number}
               onChange={handleChange}
             />
             <br />
@@ -65,6 +67,7 @@ const GeneralForm = () => {
               type="text"
               id="email"
               name="email"
+              value={formData.generalForm.email}
               onChange={handleChange}
             />
             <br />
@@ -80,6 +83,7 @@ const GeneralForm = () => {
                 type="number"
                 id="people"
                 name="people"
+                value={formData.generalForm.people}
                 onChange={handleChange}
               />
               <br />
@@ -94,6 +98,7 @@ const GeneralForm = () => {
                 type="date"
                 id="date"
                 name="date"
+                value={formData.generalForm.date}
                 onChange={handleChange}
               />
               <br />
