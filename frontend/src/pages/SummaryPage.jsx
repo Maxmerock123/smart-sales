@@ -9,7 +9,7 @@ const SummaryPage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-5">
-      <div className="w-[350px] rounded-lg bg-white p-3 shadow">
+      <div className="w-[400px] rounded-lg bg-white p-3 shadow">
         <h2 className="m-3 text-2xl font-bold">ใบสรุปรายการ</h2>
         <table className="table-auto ">
           <tbody className="">
@@ -52,6 +52,13 @@ const SummaryPage = () => {
             </tr>
           </tbody>
         </table>
+        <div className="flex justify-center">
+          <p className="w-[300px] text-center text-xs">
+            ( *หมายเหตุ ราคานี้ไม่ได้รวมค่าขนส่ง เป็นราคาเริ่มต้นเท่านั้น
+            <br />
+            ฝ่ายขายจะติดต่อกลับไปเพื่อแจ้งราคาจริงให้อีกครั้ง )
+          </p>
+        </div>
       </div>
       <div className="flex w-[350px] justify-end">
         <button
