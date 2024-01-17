@@ -48,7 +48,7 @@ const OutsideServices = () => {
             body={"งานทำบุญ / พิธีสงฆ์ "}
             url="BhuddistCeremony"
           />
-          <CardItem id="OtherForm" body="อื่นๆ" img={logo} />
+          <CardItem id="OtherForm" body="อื่นๆ" img={logo} url={"/OtherForm"} />
         </div>
       </div>
     </>

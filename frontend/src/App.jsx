@@ -25,6 +25,7 @@ import InsideWedding from "./pages/inside/InsideWedding";
 import EngagementCeremony from "./pages/inside/EngagementCeremony";
 import WeddingCeremony from "./pages/inside/WeddingCeremony";
 import Footer from "./components/Footer";
+import Redirect from "./components/Redirect";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -46,7 +47,7 @@ function App() {
           <BrowserRouter>
             <Header />
             <Routes>
-              <Route path="/smart-sales" element={<FormPage />} />
+              <Route path="/smart-sales" element={<Redirect />} />
               <Route path="/" element={<FormPage />} />
               <Route path="/PlacePage" element={<PlacePage />} />
 
