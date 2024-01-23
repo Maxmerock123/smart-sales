@@ -18,26 +18,43 @@ const GeneralForm = () => {
   };
 
   function isValidInput() {
-    const { name, email, number, date } = formData.generalForm;
-    if (name && email && number) {
+    const { name, email, number, people } = formData.generalForm;
+    if (name && email && number && people) {
+      setFormData({
+        ...formData,
+        generalForm: {
+          ...formData.generalForm,
+          isInput: true,
+        },
+      });
       return true;
     } else {
-      alert("โปรดกรอกชื่อ , อีเมล์, เบอร์โทร");
+      alert("โปรดกรอกชื่อ , อีเมล์, เบอร์โทร และจำนวนแขก");
       return false;
     }
   }
 
   const navigate = useNavigate();
 
-  const onClickHandler = () => {
+  const onSumbitHandler = () => {
+    console.log("onSubmitHandler");
     if (isValidInput()) {
       navigate("PlacePage");
     } else {
+      console.log("onClickHandler is false");
       return 0;
     }
   };
 
   const onSkipHandler = () => {
+    setFormData({
+      ...formData,
+      generalForm: {
+        ...formData.generalForm,
+        isInput: false,
+      },
+    });
+
     navigate("PlacePage");
   };
 
@@ -125,13 +142,13 @@ const GeneralForm = () => {
           <div className="mt-5 flex justify-end gap-5">
             <button
               className="rounded-[15px] bg-custom-brown px-5 text-white shadow-2xl"
-              onClick={onClickHandler}
+              onClick={onSkipHandler}
             >
               ข้าม
             </button>
             <button
               className="rounded-[15px] bg-custom-brown px-5 text-white shadow-2xl"
-              onClick={onClickHandler}
+              onClick={onSumbitHandler}
             >
               ถัดไป
             </button>
