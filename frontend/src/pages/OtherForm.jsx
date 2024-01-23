@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
+import FormDataContext from "../FormDataContext";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const OtherForm = () => {
-  function handleChange() {
-    return 0;
+  const { formData, setFormData } = useContext(FormDataContext); // Use context
+
+  function handleChange(e) {
+    setFormData({
+      ...formData,
+      generalForm: {
+        ...formData.generalForm,
+        eventType: e.target.value,
+      },
+    });
   }
+
+  const navigate = useNavigate();
+
   function onClickHandler() {
-    return 0;
+    if (formData.generalForm.eventType) {
+      navigate("/SummaryPage");
+    }
   }
 
   return (
@@ -31,7 +46,7 @@ const OtherForm = () => {
               className="rounded-[15px] bg-custom-brown px-5 text-white shadow-2xl"
               onClick={onClickHandler}
             >
-              ข้าม
+              ถัดไป
             </button>
           </div>
         </form>

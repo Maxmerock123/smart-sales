@@ -10,15 +10,6 @@ import logo from "../img/impact-logo-other.png";
 const OutsideServices = () => {
   const navigate = useNavigate();
 
-  function onClickHandler(e) {
-    console.log(`clicked on ${e.target.id}`);
-    if (e.target.id == "OtherForm") {
-      navigate("/OtherForm");
-    } else {
-      navigate(e.target.id);
-    }
-  }
-
   return (
     <>
       <h3 className="m-8 text-center font-bold">เลือกประเภทงาน</h3>

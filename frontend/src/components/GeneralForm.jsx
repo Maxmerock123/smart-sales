@@ -17,16 +17,34 @@ const GeneralForm = () => {
     console.log(formData.generalForm);
   };
 
+  function isValidInput() {
+    const { name, email, number, date } = formData.generalForm;
+    if (name && email && number) {
+      return true;
+    } else {
+      alert("โปรดกรอกชื่อ , อีเมล์, เบอร์โทร");
+      return false;
+    }
+  }
+
   const navigate = useNavigate();
 
   const onClickHandler = () => {
+    if (isValidInput()) {
+      navigate("PlacePage");
+    } else {
+      return 0;
+    }
+  };
+
+  const onSkipHandler = () => {
     navigate("PlacePage");
   };
 
   return (
     <>
       <div className="m-5 flex w-[350px] justify-center rounded-[15px] bg-custom-orange p-10 shadow-2xl">
-        <form className="flex flex-col w-full gap-5">
+        <form className="flex w-full flex-col gap-5">
           <div>
             <label className="text-white" htmlFor="name">
               ชื่อ-นามสกุล / ชื่อบริษัท *
@@ -104,7 +122,7 @@ const GeneralForm = () => {
               <br />
             </div>
           </div>
-          <div className="flex justify-end gap-5 mt-5">
+          <div className="mt-5 flex justify-end gap-5">
             <button
               className="rounded-[15px] bg-custom-brown px-5 text-white shadow-2xl"
               onClick={onClickHandler}
