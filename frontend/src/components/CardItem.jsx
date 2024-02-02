@@ -49,7 +49,7 @@ const CardItem = ({ id, url, img, body, price, isFixedPackage, dataType }) => {
           onClick={onClickHandler}
         />
         <h3>{price && <h3>{price.toLocaleString()} บาท</h3>}</h3>
-        <p>{body}</p>
+        <p className="text-center">{body}</p>
       </div>
     </>
   );

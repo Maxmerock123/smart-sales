@@ -12,13 +12,13 @@ const OutsideServices = () => {
 
   return (
     <>
-      <h3 className="m-8 font-bold text-center">เลือกประเภทงาน</h3>
+      <h3 className="m-8 font-bold text-center">เลือกประเภทการจัดงาน</h3>
       <div className="flex justify-center">
         <div className="mt-10 flex w-[80%] flex-wrap justify-between  gap-10">
           <CardItem
             id="Meeting"
             img={meetingImg}
-            body={"ประชุม / สัมมนา / อบรม"}
+            body={"ประชุม/สัมมนา/อบรม"}
             url="Meeting"
           />
           <CardItem
