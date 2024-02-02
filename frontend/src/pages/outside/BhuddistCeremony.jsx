@@ -34,7 +34,7 @@ const BhuddistCeremony = () => {
             url={"/summaryPage"}
             price={6900}
             isFixedPackage={true}
-            body="อุปกรณ์พิธีสงฆ์ + ปิ่นโตถวายพระ "
+            body="อุปกรณ์พิธีสงฆ์ + ชุดอาหารถวายพระสงฆ์ "
           />
           <CardItem
             id="outsideBhuddistCeremony2"
@@ -42,7 +42,7 @@ const BhuddistCeremony = () => {
             url={"/summaryPage"}
             price={7900}
             isFixedPackage={true}
-            body="อุปกรณ์พิธีสงฆ์ + ขันโตกถวายพระ  "
+            body="อุปกรณ์พิธีสงฆ์ + อาหารถวายพระสงฆ์แบบขันโตก  "
           />
           <CardItem
             id="outsideBhuddistCeremony3"
@@ -50,7 +50,7 @@ const BhuddistCeremony = () => {
             url={"/summaryPage"}
             price={11900}
             isFixedPackage={true}
-            body="อุปกรณ์พิธีสงฆ์ + ขันโตกถวายพระ + ไทยบุฟเฟต์สำหรับแขก"
+            body="อุปกรณ์พิธีสงฆ์ + อาหารถวายพระสงฆ์แบบขันโตก  + ไทยบุฟเฟต์"
           />
           <CardItem
             id="outsideBhuddistCeremony4"
@@ -58,7 +58,7 @@ const BhuddistCeremony = () => {
             url={"/summaryPage"}
             price={15900}
             isFixedPackage={true}
-            body="อุปกรณ์พิธีสงฆ์ + ปิ่นโตถวายพระ + ไทยบุฟเฟต์พรีเมี่ยมสำหรับแขก "
+            body="อุปกรณ์พิธีสงฆ์ + อาหารถวายพระสงฆ์แบบขันโตก  + ไทยบุฟเฟต์พรีเมี่ยม "
           />
         </div>
       </div>

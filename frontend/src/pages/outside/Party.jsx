@@ -10,15 +10,23 @@ const Party = () => {
 
   return (
     <>
-      <h3 className="m-8 text-center font-bold">เลือก Package</h3>
+      <h3 className="m-8 text-center font-bold">เลือกแพ็คเกจ</h3>
       <div className="flex justify-center">
         <div className="mt-10 flex w-[80%] flex-wrap justify-center gap-10">
           <CardItem
             id="outsideMeetingCoffeeBreak"
-            body="งานเลี้ยงสังสรรค์ + ค็อกเทลสำหรับแขก"
+            body="แพ็คเกจงานเลี้ยงสังสรรค์ + อาหารเมนูค็อกเทล"
             img={privateParty}
             url={"/summaryPage"}
             price={19900}
+            isFixedPackage={true}
+          />
+          <CardItem
+            id="outsideMeetingCoffeeBreak"
+            body="งานเลี้ยงสังสรรค์ + อาหารเมนูเซ็ตตะวันตก"
+            img={""}
+            url={"/summaryPage"}
+            price={27900}
             isFixedPackage={true}
           />
         </div>
