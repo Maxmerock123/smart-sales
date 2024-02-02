@@ -18,8 +18,8 @@ const GeneralForm = () => {
   };
 
   function isValidInput() {
-    const { name, email, number, people } = formData.generalForm;
-    if (name && email && number && people) {
+    const { name, email, number, people, address } = formData.generalForm;
+    if (name && email && number && people && address) {
       setFormData({
         ...formData,
         generalForm: {
@@ -106,6 +106,20 @@ const GeneralForm = () => {
               onChange={handleChange}
             />
             <br />
+            <br />
+            <label className="text-white" htmlFor="name">
+              หมู่บ้าน / ชื่ออาคาร
+            </label>
+            <br />
+            <input
+              className="h-8 min-w-[250px] rounded-[15px] shadow-2xl"
+              type="text"
+              id="address"
+              name="address"
+              value={formData.generalForm.address}
+              onChange={handleChange}
+            />
+            <br />
           </div>
           <div className="flex justify-between gap-5">
             <div>
@@ -121,7 +135,7 @@ const GeneralForm = () => {
                 value={formData.generalForm.people}
                 onChange={handleChange}
               />
-              <br />
+              <br />{" "}
             </div>
             <div>
               <label className="text-white" htmlFor="name">
