@@ -18,7 +18,7 @@ const OutsideServices = () => {
           <CardItem
             id="Meeting"
             img={meetingImg}
-            body={"ประชุม/สัมมนา/อบรม"}
+            body={"งานประชุม/สัมมนา/อบรม"}
             url="Meeting"
           />
           <CardItem
@@ -36,7 +36,7 @@ const OutsideServices = () => {
           <CardItem
             id="BhuddistCeremony"
             img={ceremonyImg}
-            body={"งานทำบุญ / พิธีสงฆ์ "}
+            body={"งานทำบุญบ้าน / ออฟฟิศ / พิธีสงฆ์ "}
             url="BhuddistCeremony"
           />
           <CardItem

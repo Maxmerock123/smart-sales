@@ -21,7 +21,7 @@ const InsideServices = () => {
           <CardItem
             id="Meeting"
             img={meetingImg}
-            body={"ประชุม / สัมมนา / อบรม"}
+            body={"งานประชุม / สัมมนา / อบรม"}
             url="Meeting"
             dataType="eventType"
           />

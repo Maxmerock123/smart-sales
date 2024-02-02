@@ -41,15 +41,15 @@ const CardItem = ({ id, url, img, body, price, isFixedPackage, dataType }) => {
 
   return (
     <>
-      <div className="flex max-w-[130px] flex-col items-center">
+      <div className="flex max-w-[150px] flex-col items-center">
         <img
           src={img}
           id={id}
           className="aspect-square min-w-[130px] rounded-[15px] bg-white object-scale-down object-left shadow-lg"
           onClick={onClickHandler}
         />
-        <h3>{price && <h3>{price.toLocaleString()} บาท</h3>}</h3>
         <p className="text-center">{body}</p>
+        <h3>{price && <h3>{price.toLocaleString()} บาท</h3>}</h3>
       </div>
     </>
   );

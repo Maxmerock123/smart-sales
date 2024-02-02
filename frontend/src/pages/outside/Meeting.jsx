@@ -26,7 +26,7 @@ const Meeting = () => {
 
   return (
     <>
-      <h3 className="m-8 font-bold text-center">เลือก Package</h3>
+      <h3 className="m-8 text-center font-bold">เลือกประเภทอาหาร</h3>
       <div className="flex justify-center">
         <div className="mt-10 flex w-[80%] flex-wrap justify-between gap-10">
           <CardItem
@@ -39,10 +39,10 @@ const Meeting = () => {
           />
           <CardItem
             id="outsideMeetingThaiBuffet"
-            body="ไทยบุฟเฟต์"
+            body="บุฟเฟต์อาหารไทย"
             img={thaiBuffetImg}
             url={"/summaryPage"}
-            price={280}
+            price={380}
             isFixedPackage={false}
           />
           <CardItem
@@ -50,21 +50,29 @@ const Meeting = () => {
             img={cocktailImg}
             body="ค็อกเทล"
             url={"/summaryPage"}
-            price={400}
+            price={480}
             isFixedPackage={false}
           />
           <CardItem
-            id="outsideMeetingWesternSet"
-            img={westernSetImg}
-            body="อาหารนานาชาติ"
+            id="outsideMeetingCocktail"
+            img=""
+            body="บุฟเฟต์อาหารไทย-ตะวันตก"
             url={"/summaryPage"}
             price={580}
             isFixedPackage={false}
           />
           <CardItem
+            id="outsideMeetingWesternSet"
+            img={westernSetImg}
+            body="อาหารเซ็ตตะวันตก"
+            url={"/summaryPage"}
+            price={680}
+            isFixedPackage={false}
+          />
+          <CardItem
             id="outsideMeetingChineseTable"
             img={chineseTableImg}
-            body="โต๊ะจีน"
+            body="โต๊ะจีน-ไทย"
             url={"/summaryPage"}
             price={4900}
             isFixedPackage={false}
