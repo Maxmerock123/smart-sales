@@ -12,7 +12,7 @@ const OutsideServices = () => {
 
   return (
     <>
-      <h3 className="m-8 text-center font-bold">เลือกประเภทงาน</h3>
+      <h3 className="m-8 font-bold text-center">เลือกประเภทงาน</h3>
       <div className="flex justify-center">
         <div className="mt-10 flex w-[80%] flex-wrap justify-between  gap-10">
           <CardItem
@@ -38,6 +38,18 @@ const OutsideServices = () => {
             img={ceremonyImg}
             body={"งานทำบุญ / พิธีสงฆ์ "}
             url="BhuddistCeremony"
+          />
+          <CardItem
+            id="ProductLaunching"
+            img=""
+            body={"งานเปิดตัวสินค้า / เปิดกิจการ"}
+            url="ProductLaunching"
+          />
+          <CardItem
+            id="EquipmentRental"
+            img=""
+            body={"เช่าอุปกรณ์จัดเลี้ยง"}
+            url="EquipmentRental"
           />
           <CardItem id="OtherForm" body="อื่นๆ" img={logo} url={"/OtherForm"} />
         </div>
