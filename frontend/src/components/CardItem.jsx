@@ -48,9 +48,7 @@ const CardItem = ({ id, url, img, body, price, isFixedPackage, dataType }) => {
           className="aspect-square min-w-[130px] rounded-[15px] bg-white object-scale-down object-left shadow-lg"
           onClick={onClickHandler}
         />
-        <h3>
-          {price} {price && <>บาท</>}
-        </h3>
+        <h3>{price && <h3>{price.toLocaleString()} บาท</h3>}</h3>
         <p>{body}</p>
       </div>
     </>
