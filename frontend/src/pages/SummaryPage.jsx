@@ -23,7 +23,7 @@ const SummaryPage = () => {
               <td className="px-2 py-2 font-bold">เบอร์โทรศัพท์:</td>
               <td className="px-2 py-2">
                 {formData.generalForm.number
-                  ? formData.generalForm.number.toLocaleString()
+                  ? formData.generalForm.number
                   : "-"}
               </td>
             </tr>
@@ -50,8 +50,11 @@ const SummaryPage = () => {
             <tr>
               <td className="px-2 py-2 font-bold">สถานที่จัดงาน:</td>
               <td className="px-2 py-2">
-                {formData.generalForm.place ? formData.generalForm.place : "-"}
-              </td>
+                {formData.generalForm.place ? formData.generalForm.place : "-"}{" "}
+                {formData.generalForm.address
+                  ? formData.generalForm.address
+                  : "-"}
+              </td>{" "}
             </tr>
             <tr>
               <td className="px-2 py-2 font-bold">ประเภทของงาน:</td>
@@ -68,7 +71,7 @@ const SummaryPage = () => {
               <td className="px-2 py-2">
                 {!formData.generalForm.price
                   ? "ยังไม่สามารถประเมินราคาได้ เนื่องจากยังไม่ทราบจำนวนผู้เข้าร่วมงาน"
-                  : formData.generalForm.price + " บาท"}{" "}
+                  : formData.generalForm.price.toLocaleString() + " บาท"}{" "}
               </td>
             </tr>
           </tbody>

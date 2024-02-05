@@ -8,12 +8,13 @@ const PlacePage = () => {
   const { formData, setFormData } = useContext(FormDataContext);
 
   const navigate = useNavigate();
+
   function onInside() {
     console.log("clicked inside");
     setFormData({
       ...formData,
-      eventForm: {
-        ...formData.eventForm,
+      generalForm: {
+        ...formData.generalForm,
         place: "จัดงานในอิมแพ็ค เมืองทองธานี",
       },
     });
@@ -25,8 +26,8 @@ const PlacePage = () => {
     console.log("clicked outside");
     setFormData({
       ...formData,
-      eventForm: {
-        ...formData.eventForm,
+      generalForm: {
+        ...formData.generalForm,
         place: "จัดงานนอกสถานที่",
       },
     });
