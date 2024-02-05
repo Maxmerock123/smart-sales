@@ -47,6 +47,7 @@ const GeneralForm = () => {
   };
 
   const onSkipHandler = () => {
+    alert("clicked on skip");
     setFormData({
       ...formData,
       generalForm: {
@@ -161,7 +162,7 @@ const GeneralForm = () => {
               ข้าม
             </button>
             <button
-              className="rounded-[15px] bg-custom-brown px-5 text-white shadow-2xl"
+              className="rounded-[15px] bg-custom-brown px-5  text-white shadow-2xl"
               onClick={onSumbitHandler}
             >
               ถัดไป
