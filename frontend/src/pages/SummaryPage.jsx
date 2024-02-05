@@ -1,15 +1,32 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import FormDataContext from "../FormDataContext";
+import html2canvas from "html2canvas";
 
 const SummaryPage = () => {
   const { formData } = useContext(FormDataContext);
+
+  const imageContainerRef = useRef(null);
+
+  const generateImage = () => {
+    html2canvas(imageContainerRef.current).then((canvas) => {
+      const dataUrl = canvas.toDataURL("image/png");
+      const link = document.createElement("a");
+      link.href = dataUrl;
+      link.download = "summary_page_impact_catering.png";
+      link.click();
+    });
+  };
+
   function onClickHandler() {
     alert("clicked sent to sales");
   }
 
   return (
     <div className="flex flex-col items-center justify-center gap-5">
-      <div className="w-[400px] rounded-lg bg-white p-3 shadow">
+      <div
+        className="w-[400px] rounded-lg bg-white p-3 shadow"
+        ref={imageContainerRef}
+      >
         <h2 className="m-3 text-2xl font-bold">ใบสรุปรายการ</h2>
         <table className="table-auto ">
           <tbody className="">
@@ -87,9 +104,9 @@ const SummaryPage = () => {
       <div className="flex w-[350px] justify-end">
         <button
           className="rounded-[15px] bg-custom-brown px-5 text-white shadow-2xl"
-          onClick={onClickHandler}
+          onClick={generateImage}
         >
-          ส่งข้อมูลให้ฝ่ายขาย
+          บันทึกใบสรุปรายการ
         </button>
       </div>
     </div>

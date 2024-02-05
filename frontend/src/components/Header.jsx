@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Header.module.css";
-import logo from "../../public/impact-logo.png";
+import logo from "../public/impact-logo.png";
 import { IoIosArrowBack } from "react-icons/io";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
