@@ -47,7 +47,6 @@ const GeneralForm = () => {
   };
 
   const onSkipHandler = () => {
-    alert("clicked on skip");
     setFormData({
       ...formData,
       generalForm: {
@@ -106,12 +105,11 @@ const GeneralForm = () => {
               value={formData.generalForm.email}
               onChange={handleChange}
             />
-            <br />
-            <br />
+          </div>
+          <div>
             <label className="text-white" htmlFor="name">
               หมู่บ้าน / ชื่ออาคาร
             </label>
-            <br />
             <input
               className="h-8 min-w-[250px] rounded-[15px] shadow-2xl"
               type="text"
@@ -120,7 +118,6 @@ const GeneralForm = () => {
               value={formData.generalForm.address}
               onChange={handleChange}
             />
-            <br />
           </div>
           <div className="flex justify-between gap-5">
             <div>
@@ -154,15 +151,15 @@ const GeneralForm = () => {
               <br />
             </div>
           </div>
-          <div className="mt-5 flex justify-end gap-5">
+          <div className="m-5 flex justify-end gap-10">
             <button
-              className="rounded-[15px] bg-custom-brown px-5 text-white shadow-2xl"
+              className="h-[50px] w-[100px] rounded-[15px] bg-custom-brown text-white shadow-2xl"
               onClick={onSkipHandler}
             >
               ข้าม
             </button>
             <button
-              className="rounded-[15px] bg-custom-brown px-5  text-white shadow-2xl"
+              className="w-[100px] rounded-[15px] bg-custom-brown px-5  text-white shadow-2xl"
               onClick={onSumbitHandler}
             >
               ถัดไป

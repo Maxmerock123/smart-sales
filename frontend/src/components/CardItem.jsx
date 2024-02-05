@@ -41,11 +41,11 @@ const CardItem = ({ id, url, img, body, price, isFixedPackage, dataType }) => {
 
   return (
     <>
-      <div className="flex max-w-[150px] flex-col items-center">
+      <div className="flex max-w-[120px] flex-col items-center">
         <img
           src={img}
           id={id}
-          className="aspect-square min-w-[130px] rounded-[15px] bg-white object-scale-down object-left shadow-lg"
+          className="aspect-square max-w-[120px] rounded-[15px] bg-white object-scale-down object-left shadow-lg"
           onClick={onClickHandler}
         />
         <p className="text-center">{body}</p>
