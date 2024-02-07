@@ -2,6 +2,9 @@ import wedding1 from "../../img/outside/wedding/wedding1.jpg";
 import wedding2 from "../../img/outside/wedding/wedding2.jpg";
 import wedding3 from "../../img/outside/wedding/wedding3.jpg";
 import wedding4 from "../../img/outside/wedding/wedding4.jpg";
+import wedding5 from "../../img/outside/wedding/wedding5.jpg";
+import wedding6 from "../../img/outside/wedding/wedding6.jpg";
+
 import React, { useContext } from "react";
 import CardItem from "../../components/CardItem";
 
@@ -29,7 +32,7 @@ const Wedding = () => {
           />
           <CardItem
             id="outsideWedding3"
-            img={wedding3}
+            img={wedding5}
             body="พิธีหมั้น + ยกน้ำชา + หลั่งน้ำพระพุทธมนต์ + ไทยบุฟเฟต์"
             url={"/summaryPage"}
             price={49900}
@@ -37,7 +40,7 @@ const Wedding = () => {
           />
           <CardItem
             id="outsideWedding4"
-            img={wedding4}
+            img={wedding6}
             body="พิธีฉลองมงคลสมรส + อาหารจัดเลี้ยง"
             url={"/summaryPage"}
             price={54500}
