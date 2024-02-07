@@ -7,6 +7,7 @@ import coffeeBreakImg from "../../img/food/coffeeBreak.jpg";
 import westernSetImg from "../../img/food/westernSet.jpg";
 import thaiBuffetImg from "../../img/food/thaiBuffet.jpg";
 import CardItem from "../../components/CardItem";
+import thaiWesternBuffetImg from "../../img/food/thaiWesternBuffet.png";
 
 const Meeting = () => {
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ const Meeting = () => {
 
   return (
     <>
-      <h3 className="m-8 font-bold text-center">เลือกประเภทอาหาร</h3>
+      <h3 className="m-8 text-center font-bold">เลือกประเภทอาหาร</h3>
       <div className="flex justify-center">
         <div className="mt-10 flex w-[80%] flex-wrap justify-between gap-10">
           <CardItem
@@ -54,8 +55,8 @@ const Meeting = () => {
             isFixedPackage={false}
           />
           <CardItem
-            id="outsideMeetingCocktail"
-            img=""
+            id="outsideMeetingThaiWesternBuffet"
+            img={thaiWesternBuffetImg}
             body="บุฟเฟต์อาหารไทย-ตะวันตก"
             url={"/summaryPage"}
             price={580}

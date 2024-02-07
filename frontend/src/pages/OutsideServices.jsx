@@ -1,5 +1,5 @@
 import React from "react";
-import meetingImg from "../img/img-btn-meeting.png";
+import meetingImg from "../img/img-btn-meeting.jpg";
 import partyImg from "../img/img-btn-party.png";
 import ceremonyImg from "../img/img-btn-bhudda.png";
 import weddingImg from "../img/img-btn-wedding.png";

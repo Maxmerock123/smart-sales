@@ -3,6 +3,8 @@ import privateParty from "../../img/food/privateParty.jpg";
 import FormDataContext from "../../FormDataContext";
 import { useNavigate } from "react-router-dom";
 import CardItem from "../../components/CardItem";
+import party1Img from "../../img/outside/party/party1.jpg";
+import party2Img from "../../img/outside/party/party2.jpg";
 
 const Party = () => {
   const navigate = useNavigate();
@@ -16,7 +18,7 @@ const Party = () => {
           <CardItem
             id="outsideMeetingCoffeeBreak"
             body="แพ็คเกจงานเลี้ยงสังสรรค์ + อาหารเมนูค็อกเทล"
-            img={privateParty}
+            img={party1Img}
             url={"/summaryPage"}
             price={19900}
             isFixedPackage={true}
@@ -24,7 +26,7 @@ const Party = () => {
           <CardItem
             id="outsideMeetingCoffeeBreak"
             body="งานเลี้ยงสังสรรค์ + อาหารเมนูเซ็ตตะวันตก"
-            img={""}
+            img={party2Img}
             url={"/summaryPage"}
             price={27900}
             isFixedPackage={true}

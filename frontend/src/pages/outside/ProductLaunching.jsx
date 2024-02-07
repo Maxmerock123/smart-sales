@@ -7,6 +7,7 @@ import coffeeBreakImg from "../../img/food/coffeeBreak.jpg";
 import westernSetImg from "../../img/food/westernSet.jpg";
 import thaiBuffetImg from "../../img/food/thaiBuffet.jpg";
 import CardItem from "../../components/CardItem";
+import thaiWesternBuffetImg from "../../img/food/thaiWesternBuffet.png";
 
 const ProductLaunching = () => {
   const navigate = useNavigate();
@@ -54,8 +55,8 @@ const ProductLaunching = () => {
             isFixedPackage={false}
           />
           <CardItem
-            id="outsideMeetingCocktail"
-            img=""
+            id="outsideMeetingThaiWesternBuffet"
+            img={thaiWesternBuffetImg}
             body="บุฟเฟต์อาหารไทย-ตะวันตก"
             url={"/summaryPage"}
             price={580}

@@ -68,7 +68,9 @@ const CardItem = ({
           onClick={onClickHandler}
         />
         <p className="text-center">{body}</p>
-        <h3>{price && <h3>{price.toLocaleString()} บาท</h3>}</h3>
+        <h3>
+          {price && <h3 className="font-bold">{price.toLocaleString()} บาท</h3>}
+        </h3>
       </div>
     </>
   );
