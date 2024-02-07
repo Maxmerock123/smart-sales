@@ -26,6 +26,7 @@ import EngagementCeremony from "./pages/inside/EngagementCeremony";
 import WeddingCeremony from "./pages/inside/WeddingCeremony";
 import Footer from "./components/Footer";
 import Redirect from "./components/Redirect";
+import ProductLaunching from "./pages/outside/ProductLaunching";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -72,6 +73,10 @@ function App() {
               <Route
                 path="PlacePage/OutsideServices/BhuddistCeremony"
                 element={<BhuddistCeremony />}
+              />
+              <Route
+                path="PlacePage/OutsideServices/ProductLaunching"
+                element={<ProductLaunching />}
               />
 
               <Route

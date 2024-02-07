@@ -2,7 +2,16 @@ import React, { useContext } from "react";
 import FormDataContext from "../FormDataContext";
 import { useNavigate } from "react-router-dom";
 
-const CardItem = ({ id, url, img, body, price, isFixedPackage, dataType }) => {
+const CardItem = ({
+  id,
+  url,
+  directUrl,
+  img,
+  body,
+  price,
+  isFixedPackage,
+  dataType,
+}) => {
   const navigate = useNavigate();
   const { formData, setFormData } = useContext(FormDataContext);
 
@@ -36,7 +45,11 @@ const CardItem = ({ id, url, img, body, price, isFixedPackage, dataType }) => {
         },
       });
     }
-    navigate(url);
+    if (directUrl) {
+      window.location.replace(directUrl);
+    } else {
+      navigate(url);
+    }
   }
 
   return (
