@@ -77,9 +77,7 @@ const SummaryPage = () => {
               <td className="px-2 py-2 font-bold">ประเภทของงาน:</td>
               <td className="px-2 py-2">
                 {formData.generalForm.eventType}
-                {" ("}
                 {formData.generalForm.eventName}
-                {"  )"}
               </td>
             </tr>
             <br></br>

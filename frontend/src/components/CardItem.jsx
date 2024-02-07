@@ -15,10 +15,16 @@ const CardItem = ({
   const navigate = useNavigate();
   const { formData, setFormData } = useContext(FormDataContext);
 
+  // Price Finding
   let people = formData.generalForm.people;
   function findPrice(price, people) {
     if (isFixedPackage == false) {
-      let result = price * people;
+      let result = 0;
+      if (people <= 30) {
+        result = price * 30;
+      } else {
+        result = price * people;
+      }
       return result;
     } else {
       return price;
