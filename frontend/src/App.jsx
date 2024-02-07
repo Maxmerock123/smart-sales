@@ -5,7 +5,7 @@ import style from "./App.module.css";
 import Header from "./components/Header";
 import GeneralForm from "./components/GeneralForm";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import FormPage from "./pages/FormPage";
 import ServicesPage from "./pages/ServicesPage";
 import SummaryPage from "./pages/SummaryPage";
@@ -47,7 +47,7 @@ function App() {
     <>
       <FormDataContext.Provider value={{ formData, setFormData }}>
         <div className="mb-auto">
-          <BrowserRouter>
+          <HashRouter>
             <Header />
             <Routes>
               <Route path="/smart-sales" element={<Redirect />} />
@@ -107,7 +107,7 @@ function App() {
               <Route path="/OtherForm" element={<OtherForm />} />
               <Route path="/SummaryPage" element={<SummaryPage />} />
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </div>
       </FormDataContext.Provider>
     </>
