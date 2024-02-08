@@ -10,40 +10,42 @@ import cocktail from "../../img/food/cocktail.jpg";
 const WeddingCeremony = () => {
   return (
     <>
-      <h3 className="m-8 font-bold text-center">เลือกแพ็คเกจ</h3>
-      <div className="flex flex-wrap justify-center gap-10 mt-10">
-        <CardItem
-          id="insideWeddingThaiChineseTable"
-          img={thaiBuffet}
-          price={10500}
-          isFixedPackage={true}
-          url={"/summaryPage"}
-          body="โต๊ะไทยจีน"
-        />
-        <CardItem
-          id="insideWeddingCocktail"
-          img={cocktail}
-          url={"/summaryPage"}
-          price={990}
-          isFixedPackage={false}
-          body="ค็อกเทล"
-        />
-        <CardItem
-          id="insideWeddingInternationalBuffet"
-          img={internationalBuffet}
-          url={"/summaryPage"}
-          price={990}
-          isFixedPackage={false}
-          body="บุฟเฟต์อาหารไทยและเวสเทิร์น"
-        />
-        <CardItem
-          id="insideWeddingChineseTable"
-          img={chineseTable}
-          url={"/summaryPage"}
-          price={10900}
-          isFixedPackage={true}
-          body="โต๊ะจีน (สำหรับ 10 ท่าน)"
-        />
+      <h3 className="m-8 text-center font-bold">เลือกแพ็คเกจ</h3>
+      <div className="flex justify-center">
+        <div className="mt-3 flex w-[80%] flex-wrap justify-between gap-5">
+          <CardItem
+            id="insideWeddingThaiChineseTable"
+            img={thaiBuffet}
+            price={10500}
+            isFixedPackage={true}
+            url={"/summaryPage"}
+            body="โต๊ะไทยจีน"
+          />
+          <CardItem
+            id="insideWeddingCocktail"
+            img={cocktail}
+            url={"/summaryPage"}
+            price={990}
+            isFixedPackage={false}
+            body="ค็อกเทล"
+          />
+          <CardItem
+            id="insideWeddingInternationalBuffet"
+            img={internationalBuffet}
+            url={"/summaryPage"}
+            price={990}
+            isFixedPackage={false}
+            body="บุฟเฟต์อาหารไทยและเวสเทิร์น"
+          />
+          <CardItem
+            id="insideWeddingChineseTable"
+            img={chineseTable}
+            url={"/summaryPage"}
+            price={10900}
+            isFixedPackage={true}
+            body="โต๊ะจีน (สำหรับ 10 ท่าน)"
+          />
+        </div>
       </div>
     </>
   );

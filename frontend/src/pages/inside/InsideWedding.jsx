@@ -10,25 +10,24 @@ const InsideWedding = () => {
   const navigate = useNavigate();
   const { formData, setFormData } = useContext(FormDataContext);
 
-
   return (
     <>
-      <h3 className="m-8 font-bold text-center">เลือกแพ็คเกจ</h3>
-      <div className="flex flex-wrap justify-center gap-10 mt-10">
-        <CardItem
-          img={engage0}
-          url="EngagementCeremony"
-          body="พิธีหมั้น"
-          id="EngagementCeremony"
-
-        />
-        <CardItem
-          img={wedding0}
-          body="งานเลี้ยง ฉลองมงคลสมรส"
-          url="WeddingCeremony"
-          id="WeddingCeremony"
-
-        />
+      <h3 className="m-8 text-center font-bold">เลือกแพ็คเกจ</h3>
+      <div className="flex justify-center">
+        <div className="mt-3 flex w-[80%] flex-wrap justify-between gap-5">
+          <CardItem
+            img={engage0}
+            url="EngagementCeremony"
+            body="พิธีหมั้น"
+            id="EngagementCeremony"
+          />
+          <CardItem
+            img={wedding0}
+            body="งานเลี้ยง ฉลองมงคลสมรส"
+            url="WeddingCeremony"
+            id="WeddingCeremony"
+          />
+        </div>
       </div>
     </>
   );

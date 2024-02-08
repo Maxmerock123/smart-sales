@@ -13,7 +13,7 @@ const Wedding = () => {
     <>
       <h3 className="m-8 text-center font-bold">เลือกแพ็คเกจ</h3>
       <div className="flex justify-center">
-        <div className="mt-10 flex w-[80%] flex-wrap justify-between gap-10">
+        <div className="mt-3 flex w-[80%] flex-wrap justify-between gap-5">
           <CardItem
             id="outsideWedding1"
             img={wedding1}
