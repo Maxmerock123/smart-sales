@@ -25,7 +25,7 @@ const InsideParty = () => {
 
   return (
     <>
-      <h3 className="m-8 text-center font-bold">เลือกแพ็คเกจ</h3>
+      <h3 className="m-8 font-bold text-center">เลือกแพ็คเกจ</h3>
       <div className="flex justify-center">
         <div className="mt-3 flex w-[80%] flex-wrap justify-between gap-5">
           <CardItem
@@ -59,6 +59,7 @@ const InsideParty = () => {
             price={8900}
             body="โต๊ะจีน (สำหรับ 10 ท่าน)"
             isFixedPackage={false}
+            
           />
         </div>
       </div>

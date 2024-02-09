@@ -31,9 +31,11 @@ const InsideServices = () => {
           <CardItem
             id="Party"
             img={partyImg}
-            url="Party"
-            body={"งานเลี้ยงสังสรรค์"}
-            dataType="eventType"
+            url={"/summaryPage"}
+            body={"งานเลี้ยงสังสรรค์ (ราคาอิงตามบุฟเฟต์อาหารไทย)"}
+            price={700}
+            isFixedPackage={false}
+            isHidePrice={true}
           />
           <CardItem
             id="Wedding"
