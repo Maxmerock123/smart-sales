@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center gap-2 h-28 bg-gradient-to-b from-custom-yellow to-transparent ">
+      <div className="flex h-28 items-center justify-center gap-2 bg-gradient-to-b from-custom-yellow to-transparent ">
         <div className="mb-8 mt-[30px] flex items-center justify-center gap-[50px]">
           <p className="" onClick={onBackHandler}>
             ย้อนกลับ

@@ -11,6 +11,8 @@ const CardItem = ({
   price,
   isFixedPackage,
   dataType,
+  isHidePrice,
+  place,
 }) => {
   const navigate = useNavigate();
   const { formData, setFormData } = useContext(FormDataContext);
@@ -24,7 +26,7 @@ const CardItem = ({
       if (people == 0) {
         console.log("case 0");
         return 0;
-      } else if (people <= 30) {
+      } else if (people <= 30 && place != "inside") {
         console.log("case1");
         result = price * 30;
       } else {
@@ -73,8 +75,13 @@ const CardItem = ({
           onClick={onClickHandler}
         />
         <p className="text-center">{body}</p>
+
         <h3>
-          {price && <h3 className="font-bold">{price.toLocaleString()} บาท</h3>}
+          {isHidePrice
+            ? " "
+            : price && (
+                <h3 className="font-bold">{price.toLocaleString()} บาท</h3>
+              )}
         </h3>
       </div>
     </>
