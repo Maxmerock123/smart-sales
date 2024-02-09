@@ -85,7 +85,7 @@ const SummaryPage = () => {
               <td className="px-2 py-2 font-bold ">ราคาโดยประมาณ:</td>
               <td className="px-2 py-2">
                 {!formData.generalForm.price
-                  ? "ยังไม่สามารถประเมินราคาได้ เนื่องจากยังไม่ทราบจำนวนผู้เข้าร่วมงาน"
+                  ? "ยังไม่สามารถประเมินราคาได้ โปรดติดต่อฝ่ายขายด้วยข้อมูลนี้แล้วจะทำการประเมินราคาให้ค่ะ"
                   : formData.generalForm.price.toLocaleString() + " บาท"}{" "}
               </td>
             </tr>

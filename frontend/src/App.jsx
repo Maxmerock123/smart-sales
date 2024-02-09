@@ -27,6 +27,7 @@ import WeddingCeremony from "./pages/inside/WeddingCeremony";
 import Footer from "./components/Footer";
 import Redirect from "./components/Redirect";
 import ProductLaunching from "./pages/outside/ProductLaunching";
+import Concert from "./pages/inside/Concert";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -102,6 +103,10 @@ function App() {
               <Route
                 path="PlacePage/InsideServices/Wedding/WeddingCeremony"
                 element={<WeddingCeremony />}
+              />
+              <Route
+                path="PlacePage/InsideServices/Concert"
+                element={<Concert />}
               />
 
               <Route path="/OtherForm" element={<OtherForm />} />
