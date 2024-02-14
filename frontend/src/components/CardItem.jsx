@@ -67,11 +67,11 @@ const CardItem = ({
 
   return (
     <>
-      <div className="flex max-w-[120px] flex-col items-center">
+      <div className="flex max-w-[120px] flex-col items-center md:w-[30vh]">
         <img
           src={img}
           id={id}
-          className="aspect-square max-w-[130px] rounded-[15px] bg-white object-scale-down object-left shadow-lg"
+          className="aspect-square max-w-[130px] rounded-[15px] bg-white object-scale-down object-left shadow-lg md:w-[30vh]"
           onClick={onClickHandler}
         />
         <p className="text-center">{body}</p>

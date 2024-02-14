@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
-import meetingImg from "../img/img-btn-meeting.png";
-import partyImg from "../img/img-btn-party.png";
-import ceremonyImg from "../img/img-btn-bhudda.png";
-import weddingImg from "../img/img-btn-wedding.png";
+import meetingImg from "../img/inside/new-icon/inside-meeting.jpg";
+import partyImg from "../img/inside/new-icon/inside-party.jpg";
+import ceremonyImg from "../img/inside/new-icon/inside-engagement.jpg";
+import weddingImg from "../img/inside/wedding0.jpg";
+import concertImg from "../img/inside/new-icon/inside-concert-arena.jpg";
+
+import logo from "../img/impact-logo-other.png";
 import { useNavigate } from "react-router-dom";
 import CardItem from "../components/CardItem";
-import logo from "../img/impact-logo-other.png";
 import FormDataContext from "../FormDataContext";
 
 const InsideServices = () => {
@@ -46,7 +48,7 @@ const InsideServices = () => {
           />
           <CardItem
             id="Concert"
-            img={logo}
+            img={concertImg}
             url="Concert"
             body={"งานคอนเสิร์ต"}
             dataType="eventType"
