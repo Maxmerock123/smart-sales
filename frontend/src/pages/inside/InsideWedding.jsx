@@ -19,14 +19,14 @@ const InsideWedding = () => {
         <div className="mt-3 flex w-[80%] flex-wrap justify-between gap-5">
           <CardItem
             img={engagementImg}
-            url="EngagementCeremony"
+            url="/summaryPage"
             body="พิธีหมั้น"
             id="EngagementCeremony"
           />
           <CardItem
             img={weddingImg}
             body="งานเลี้ยง ฉลองมงคลสมรส"
-            url="WeddingCeremony"
+            url="/summaryPage"
             id="WeddingCeremony"
           />
         </div>
