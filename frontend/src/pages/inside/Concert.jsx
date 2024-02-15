@@ -14,30 +14,30 @@ const Concert = () => {
       <div className="flex justify-center">
         <div className="mt-3 flex w-[80%] flex-wrap justify-between gap-5">
           <CardItem
-            id="Concert1"
+            id="concertThunderdome"
             img={thunderdomeImg}
-            url={"/PackagePage"}
+            url={"/summaryPage"}
             body="Thunderdome"
             dataType={"concert"}
           />
           <CardItem
-            id="Concert2"
+            id="concertIec"
             img={iecImg}
-            url={"/PackagePage"}
+            url={"/summaryPage"}
             body="IEC"
             dataType={"concert"}
           />
           <CardItem
-            id="Concert3"
+            id="concertArena"
             img={arenaImg}
-            url={"/PackagePage"}
+            url={"/summaryPage"}
             body="Arena"
             dataType={"concert"}
           />
           <CardItem
-            id="Concert4"
+            id="concertChallenger"
             img={challengerImg}
-            url={"/PackagePage"}
+            url={"/summaryPage"}
             body="Challenger"
             dataType={"concert"}
           />

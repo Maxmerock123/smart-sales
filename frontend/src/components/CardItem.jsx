@@ -46,6 +46,7 @@ const CardItem = ({
         ...formData.generalForm,
         eventName: body,
         price: findPrice(price, people),
+        id: id,
       },
     });
 

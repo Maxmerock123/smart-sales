@@ -91,16 +91,31 @@ const SummaryPage = () => {
             </tr>
           </tbody>
         </table>
-        <div className="flex justify-center m-5">
-          <p className="w-[300px] text-center text-xs">
-            *หมายเหตุ* <br />
-            1. กรณีจัดงานภายในอิมแพ็ค เมืองทองธานี ราคาโดยประมาณที่แจ้ง
-            คำนวนจากราคาประชุมเต็มวันและยังไม่รวมภาษีมูลค่าเพิ่ม <br />
-            2. กรณีจัดงานภายในอิมแพ็ค เมืองทองธานี
-            ราคาโดยประมาณที่แจ้งคำนวนจากราคาบุฟเฟต์อาหารไทย <br />
-            3. เงื่อนไขเป็นไปตามที่บริษัทกำหนด <br />
-            4. ฝ่ายขายจะดำเนินการติดต่อกลับโดยเร็วที่สุด
-          </p>
+        <div className="flex items-center justify-center">
+          <div className="my-5 w-[400px] text-center text-xs">
+            <p>* ฝ่ายขายจะติดต่อกลับโดยเร็วที่สุด *</p>
+            <br />
+            <p className="m-3">หมายเหตุ</p>
+            <div>
+              <p className="underline">กรณีจัดงานในอิมแพ็ค เมืองทองธานี</p>
+              <div className="flex flex-wrap flex-start">
+                <p>
+                  • สำหรับงานประชุม ราคาโดยประมาณที่คำนวณจากราคาประชุมเต็มวัน
+                </p>
+                <p>
+                  • สำหรับงานเลี้ยงสังสรรค์
+                  ราคาโดยประมานคำนวณจากราคาบุฟเฟต์อาหารไทย{" "}
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col items-center flex-center">
+              <p className="underline">กรณีจัดงานนอกสถานที่</p>
+              <div className="flex-start flex w-[300px] flex-wrap">
+                <p>• ราคาดังกล่าวเป็นราคาเริ่มต้น และยังไม่รวมค่าขนส่ง</p>
+                <p>• เงื่อนไขเป็นไปตามที่บริษัทกำหนด</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="flex w-[350px] justify-end">

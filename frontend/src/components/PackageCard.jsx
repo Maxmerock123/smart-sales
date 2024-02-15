@@ -1,7 +1,7 @@
 import React from "react";
-import packageMeeting1 from "../img/inside/package/package-meeting-1.jpg";
 
 const PackageCard = (img, linkUrl) => {
+  console.log(img);
   return <img src={img} className="object-contain" />;
 };
 
