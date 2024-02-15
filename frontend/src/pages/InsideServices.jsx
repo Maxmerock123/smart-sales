@@ -4,6 +4,7 @@ import partyImg from "../img/inside/new-icon/inside-party.jpg";
 import ceremonyImg from "../img/inside/new-icon/inside-engagement.jpg";
 import weddingImg from "../img/inside/wedding0.jpg";
 import concertImg from "../img/inside/new-icon/inside-concert-arena.jpg";
+import otherImg from "../img/inside/new-icon/inside-others.jpg";
 
 import logo from "../img/impact-logo-other.png";
 import { useNavigate } from "react-router-dom";
@@ -23,9 +24,9 @@ const InsideServices = () => {
           <CardItem
             id="Meeting"
             img={meetingImg}
-            body={"งานประชุม / สัมมนา / อบรม (ราคาประชุมเต็มวัน)"}
+            body={"งานประชุม / สัมมนา / อบรม"}
             url={"/summaryPage"}
-            price={15000}
+            price={1050}
             isFixedPackage={false}
             isHidePrice={true}
             place={"inside"}
@@ -34,7 +35,7 @@ const InsideServices = () => {
             id="Party"
             img={partyImg}
             url={"/summaryPage"}
-            body={"งานเลี้ยงสังสรรค์ (ราคาอิงตามบุฟเฟต์อาหารไทย)"}
+            body={"งานเลี้ยงสังสรรค์"}
             price={700}
             isFixedPackage={false}
             isHidePrice={true}
@@ -53,7 +54,12 @@ const InsideServices = () => {
             body={"งานคอนเสิร์ต"}
             dataType="eventType"
           />
-          <CardItem id="OtherForm" body="อื่นๆ" img={logo} url="/OtherForm" />
+          <CardItem
+            id="OtherForm"
+            body="อื่นๆ"
+            img={otherImg}
+            url="/OtherForm"
+          />
         </div>
       </div>
     </>

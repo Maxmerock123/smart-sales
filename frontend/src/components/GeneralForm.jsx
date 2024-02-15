@@ -29,7 +29,7 @@ const GeneralForm = () => {
       });
       return true;
     } else {
-      alert("โปรดกรอกชื่อ , อีเมล์, เบอร์โทร และจำนวนแขก");
+      console.log("โปรดกรอกชื่อ , อีเมล์, เบอร์โทร และจำนวนแขก");
       return false;
     }
   }

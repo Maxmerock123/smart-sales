@@ -76,7 +76,7 @@ const SummaryPage = () => {
             <tr>
               <td className="px-2 py-2 font-bold">ประเภทของงาน:</td>
               <td className="px-2 py-2">
-                {formData.generalForm.eventType}
+                {formData.generalForm.eventType}{" "}
                 {formData.generalForm.eventName}
               </td>
             </tr>
@@ -85,17 +85,21 @@ const SummaryPage = () => {
               <td className="px-2 py-2 font-bold ">ราคาโดยประมาณ:</td>
               <td className="px-2 py-2">
                 {!formData.generalForm.price
-                  ? "ยังไม่สามารถประเมินราคาได้ โปรดติดต่อฝ่ายขายด้วยข้อมูลนี้แล้วจะทำการประเมินราคาให้ค่ะ"
+                  ? "ฝ่ายขายจะทำการติดต่อกลับเพื่อแจ้งราคาโดยเร็วที่สุด"
                   : formData.generalForm.price.toLocaleString() + " บาท"}{" "}
               </td>
             </tr>
           </tbody>
         </table>
-        <div className="flex justify-center">
+        <div className="flex justify-center m-5">
           <p className="w-[300px] text-center text-xs">
-            ( *หมายเหตุ ราคานี้ไม่ได้รวมค่าขนส่ง เป็นราคาเริ่มต้นเท่านั้น
-            <br />
-            ฝ่ายขายจะติดต่อกลับไปเพื่อแจ้งราคาจริงให้อีกครั้ง )
+            *หมายเหตุ* <br />
+            1. กรณีจัดงานภายในอิมแพ็ค เมืองทองธานี ราคาโดยประมาณที่แจ้ง
+            คำนวนจากราคาประชุมเต็มวันและยังไม่รวมภาษีมูลค่าเพิ่ม <br />
+            2. กรณีจัดงานภายในอิมแพ็ค เมืองทองธานี
+            ราคาโดยประมาณที่แจ้งคำนวนจากราคาบุฟเฟต์อาหารไทย <br />
+            3. เงื่อนไขเป็นไปตามที่บริษัทกำหนด <br />
+            4. ฝ่ายขายจะดำเนินการติดต่อกลับโดยเร็วที่สุด
           </p>
         </div>
       </div>

@@ -48,7 +48,7 @@ function App() {
     <>
       <FormDataContext.Provider value={{ formData, setFormData }}>
         <div className="mb-auto">
-          <HashRouter>
+          <BrowserRouter basename="/">
             <Header />
             <Routes>
               <Route path="/smart-sales" element={<Redirect />} />
@@ -112,7 +112,7 @@ function App() {
               <Route path="/OtherForm" element={<OtherForm />} />
               <Route path="/SummaryPage" element={<SummaryPage />} />
             </Routes>
-          </HashRouter>
+          </BrowserRouter>
         </div>
       </FormDataContext.Provider>
     </>

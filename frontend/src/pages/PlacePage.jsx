@@ -43,7 +43,7 @@ const PlacePage = () => {
             src={insideImg}
             className="aspect-video w-[300px] rounded-[15px] bg-gray-300 shadow-lg"
           />
-          <p className="text-center">จัดงานเลี้ยงใน อิมแพ็ค เมืองทองธานี</p>
+          <p className="text-center">อิมแพ็ค เมืองทองธานี</p>
         </div>
 
         <div className="flex flex-col justify-center" onClick={onOutside}>
@@ -51,7 +51,7 @@ const PlacePage = () => {
             src={outsideImg}
             className="aspect-video w-[300px] rounded-[15px] bg-gray-300 shadow-lg"
           />
-          <p className="text-center">จัดงานเลี้ยงนอกสถานที่</p>
+          <p className="text-center">นอกสถานที่</p>
         </div>
       </div>
     </>

@@ -5,6 +5,8 @@ import wedding0 from "../../img/inside/wedding0.jpg";
 import engage0 from "../../img/inside/engage0.jpg";
 import React, { useContext } from "react";
 import FormDataContext from "../../FormDataContext";
+import engagementImg from "../../img/inside/new-icon/inside-engagement.jpg";
+import weddingImg from "../../img/inside/new-icon/inside-ceremony.jpg";
 
 const InsideWedding = () => {
   const navigate = useNavigate();
@@ -16,13 +18,13 @@ const InsideWedding = () => {
       <div className="flex justify-center">
         <div className="mt-3 flex w-[80%] flex-wrap justify-between gap-5">
           <CardItem
-            img={engage0}
+            img={engagementImg}
             url="EngagementCeremony"
             body="พิธีหมั้น"
             id="EngagementCeremony"
           />
           <CardItem
-            img={wedding0}
+            img={weddingImg}
             body="งานเลี้ยง ฉลองมงคลสมรส"
             url="WeddingCeremony"
             id="WeddingCeremony"
