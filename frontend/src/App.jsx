@@ -28,6 +28,7 @@ import Footer from "./components/Footer";
 import Redirect from "./components/Redirect";
 import ProductLaunching from "./pages/outside/ProductLaunching";
 import Concert from "./pages/inside/Concert";
+import PackagePage from "./pages/PackagePage";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -108,6 +109,7 @@ function App() {
                 path="PlacePage/InsideServices/Concert"
                 element={<Concert />}
               />
+              <Route path="PackagePage" element={<PackagePage />} />
 
               <Route path="/OtherForm" element={<OtherForm />} />
               <Route path="/SummaryPage" element={<SummaryPage />} />

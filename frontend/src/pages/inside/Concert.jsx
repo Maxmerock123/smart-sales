@@ -5,6 +5,7 @@ import thunderdomeImg from "../../img/inside/new-icon/inside-concert-thunderdome
 import arenaImg from "../../img/inside/new-icon/inside-concert-arena.jpg";
 import iecImg from "../../img/inside/new-icon/inside-concert-iec.jpg";
 import challengerImg from "../../img/inside/new-icon/inside-concert-challenger.jpg";
+import PackageCard from "../../components/PackageCard";
 
 const Concert = () => {
   return (
@@ -15,33 +16,34 @@ const Concert = () => {
           <CardItem
             id="Concert1"
             img={thunderdomeImg}
-            url={"/summaryPage"}
+            url={"/PackagePage"}
             body="Thunderdome"
             dataType={"concert"}
           />
           <CardItem
             id="Concert2"
             img={iecImg}
-            url={"/summaryPage"}
+            url={"/PackagePage"}
             body="IEC"
             dataType={"concert"}
           />
           <CardItem
             id="Concert3"
             img={arenaImg}
-            url={"/summaryPage"}
+            url={"/PackagePage"}
             body="Arena"
             dataType={"concert"}
           />
           <CardItem
             id="Concert4"
             img={challengerImg}
-            url={"/summaryPage"}
+            url={"/PackagePage"}
             body="Challenger"
             dataType={"concert"}
           />
         </div>
       </div>
+      <PackageCard />
     </>
   );
 };
