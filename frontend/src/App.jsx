@@ -28,7 +28,6 @@ import Footer from "./components/Footer";
 import Redirect from "./components/Redirect";
 import ProductLaunching from "./pages/outside/ProductLaunching";
 import Concert from "./pages/inside/Concert";
-import PackageThunderdome from "./pages/inside/PackageThunderdome";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -109,10 +108,6 @@ function App() {
               <Route
                 path="PlacePage/InsideServices/Concert"
                 element={<Concert />}
-              />
-              <Route
-                path="PackageThunderdome"
-                element={<PackageThunderdome />}
               />
 
               <Route path="/OtherForm" element={<OtherForm />} />
