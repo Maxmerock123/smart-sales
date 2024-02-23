@@ -98,7 +98,7 @@ const SummaryPage = () => {
             <p className="m-3">หมายเหตุ</p>
             <div>
               <p className="underline">กรณีจัดงานในอิมแพ็ค เมืองทองธานี</p>
-              <div className="flex flex-wrap flex-start">
+              <div className="flex-start flex flex-wrap">
                 <p>
                   • สำหรับงานประชุม ราคาโดยประมาณที่คำนวณจากราคาประชุมเต็มวัน
                 </p>
@@ -108,7 +108,7 @@ const SummaryPage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col items-center flex-center">
+            <div className="flex-center flex flex-col items-center">
               <p className="underline">กรณีจัดงานนอกสถานที่</p>
               <div className="flex-start flex w-[300px] flex-wrap">
                 <p>• ราคาดังกล่าวเป็นราคาเริ่มต้น และยังไม่รวมค่าขนส่ง</p>

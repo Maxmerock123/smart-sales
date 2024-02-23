@@ -48,13 +48,6 @@ const InsideServices = () => {
             dataType="eventType"
           />
           <CardItem
-            id="Concert"
-            img={concertImg}
-            url="Concert"
-            body={"งานคอนเสิร์ต"}
-            dataType="eventType"
-          />
-          <CardItem
             id="OtherForm"
             body="อื่นๆ"
             img={otherImg}
