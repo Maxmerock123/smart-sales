@@ -5,6 +5,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
 import { TiThMenu } from "react-icons/ti";
+import { BiSolidPhoneCall } from "react-icons/bi";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ const Header = () => {
           ></img>
         </div>
         <div className="flex w-[100px] justify-center ">
-          <TiThMenu size={30} />
+          <BiSolidPhoneCall onClick={onCall} size={30} />
         </div>
       </div>
     </>

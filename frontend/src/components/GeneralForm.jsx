@@ -61,7 +61,7 @@ const GeneralForm = () => {
   return (
     <>
       <div className="m-5 flex w-[350px] justify-center rounded-[15px] bg-custom-orange p-10 shadow-2xl">
-        <form className="flex w-full flex-col gap-5">
+        <form className="flex flex-col w-full gap-5">
           <div>
             <label className="text-white" htmlFor="name">
               ชื่อ-นามสกุล / ชื่อบริษัท *
@@ -151,7 +151,7 @@ const GeneralForm = () => {
               <br />
             </div>
           </div>
-          <div className="m-5 flex justify-end gap-10">
+          <div className="flex justify-end gap-10 m-5">
             <button
               className="h-[50px] w-[100px] rounded-[15px] bg-custom-brown text-white shadow-2xl"
               onClick={onSkipHandler}

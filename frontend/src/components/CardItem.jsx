@@ -72,7 +72,7 @@ const CardItem = ({
         <img
           src={img}
           id={id}
-          className="aspect-square max-w-[130px] rounded-[15px] bg-white object-scale-down object-left shadow-lg md:w-[30vh]"
+          className="aspect-square max-w-[130px] rounded-[15px] bg-white object-scale-down object-left shadow-2xl md:w-[30vh]"
           onClick={onClickHandler}
         />
         <p className="text-center">{body}</p>
