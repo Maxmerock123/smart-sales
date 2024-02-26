@@ -22,7 +22,7 @@ const SummaryPage = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-5">
+    <div className="flex flex-col items-center justify-center gap-5 animate-fade-down animate-once">
       <div
         className="w-[400px] rounded-lg bg-white p-3 shadow"
         ref={imageContainerRef}
@@ -98,7 +98,7 @@ const SummaryPage = () => {
             <p className="m-3">หมายเหตุ</p>
             <div>
               <p className="underline">กรณีจัดงานในอิมแพ็ค เมืองทองธานี</p>
-              <div className="flex-start flex flex-wrap">
+              <div className="flex flex-wrap flex-start">
                 <p>
                   • สำหรับงานประชุม ราคาโดยประมาณที่คำนวณจากราคาประชุมเต็มวัน
                 </p>
@@ -108,7 +108,7 @@ const SummaryPage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex-center flex flex-col items-center">
+            <div className="flex flex-col items-center flex-center">
               <p className="underline">กรณีจัดงานนอกสถานที่</p>
               <div className="flex-start flex w-[300px] flex-wrap">
                 <p>• ราคาดังกล่าวเป็นราคาเริ่มต้น และยังไม่รวมค่าขนส่ง</p>

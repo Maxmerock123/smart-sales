@@ -68,7 +68,7 @@ const CardItem = ({
 
   return (
     <>
-      <div className="flex max-w-[120px] flex-col items-center md:w-[30vh]">
+      <div className="animate-fade-down animate-once flex max-w-[120px] flex-col items-center md:w-[30vh]">
         <img
           src={img}
           id={id}
