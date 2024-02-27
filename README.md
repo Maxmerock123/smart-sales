@@ -1,2 +1,10 @@
 # smart-sales
-for IMPACT Exhbition management as i intern.
+
+how to run app
+
+```
+npm init
+
+cd /frontend
+npm run dev
+```
