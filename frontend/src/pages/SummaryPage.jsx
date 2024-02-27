@@ -5,7 +5,7 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 
 const SummaryPage = () => {
   const { formData } = useContext(FormDataContext);
-
+  const axios = require('axios').default;
   const imageContainerRef = useRef(null);
 
   const generateImage = () => {
@@ -17,6 +17,8 @@ const SummaryPage = () => {
       link.click();
     });
   };
+
+  function saveJson(data) {}
 
   function onClickHandler() {
     alert("clicked sent to sales");
@@ -86,7 +88,9 @@ const SummaryPage = () => {
               </td>
             </tr>
             <tr>
-              <td className="px-2 font-bold border bg-stone-300 ">ราคาโดยประมาณ:</td>
+              <td className="px-2 font-bold border bg-stone-300 ">
+                ราคาโดยประมาณ:
+              </td>
               <td className="px-2 border bg-stone-300">
                 {!formData.generalForm.price
                   ? "(ฝ่ายขายจะทำการติดต่อกลับเพื่อแจ้งราคาโดยเร็วที่สุด)"
