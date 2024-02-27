@@ -25,15 +25,15 @@ const OtherForm = () => {
 
   return (
     <>
-      <div className="m-5 flex min-w-[80%] justify-center rounded-[15px] bg-custom-orange p-10 shadow-2xl">
-        <form className="flex w-full flex-col gap-5">
+      <div className="m-5 flex min-w-[80%] justify-center rounded-[15px] bg-custom-orange p-5 shadow-2xl">
+        <form className="flex flex-col w-full gap-5">
           <div>
             <label className="text-white" htmlFor="name">
-              อื่นๆ กรอกที่นี่
+              จัดงานประเภทอื่นๆ กรอกที่นี่
             </label>
             <br />
             <input
-              className="h-8 rounded-[15px] shadow-2xl"
+              className="h-8 w-[37vh] rounded-[15px] shadow-2xl"
               type="text"
               id="name"
               name="name"

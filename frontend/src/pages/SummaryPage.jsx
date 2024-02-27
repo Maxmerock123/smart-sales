@@ -23,35 +23,35 @@ const SummaryPage = () => {
   }
 
   const onCall = () => {
-    window.open("tel:0886123858");
+    window.open("tel:028335252");
   };
 
   return (
-    <div className="animate-fade-down animate-once flex flex-col items-center justify-center gap-5">
+    <div className="flex flex-col items-center justify-center gap-5 animate-fade-down animate-once">
       <div
         className="w-[400px] rounded-lg bg-white p-3 shadow"
         ref={imageContainerRef}
       >
         <h2 className="m-3 text-2xl font-bold">ใบสรุปรายการ</h2>
-        <table className="table-auto border-collapse border-2 ">
+        <table className="border-2 border-collapse table-auto ">
           <tbody className="">
             <tr>
-              <td className="border px-2 font-bold ">ชื่อ-นามสกุล:</td>
-              <td className="border px-2 ">
+              <td className="px-2 font-bold border ">ชื่อ-นามสกุล:</td>
+              <td className="px-2 border ">
                 {formData.generalForm.name ? formData.generalForm.name : "-"}
               </td>
             </tr>
             <tr>
-              <td className="border px-2 font-bold">เบอร์โทรศัพท์:</td>
-              <td className="border px-2 ">
+              <td className="px-2 font-bold border">เบอร์โทรศัพท์:</td>
+              <td className="px-2 border ">
                 {formData.generalForm.number
                   ? formData.generalForm.number
                   : "-"}
               </td>
             </tr>
             <tr>
-              <td className="border px-2 font-bold">E-mail:</td>
-              <td className="border px-2">
+              <td className="px-2 font-bold border">E-mail:</td>
+              <td className="px-2 border">
                 {formData.generalForm.email ? formData.generalForm.email : "-"}
               </td>
             </tr>
@@ -64,14 +64,14 @@ const SummaryPage = () => {
               </td>
             </tr>
             <tr>
-              <td className="border px-2 font-bold">วันที่จัด:</td>
-              <td className="border px-2">
+              <td className="px-2 font-bold border">วันที่จัด:</td>
+              <td className="px-2 border">
                 {formData.generalForm.date ? formData.generalForm.date : "-"}
               </td>
             </tr>
             <tr>
-              <td className="border px-2 font-bold">สถานที่จัดงาน:</td>
-              <td className="border px-2 ">
+              <td className="px-2 font-bold border">สถานที่จัดงาน:</td>
+              <td className="px-2 border ">
                 {formData.generalForm.place ? formData.generalForm.place : "-"}{" "}
                 {formData.generalForm.address
                   ? formData.generalForm.address
@@ -79,17 +79,17 @@ const SummaryPage = () => {
               </td>{" "}
             </tr>
             <tr>
-              <td className="border px-2 font-bold">ประเภทของงาน:</td>
-              <td className="border px-2">
+              <td className="px-2 font-bold border">ประเภทของงาน:</td>
+              <td className="px-2 border">
                 {formData.generalForm.eventType}{" "}
                 {formData.generalForm.eventName}
               </td>
             </tr>
             <tr>
-              <td className="border px-2 font-bold ">ราคาโดยประมาณ:</td>
-              <td className="border px-2">
+              <td className="px-2 font-bold border bg-stone-300 ">ราคาโดยประมาณ:</td>
+              <td className="px-2 border bg-stone-300">
                 {!formData.generalForm.price
-                  ? "ฝ่ายขายจะทำการติดต่อกลับเพื่อแจ้งราคาโดยเร็วที่สุด"
+                  ? "(ฝ่ายขายจะทำการติดต่อกลับเพื่อแจ้งราคาโดยเร็วที่สุด)"
                   : formData.generalForm.price.toLocaleString() + " บาท"}{" "}
               </td>
             </tr>
@@ -102,7 +102,7 @@ const SummaryPage = () => {
             <p className="m-3">หมายเหตุ</p>
             <div>
               <p className="underline">กรณีจัดงานในอิมแพ็ค เมืองทองธานี</p>
-              <div className="flex-start flex flex-wrap">
+              <div className="flex flex-wrap flex-start">
                 <p>
                   • สำหรับงานประชุม ราคาโดยประมาณที่คำนวณจากราคาประชุมเต็มวัน
                 </p>
@@ -112,7 +112,7 @@ const SummaryPage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex-center flex flex-col items-center">
+            <div className="flex flex-col items-center flex-center">
               <p className="underline">กรณีจัดงานนอกสถานที่</p>
               <div className="flex-start flex w-[300px] flex-wrap">
                 <p>• ราคาดังกล่าวเป็นราคาเริ่มต้น และยังไม่รวมค่าขนส่ง</p>

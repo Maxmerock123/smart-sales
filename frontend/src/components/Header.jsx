@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   const onCall = () => {
-    window.open("tel:0886123858");
+    window.open("tel:028335252");
   };
 
   return (
