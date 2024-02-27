@@ -122,10 +122,9 @@ const SummaryPage = () => {
           </tbody>
         </table>
         <div className="flex items-center justify-center">
-          <div className="my-5 w-[400px] text-center text-xs">
-            <p>* ฝ่ายขายจะติดต่อกลับโดยเร็วที่สุด *</p>
+          <div className="my-5 w-[400px] text-center text-sm">
             <br />
-            <p className="m-3">หมายเหตุ</p>
+            <p className="m-3 underline ">หมายเหตุ</p>
             <div>
               <p className="underline">กรณีจัดงานในอิมแพ็ค เมืองทองธานี</p>
               <div className="flex-start flex flex-wrap">
@@ -137,6 +136,7 @@ const SummaryPage = () => {
                   ราคาโดยประมานคำนวณจากราคาบุฟเฟต์อาหารไทย{" "}
                 </p>
               </div>
+              <br />
             </div>
             <div className="flex-center flex flex-col items-center">
               <p className="underline">กรณีจัดงานนอกสถานที่</p>
@@ -149,10 +149,7 @@ const SummaryPage = () => {
         </div>
       </div>
       <div className="flex w-[350px] flex-col justify-end">
-        <button
-          className="my-5 flex h-[50px] w-[350px] items-center justify-center gap-5 rounded-[15px] bg-custom-brown px-5 text-white shadow-2xl"
-          onClick={onSendData}
-        >
+        <button className="my-5 flex h-[50px] w-[350px] items-center justify-center gap-5 rounded-[15px] bg-custom-brown px-5 text-white shadow-2xl">
           ส่งข้อมูลไปยังฝ่ายขาย <MdAttachEmail size={30} />
         </button>
 
@@ -169,7 +166,7 @@ const SummaryPage = () => {
           บันทึกใบสรุปรายการ
         </button>
         <p className="text-center">
-          * หรือ capture แล้วส่งให้ฝ่ายขายได้เลยค่ะ *
+          * หรือ capture ภาพ แล้วส่งให้ฝ่ายขายได้เลยค่ะ *
         </p>
       </div>
     </div>

@@ -60,8 +60,8 @@ const GeneralForm = () => {
 
   return (
     <>
-      <div className="m-5 flex w-[350px] justify-center rounded-[15px] bg-custom-orange p-10 shadow-2xl">
-        <form className="flex flex-col w-full gap-5">
+      <div className="m-5 flex w-[350px] animate-fade-down justify-center rounded-[15px] bg-custom-orange p-10 shadow-2xl animate-once animate-ease-out">
+        <form className="flex w-full animate-fade-down flex-col gap-5 animate-delay-300 animate-once animate-ease-out">
           <div>
             <label className="text-white" htmlFor="name">
               ชื่อ-นามสกุล / ชื่อบริษัท *
@@ -151,19 +151,21 @@ const GeneralForm = () => {
               <br />
             </div>
           </div>
-          <div className="flex justify-end gap-10 m-5">
-            <button
-              className="h-[50px] w-[100px] rounded-[15px] bg-custom-brown text-white shadow-2xl"
-              onClick={onSkipHandler}
-            >
-              ข้าม
-            </button>
-            <button
-              className="w-[100px] rounded-[15px] bg-custom-brown px-5  text-white shadow-2xl"
-              onClick={onSumbitHandler}
-            >
-              ถัดไป
-            </button>
+          <div>
+            <div className="m-5 flex justify-end gap-10">
+              <button
+                className="h-[50px] w-[100px] rounded-[15px] bg-custom-brown text-white shadow-2xl"
+                onClick={onSkipHandler}
+              >
+                ข้าม
+              </button>
+              <button
+                className="w-[100px] rounded-[15px] bg-custom-brown px-5  text-white shadow-2xl"
+                onClick={onSumbitHandler}
+              >
+                ถัดไป
+              </button>
+            </div>
           </div>
         </form>
       </div>
