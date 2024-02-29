@@ -5,6 +5,6 @@ how to run app
 ```
 npm init
 
-cd /frontend
+cd frontend/
 npm run dev
 ```
