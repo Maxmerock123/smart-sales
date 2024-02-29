@@ -68,11 +68,11 @@ const CardItem = ({
 
   return (
     <>
-      <div className="flex max-w-[120px] animate-fade-down flex-col items-center  duration-300 ease-in animate-once  md:w-[30vh]">
+      <div className="flex w-[150px] animate-fade-down flex-col items-center  duration-300 ease-in animate-once lg:w-[300px]">
         <img
           src={img}
           id={id}
-          className="aspect-square max-w-[130px] rounded-[15px] bg-white object-scale-down object-left shadow-2xl  "
+          className="aspect-square rounded-[15px] bg-white object-scale-down object-left shadow-2xl sm:w-[130px] lg:w-[200px]  "
           onClick={onClickHandler}
         />
         <p className="text-center">{body}</p>

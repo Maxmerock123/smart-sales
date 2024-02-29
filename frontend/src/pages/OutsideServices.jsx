@@ -1,8 +1,8 @@
 import React from "react";
 import meetingImg from "../img/img-btn-meeting.jpg";
-import partyImg from "../img/img-btn-party.png";
-import ceremonyImg from "../img/img-btn-bhudda.png";
-import weddingImg from "../img/img-btn-wedding.png";
+import partyImg from "../img/outside/party/party1.jpg";
+import ceremonyImg from "../img/outside/bhuddistCeremony/bhuddistCeremony2.jpg";
+import weddingImg from "../img/outside/wedding/wedding1.jpg";
 import { useNavigate } from "react-router-dom";
 import CardItem from "../components/CardItem";
 import logo from "../img/impact-logo-other.png";
