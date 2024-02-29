@@ -11,7 +11,7 @@ const EngagementCeremony = () => {
     <>
       <h3 className="m-8 text-center font-bold">เลือก Package</h3>
       <div className="flex justify-center">
-        <div className="mt-3 flex w-[80%] flex-wrap justify-between gap-5">
+        <div className="mt-3 flex w-[80%] flex-wrap justify-between gap-5 lg:justify-center">
           <CardItem
             id="insideEngage1"
             body="พิธีหมั้น + ยกน้ำชา"

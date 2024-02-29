@@ -51,9 +51,9 @@ const SummaryPage = () => {
   };
 
   return (
-    <div className="flex animate-fade-down flex-col items-center justify-center gap-5 animate-once">
+    <div className="flex animate-fade-down flex-col items-center justify-center gap-5 animate-once lg:flex-row">
       <div
-        className="w-[400px] rounded-lg bg-white p-3 shadow"
+        className="sm:w-[400px]lg:w-[600px] rounded-lg bg-white p-3 shadow-lg"
         ref={imageContainerRef}
       >
         <h2 className="m-3 text-2xl font-bold">ใบสรุปรายการ</h2>

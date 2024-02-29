@@ -14,9 +14,9 @@ const InsideWedding = () => {
 
   return (
     <>
-      <h3 className="m-8 font-bold text-center">เลือกแพ็คเกจ</h3>
+      <h3 className="m-8 text-center font-bold">เลือกแพ็คเกจ</h3>
       <div className="flex justify-center">
-        <div className="mt-3 flex w-[80%] flex-wrap justify-between gap-5">
+        <div className="mt-3 flex w-[80%] flex-wrap justify-center gap-5">
           <CardItem
             img={engagementImg}
             url="EngagementCeremony"

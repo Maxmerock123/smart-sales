@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="sticky top-0 flex items-center justify-around gap-2 bg-gradient-to-b from-custom-yellow to-transparent px-10 py-10">
+      <div className="sticky top-0 flex items-center justify-around gap-2 bg-gradient-to-b from-custom-yellow to-transparent px-10 py-10 lg:justify-center">
         <div className="flex w-[100px] justify-center">
           <p className="text-4xl" onClick={onBackHandler}>
             &#x2190;

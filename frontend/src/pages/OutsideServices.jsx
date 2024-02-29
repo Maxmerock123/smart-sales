@@ -16,7 +16,7 @@ const OutsideServices = () => {
     <>
       <h3 className="m-8 text-center font-bold">เลือกประเภทการจัดงาน</h3>
       <div className="flex justify-center">
-        <div className="mt-10 flex w-[80%] flex-wrap justify-between  gap-10">
+        <div className="mt-10 flex w-[80%] flex-wrap justify-center  gap-10">
           <CardItem
             id="Meeting"
             img={meetingImg}

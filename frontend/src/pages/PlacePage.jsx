@@ -39,23 +39,23 @@ const PlacePage = () => {
       <h3 className="m-8 text-center font-bold ">เลือกสถานที่จัดงาน</h3>
       <div className="mt-10 flex flex-wrap items-center justify-center gap-10">
         <div
-          className="animate-fade-right animate-once flex flex-col justify-center"
+          className="flex animate-fade-right flex-col justify-center animate-once"
           onClick={onInside}
         >
           <img
             src={insideImg}
-            className="aspect-video w-[300px] rounded-[15px] bg-gray-300 shadow-lg"
+            className="aspect-video w-[300px] rounded-[15px] bg-gray-300 shadow-lg lg:w-[550px]"
           />
           <p className="text-center">อิมแพ็ค เมืองทองธานี</p>
         </div>
 
         <div
-          className="animate-fade-left animate-once flex flex-col justify-center"
+          className="flex animate-fade-left flex-col justify-center animate-once"
           onClick={onOutside}
         >
           <img
             src={outsideImg}
-            className="aspect-video w-[300px] rounded-[15px] bg-gray-300 shadow-lg"
+            className="aspect-video w-[300px] rounded-[15px] bg-gray-300 shadow-lg lg:w-[550px]"
           />
           <p className="text-center">นอกสถานที่</p>
         </div>
