@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Prompt&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Prompt&display=swap');
+
 
 body,
 html {
@@ -10,4 +11,13 @@ html {
 
 
 
+
+}
+
+body {
+    background-image: url("./img/bg-white-backdrop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    max-height: 1500px
 }
