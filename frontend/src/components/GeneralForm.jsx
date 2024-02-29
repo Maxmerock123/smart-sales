@@ -19,7 +19,7 @@ const GeneralForm = () => {
 
   function isValidInput() {
     const { name, email, number, people, address } = formData.generalForm;
-    if (name && email && number && people && address) {
+    if (name && number && people) {
       setFormData({
         ...formData,
         generalForm: {
@@ -29,7 +29,7 @@ const GeneralForm = () => {
       });
       return true;
     } else {
-      console.log("โปรดกรอกชื่อ , อีเมล์, เบอร์โทร และจำนวนแขก");
+      alert("โปรดกรอกชื่อ เบอร์โทร และ จำนวนแขกเพื่อดำเนินการต่อ ");
       return false;
     }
   }
@@ -60,15 +60,16 @@ const GeneralForm = () => {
 
   return (
     <>
-      <div className="m-5 flex w-[350px] animate-fade-down justify-center rounded-[15px] bg-custom-orange p-10 shadow-2xl animate-once animate-ease-out">
+      <div className="m-5 flex w-[350px] animate-fade-down justify-center rounded-[15px] bg-white p-10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] animate-once animate-ease-out">
         <form className="flex w-full animate-fade-down flex-col gap-5 animate-delay-300 animate-once animate-ease-out">
           <div>
-            <label className="text-white" htmlFor="name">
-              ชื่อ-นามสกุล / ชื่อบริษัท *
+            <label className="text-black" htmlFor="name">
+              ชื่อ-นามสกุล / ชื่อบริษัท
             </label>
+            <label className="text-red-500"> *</label>
             <br />
             <input
-              className="h-8 min-w-[250px] rounded-[15px] shadow-2xl"
+              className="h-8 min-w-[250px] rounded-[15px]  border-[1px] border-stone-300 shadow-2xl"
               type="text"
               id="name"
               name="name"
@@ -78,12 +79,14 @@ const GeneralForm = () => {
             <br />
           </div>
           <div>
-            <label className="text-white" htmlFor="name">
-              เบอร์โทรศัพท์ *
+            <label className="text-black" htmlFor="name">
+              เบอร์โทรศัพท์
             </label>
+            <label className="text-red-500"> *</label>
+
             <br />
             <input
-              className="h-8 min-w-[250px] rounded-[15px] shadow-2xl"
+              className="h-8 min-w-[250px] rounded-[15px] border-[1px] border-stone-300 shadow-2xl"
               type="text"
               id="number"
               name="number"
@@ -93,12 +96,12 @@ const GeneralForm = () => {
             <br />
           </div>
           <div>
-            <label className="text-white" htmlFor="name">
+            <label className="text-black" htmlFor="name">
               อีเมล
             </label>
             <br />
             <input
-              className="h-8 min-w-[250px] rounded-[15px] shadow-2xl"
+              className="h-8 min-w-[250px] rounded-[15px]  border-[1px] border-stone-300 shadow-2xl"
               type="text"
               id="email"
               name="email"
@@ -107,11 +110,11 @@ const GeneralForm = () => {
             />
           </div>
           <div>
-            <label className="text-white" htmlFor="name">
+            <label className="text-black" htmlFor="name">
               หมู่บ้าน / ชื่ออาคาร
             </label>
             <input
-              className="h-8 min-w-[250px] rounded-[15px] shadow-2xl"
+              className="h-8 min-w-[250px] rounded-[15px]  border-[1px] border-stone-300 shadow-2xl"
               type="text"
               id="address"
               name="address"
@@ -121,12 +124,13 @@ const GeneralForm = () => {
           </div>
           <div className="flex justify-between gap-5">
             <div>
-              <label className="text-white" htmlFor="name">
+              <label className="text-black" htmlFor="name">
                 จำนวนแขก
               </label>
+              <label className="text-red-500"> *</label>
               <br />
               <input
-                className="h-8 w-24 rounded-[15px] shadow-2xl"
+                className="h-8 w-24 rounded-[15px] border-[1px] border-stone-300 shadow-2xl"
                 type="number"
                 id="people"
                 name="people"
@@ -141,7 +145,7 @@ const GeneralForm = () => {
               </label>
               <br />
               <input
-                className="h-8 w-[150px] rounded-[15px] shadow-2xl"
+                className="h-8 w-[150px] rounded-[15px] border-[1px] border-stone-300 shadow-2xl"
                 type="date"
                 id="date"
                 name="date"
