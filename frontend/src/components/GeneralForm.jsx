@@ -140,7 +140,7 @@ const GeneralForm = () => {
               <br />{" "}
             </div>
             <div>
-              <label className="text-white" htmlFor="name">
+              <label className="text-black" htmlFor="name">
                 วันที่จัดงาน
               </label>
               <br />

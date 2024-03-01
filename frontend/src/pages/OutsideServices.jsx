@@ -10,8 +10,6 @@ import productLaunchImg from "../img/outside/productLaunch/productLaunch1.jpg";
 import equipmentRental from "../img/outside/equipmentRental/equipmentRental1.jpg";
 
 const OutsideServices = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       <h3 className="m-8 text-center font-bold">เลือกประเภทการจัดงาน</h3>
