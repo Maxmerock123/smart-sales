@@ -1,6 +1,7 @@
 import React, { useContext, useState, useRef } from "react";
 import FormDataContext from "../FormDataContext";
 import html2canvas from "html2canvas";
+import { useNavigate } from "react-router-dom";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { MdAttachEmail } from "react-icons/md";
 import { IoIosContacts } from "react-icons/io";
@@ -9,6 +10,7 @@ import axios from "axios";
 const SummaryPage = () => {
   const [showModal, setShowModal] = React.useState(false);
   const { formData } = useContext(FormDataContext);
+  const navigate = useNavigate();
 
   const imageContainerRef = useRef(null);
 

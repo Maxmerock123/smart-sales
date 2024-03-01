@@ -30,6 +30,7 @@ const InsideServices = () => {
             isFixedPackage={false}
             isHidePrice={true}
             place={"inside"}
+            checkIsSkip={true}
           />
           <CardItem
             id="Party"
@@ -39,6 +40,7 @@ const InsideServices = () => {
             price={700}
             isFixedPackage={false}
             isHidePrice={true}
+            checkIsSkip={true}
           />
           <CardItem
             id="Wedding"
@@ -46,12 +48,14 @@ const InsideServices = () => {
             url="Wedding"
             body={"งานแต่งงาน "}
             dataType="eventType"
+            checkIsSkip={true}
           />
           <CardItem
             id="OtherForm"
             body="อื่นๆ"
             img={otherImg}
             url="/OtherForm"
+            checkIsSkip={true}
           />
         </div>
       </div>

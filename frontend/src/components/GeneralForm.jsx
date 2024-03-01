@@ -37,11 +37,18 @@ const GeneralForm = () => {
   const navigate = useNavigate();
 
   const onSumbitHandler = () => {
-    console.log("onSubmitHandler");
+    console.log("set formData isSkip = false");
+    setFormData({
+      ...formData,
+      generalForm: {
+        ...formData.generalForm,
+        isSkip: false,
+      },
+    });
+
     if (isValidInput()) {
       navigate("PlacePage");
     } else {
-      console.log("onClickHandler is false");
       return 0;
     }
   };
@@ -51,7 +58,7 @@ const GeneralForm = () => {
       ...formData,
       generalForm: {
         ...formData.generalForm,
-        isInput: false,
+        isSkip: true,
       },
     });
 

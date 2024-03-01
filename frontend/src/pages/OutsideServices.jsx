@@ -21,6 +21,7 @@ const OutsideServices = () => {
             body={"งานประชุม/สัมมนา/อบรม"}
             url="Meeting"
             dataType="eventType"
+            checkIsSkip={true}
           />
           <CardItem
             id="Party"
@@ -28,6 +29,7 @@ const OutsideServices = () => {
             url="Party"
             body={"งานเลี้ยงสังสรรค์"}
             dataType="eventType"
+            checkIsSkip={true}
           />
           <CardItem
             id="Wedding"
@@ -35,6 +37,7 @@ const OutsideServices = () => {
             url="Wedding"
             body={"งานแต่งงาน "}
             dataType="eventType"
+            checkIsSkip={true}
           />
           <CardItem
             id="BhuddistCeremony"
@@ -42,6 +45,7 @@ const OutsideServices = () => {
             body={"งานทำบุญบ้าน / ออฟฟิศ / พิธีสงฆ์ "}
             url="BhuddistCeremony"
             dataType="eventType"
+            checkIsSkip={true}
           />
           <CardItem
             id="ProductLaunching"
@@ -49,6 +53,7 @@ const OutsideServices = () => {
             body={"งานเปิดตัวสินค้า / เปิดกิจการ"}
             url="ProductLaunching"
             dataType="eventType"
+            checkIsSkip={true}
           />
           <CardItem
             id="EquipmentRental"
@@ -56,6 +61,7 @@ const OutsideServices = () => {
             body={"เช่าอุปกรณ์จัดเลี้ยง"}
             directUrl="https://impact-catering.com/service/equipment-rental/"
             dataType="eventType"
+            checkIsSkip={true}
           />
           <CardItem id="OtherForm" body="อื่นๆ" img={logo} url={"/OtherForm"} />
         </div>

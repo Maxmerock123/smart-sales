@@ -13,6 +13,7 @@ const CardItem = ({
   dataType,
   isHidePrice,
   place,
+  checkIsSkip,
 }) => {
   const navigate = useNavigate();
   const { formData, setFormData } = useContext(FormDataContext);
@@ -40,6 +41,8 @@ const CardItem = ({
 
   function onClickHandler(e) {
     console.log(`clicked on ${e.target.id}`);
+
+    console.log("this man is not skip");
     setFormData({
       ...formData,
       generalForm: {
@@ -59,9 +62,12 @@ const CardItem = ({
         },
       });
     }
+
     if (directUrl) {
+      console.log("have directURL");
       window.location.replace(directUrl);
     } else {
+      console.log("don't have directURL, navigate to url");
       navigate(url);
     }
   }
