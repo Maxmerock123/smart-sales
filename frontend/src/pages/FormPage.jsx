@@ -6,7 +6,8 @@ import style from "./FormPage.module.css";
 const FormPage = () => {
   return (
     <>
-      <h3 className="mt-4 text-center font-bold">ข้อมูลทั่วไป</h3>
+    
+      <h3 className="mt-4 font-bold text-center">ข้อมูลทั่วไป</h3>
       <div className={style.formContainer}>
         <GeneralForm />
       </div>

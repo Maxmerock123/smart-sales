@@ -5,6 +5,7 @@ import FormDataContext from "../FormDataContext";
 
 const GeneralForm = () => {
   const { formData, setFormData } = useContext(FormDataContext); // Use context
+  const [showModal, setShowModal] = React.useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -67,6 +68,52 @@ const GeneralForm = () => {
 
   return (
     <>
+      {showModal ? (
+        <>
+          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
+            <div className="relative mx-auto my-6 w-auto max-w-3xl">
+              {/*content*/}
+              <div className="relative flex w-full animate-fade-down flex-col rounded-[15px] border-0 bg-white shadow-lg outline-none focus:outline-none">
+                {/*header*/}
+                <div className="border-blueGray-200 flex items-start justify-between rounded-t border-b border-solid p-5">
+                  <h3 className="text-3xl font-semibold">
+                    ส่งข้อมูลสำเร็จ (ทดลองเท่านั้น)
+                  </h3>
+                  <button
+                    className="float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-black opacity-5 outline-none focus:outline-none"
+                    onClick={() => setShowModal(false)}
+                  >
+                    <span className="block h-6 w-6 bg-transparent text-2xl text-black opacity-5 outline-none focus:outline-none">
+                      ×
+                    </span>
+                  </button>
+                </div>
+                {/*body*/}
+                <div className="relative flex-auto p-6">
+                  <p className="text-blueGray-500 my-4 text-lg leading-relaxed">
+                    ส่งข้อมูลไปยังฝ่ายขายเรียบร้อยแล้ว
+                    หรือลูกค้าสามารถแคปภาพหน้าจอแล้วส่งมาโดยตรงที่ LINE IMPACT
+                    Catering ได้เลยค่ะ
+                  </p>
+                </div>
+                {/*footer*/}
+                <div className="border-blueGray-200 flex items-center justify-end rounded-b border-t border-solid p-6">
+                  <button
+                    className="mb-1 mr-1 rounded bg-custom-brown px-6 py-3 text-sm font-bold uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-emerald-600"
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    รับทราบ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
+        </>
+      ) : null}
+
+      {/* Content */}
       <div className="m-5 flex w-[350px] animate-fade-down justify-center rounded-[15px] bg-white p-10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] animate-once animate-ease-out">
         <form className="flex w-full animate-fade-down flex-col gap-5 animate-delay-300 animate-once animate-ease-out">
           <div>

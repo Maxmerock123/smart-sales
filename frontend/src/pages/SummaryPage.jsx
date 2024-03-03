@@ -28,9 +28,9 @@ const SummaryPage = () => {
     window.open("https://linktr.ee/salesatimpact");
   };
 
-  function onSendData(data) {
+  function onSendData() {
     axios
-      .post("http://localhost:3000/summaryData", {
+      .post("http://localhost:4000/summaryData", {
         name: formData.generalForm.name,
         number: formData.generalForm.number,
         email: formData.generalForm.email,
@@ -43,15 +43,11 @@ const SummaryPage = () => {
         price: formData.generalForm.price,
       })
       .then(function (response) {
-        console.log(response);
+        console.log("data sent successfully", response);
       })
       .catch(function (error) {
-        console.log(error);
+        console.log("error sending data", error);
       });
-  }
-
-  function onClickHandler() {
-    alert("clicked sent to sales");
   }
 
   const onCall = () => {
@@ -209,7 +205,10 @@ const SummaryPage = () => {
         </div>
         <div className="flex w-[350px] flex-col justify-end">
           <button
-            onClick={() => setShowModal(true)}
+            onClick={() => {
+              setShowModal(true);
+              onSendData();
+            }}
             className=" flex h-[50px] w-[350px] items-center justify-center gap-5 rounded-[15px] bg-custom-brown px-5 text-white shadow-2xl"
           >
             <MdAttachEmail size={30} />
