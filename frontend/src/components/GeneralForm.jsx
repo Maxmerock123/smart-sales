@@ -15,7 +15,7 @@ const GeneralForm = () => {
         [e.target.name]: e.target.value,
       },
     });
-    console.log(formData.generalForm);
+    //console.log(formData.generalForm);
   };
 
   function isValidInput() {
@@ -28,9 +28,9 @@ const GeneralForm = () => {
           isInput: true,
         },
       });
-      navigate("PlacePage");
+      return true;
     } else {
-      setShowModal(true);
+      return false;
     }
   }
 
@@ -38,8 +38,11 @@ const GeneralForm = () => {
 
   const onSumbitHandler = (e) => {
     e.preventDefault();
-    console.log("set formData isSkip = false");
-    isValidInput();
+    if (isValidInput() == true) {
+      navigate("PlacePage");
+    } else {
+      setShowModal(true);
+    }
     setFormData({
       ...formData,
       generalForm: {

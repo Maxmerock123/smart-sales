@@ -23,12 +23,12 @@ const CardItem = ({
   function findPrice(price, people) {
     if (isFixedPackage == false) {
       let result = 0;
-      console.log(`people: ${people}`);
+      //console.log(`people: ${people}`);
       if (people == 0) {
-        console.log("case 0");
+        //console.log("case 0");
         return 0;
       } else if (people <= 30 && place != "inside") {
-        console.log("case1");
+        //console.log("case1");
         result = price * 30;
       } else {
         result = price * people;
@@ -40,9 +40,9 @@ const CardItem = ({
   }
 
   function onClickHandler(e) {
-    console.log(`clicked on ${e.target.id}`);
+    //console.log(`clicked on ${e.target.id}`);
 
-    console.log("this man is not skip");
+    //console.log("this man is not skip");
     setFormData({
       ...formData,
       generalForm: {
@@ -64,10 +64,10 @@ const CardItem = ({
     }
 
     if (directUrl) {
-      console.log("have directURL");
+      //console.log("have directURL");
       window.location.replace(directUrl);
     } else {
-      console.log("don't have directURL, navigate to url");
+      //console.log("don't have directURL, navigate to url");
       navigate(url);
     }
   }

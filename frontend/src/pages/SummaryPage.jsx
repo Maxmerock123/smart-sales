@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { MdAttachEmail } from "react-icons/md";
 import { IoIosContacts } from "react-icons/io";
-import GeneralForm from "../components/GeneralForm";
 import axios from "axios";
 
 const SummaryPage = () => {
@@ -30,13 +29,25 @@ const SummaryPage = () => {
     checkIsSkip();
   }, []);
 
+  function isValidInput() {
+    const { name, email, number, people, address } = formData.generalForm;
+    if (name && number && people) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   const checkIsSkip = () => {
-    if (formData.generalForm.isSkip == true) {
+    //console.log("isValidInput = ", isValidInput());
+    if (formData.generalForm.isSkip == true && isValidInput() == false) {
       alert("โปรดกรอกรายละเอียด แล้วเลือกถัดไปค่ะ");
       navigate("/");
-      console.log(formData.generalForm.isSkip);
+      //console.log("skipped and invalid input");
+    } else if (formData.generalForm.isSkip == true && isValidInput() == true) {
+      //console.log("skipped but valid input");
     } else {
-      console.log(formData.generalForm.isSkip);
+      //console.log("not skipped")
     }
   };
 
@@ -59,10 +70,10 @@ const SummaryPage = () => {
         price: formData.generalForm.price,
       })
       .then(function (response) {
-        console.log("data sent successfully", response);
+        //console.log("data sent successfully", response);
       })
       .catch(function (error) {
-        console.log("error sending data", error);
+        //console.log("error sending data", error);
       });
   }
 
@@ -74,36 +85,36 @@ const SummaryPage = () => {
     <>
       {showModal ? (
         <>
-          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
-            <div className="relative mx-auto my-6 w-auto max-w-3xl">
+          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
+            <div className="relative w-auto max-w-3xl mx-auto my-6">
               {/*content*/}
               <div className="relative flex w-full animate-fade-down flex-col rounded-[15px] border-0 bg-white shadow-lg outline-none focus:outline-none">
                 {/*header*/}
-                <div className="border-blueGray-200 flex items-start justify-between rounded-t border-b border-solid p-5">
+                <div className="flex items-start justify-between p-5 border-b border-solid rounded-t border-blueGray-200">
                   <h3 className="text-3xl font-semibold">
                     ส่งข้อมูลสำเร็จ (ทดลองเท่านั้น)
                   </h3>
                   <button
-                    className="float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-black opacity-5 outline-none focus:outline-none"
+                    className="float-right p-1 ml-auto text-3xl font-semibold leading-none text-black bg-transparent border-0 outline-none opacity-5 focus:outline-none"
                     onClick={() => setShowModal(false)}
                   >
-                    <span className="block h-6 w-6 bg-transparent text-2xl text-black opacity-5 outline-none focus:outline-none">
+                    <span className="block w-6 h-6 text-2xl text-black bg-transparent outline-none opacity-5 focus:outline-none">
                       ×
                     </span>
                   </button>
                 </div>
                 {/*body*/}
                 <div className="relative flex-auto p-6">
-                  <p className="text-blueGray-500 my-4 text-lg leading-relaxed">
+                  <p className="my-4 text-lg leading-relaxed text-blueGray-500">
                     ส่งข้อมูลไปยังฝ่ายขายเรียบร้อยแล้ว
                     หรือลูกค้าสามารถแคปภาพหน้าจอแล้วส่งมาโดยตรงที่ LINE IMPACT
                     Catering ได้เลยค่ะ
                   </p>
                 </div>
                 {/*footer*/}
-                <div className="border-blueGray-200 flex items-center justify-end rounded-b border-t border-solid p-6">
+                <div className="flex items-center justify-end p-6 border-t border-solid rounded-b border-blueGray-200">
                   <button
-                    className="mb-1 mr-1 rounded bg-custom-brown px-6 py-3 text-sm font-bold uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-emerald-600"
+                    className="px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear rounded shadow outline-none bg-custom-brown hover:shadow-lg focus:outline-none active:bg-emerald-600"
                     type="button"
                     onClick={() => setShowModal(false)}
                   >
@@ -118,31 +129,31 @@ const SummaryPage = () => {
       ) : null}
 
       {/* Page Content */}
-      <div className="flex animate-fade-down flex-col items-center justify-center gap-5 animate-once lg:flex-row">
+      <div className="flex flex-col items-center justify-center gap-5 animate-fade-down animate-once lg:flex-row">
         <div
           className="sm:w-[400px]lg:w-[600px] rounded-[15px]  bg-white p-3 shadow-lg"
           ref={imageContainerRef}
         >
           <h2 className="m-3 text-2xl font-bold">ใบสรุปรายการ</h2>
-          <table className="table-auto border-collapse border-2 ">
+          <table className="border-2 border-collapse table-auto ">
             <tbody className="">
               <tr>
-                <td className="border px-2 font-bold ">ชื่อ-นามสกุล:</td>
-                <td className="border px-2 ">
+                <td className="px-2 font-bold border ">ชื่อ-นามสกุล:</td>
+                <td className="px-2 border ">
                   {formData.generalForm.name ? formData.generalForm.name : "-"}
                 </td>
               </tr>
               <tr>
-                <td className="border px-2 font-bold">เบอร์โทรศัพท์:</td>
-                <td className="border px-2 ">
+                <td className="px-2 font-bold border">เบอร์โทรศัพท์:</td>
+                <td className="px-2 border ">
                   {formData.generalForm.number
                     ? formData.generalForm.number
                     : "-"}
                 </td>
               </tr>
               <tr>
-                <td className="border px-2 font-bold">E-mail:</td>
-                <td className="border px-2">
+                <td className="px-2 font-bold border">E-mail:</td>
+                <td className="px-2 border">
                   {formData.generalForm.email
                     ? formData.generalForm.email
                     : "-"}
@@ -157,14 +168,14 @@ const SummaryPage = () => {
                 </td>
               </tr>
               <tr>
-                <td className="border px-2 font-bold">วันที่จัด:</td>
-                <td className="border px-2">
+                <td className="px-2 font-bold border">วันที่จัด:</td>
+                <td className="px-2 border">
                   {formData.generalForm.date ? formData.generalForm.date : "-"}
                 </td>
               </tr>
               <tr>
-                <td className="border px-2 font-bold">สถานที่จัดงาน:</td>
-                <td className="border px-2 ">
+                <td className="px-2 font-bold border">สถานที่จัดงาน:</td>
+                <td className="px-2 border ">
                   {formData.generalForm.place
                     ? formData.generalForm.place
                     : "-"}{" "}
@@ -174,17 +185,17 @@ const SummaryPage = () => {
                 </td>{" "}
               </tr>
               <tr>
-                <td className="border px-2 font-bold">ประเภทของงาน:</td>
-                <td className="border px-2">
+                <td className="px-2 font-bold border">ประเภทของงาน:</td>
+                <td className="px-2 border">
                   {formData.generalForm.eventType}{" "}
                   {formData.generalForm.eventName}
                 </td>
               </tr>
               <tr>
-                <td className="border bg-stone-300 px-2 font-bold ">
+                <td className="px-2 font-bold border bg-stone-300 ">
                   ราคาเริ่มต้น:
                 </td>
-                <td className="border bg-stone-300 px-2">
+                <td className="px-2 border bg-stone-300">
                   {!formData.generalForm.price
                     ? "(ฝ่ายขายจะทำการติดต่อกลับเพื่อแจ้งราคาโดยเร็วที่สุด)"
                     : formData.generalForm.price.toLocaleString() + " บาท"}{" "}
@@ -198,7 +209,7 @@ const SummaryPage = () => {
               <p className="m-3 underline ">หมายเหตุ</p>
               <div>
                 <p className="underline">กรณีจัดงานในอิมแพ็ค เมืองทองธานี</p>
-                <div className="flex-start flex flex-wrap">
+                <div className="flex flex-wrap flex-start">
                   <p>
                     • สำหรับงานประชุม ราคาโดยประมาณที่คำนวณจากราคาประชุมเต็มวัน
                   </p>
@@ -209,7 +220,7 @@ const SummaryPage = () => {
                 </div>
                 <br />
               </div>
-              <div className="flex-center flex flex-col items-center">
+              <div className="flex flex-col items-center flex-center">
                 <p className="underline">กรณีจัดงานนอกสถานที่</p>
                 <div className="flex-start flex w-[300px] flex-wrap">
                   <p>• ราคาดังกล่าวเป็นราคาเริ่มต้น และยังไม่รวมค่าขนส่ง</p>

@@ -10,7 +10,7 @@ const PlacePage = () => {
   const navigate = useNavigate();
 
   function onInside() {
-    console.log("clicked inside");
+    //console.log("clicked inside");
     setFormData({
       ...formData,
       generalForm: {
@@ -23,7 +23,7 @@ const PlacePage = () => {
   }
 
   function onOutside() {
-    console.log("clicked outside");
+    //console.log("clicked outside");
     setFormData({
       ...formData,
       generalForm: {
