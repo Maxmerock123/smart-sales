@@ -28,17 +28,18 @@ const GeneralForm = () => {
           isInput: true,
         },
       });
-      return true;
+      navigate("PlacePage");
     } else {
-      alert("โปรดกรอกชื่อ เบอร์โทร และ จำนวนแขกเพื่อดำเนินการต่อ ");
-      return false;
+      setShowModal(true);
     }
   }
 
   const navigate = useNavigate();
 
-  const onSumbitHandler = () => {
+  const onSumbitHandler = (e) => {
+    e.preventDefault();
     console.log("set formData isSkip = false");
+    isValidInput();
     setFormData({
       ...formData,
       generalForm: {
@@ -46,12 +47,6 @@ const GeneralForm = () => {
         isSkip: false,
       },
     });
-
-    if (isValidInput()) {
-      navigate("PlacePage");
-    } else {
-      return 0;
-    }
   };
 
   const onSkipHandler = () => {
@@ -76,9 +71,7 @@ const GeneralForm = () => {
               <div className="relative flex w-full animate-fade-down flex-col rounded-[15px] border-0 bg-white shadow-lg outline-none focus:outline-none">
                 {/*header*/}
                 <div className="border-blueGray-200 flex items-start justify-between rounded-t border-b border-solid p-5">
-                  <h3 className="text-3xl font-semibold">
-                    ส่งข้อมูลสำเร็จ (ทดลองเท่านั้น)
-                  </h3>
+                  <h3 className="text-3xl font-semibold">โปรดกรอกข้อมูล</h3>
                   <button
                     className="float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-black opacity-5 outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
@@ -91,9 +84,7 @@ const GeneralForm = () => {
                 {/*body*/}
                 <div className="relative flex-auto p-6">
                   <p className="text-blueGray-500 my-4 text-lg leading-relaxed">
-                    ส่งข้อมูลไปยังฝ่ายขายเรียบร้อยแล้ว
-                    หรือลูกค้าสามารถแคปภาพหน้าจอแล้วส่งมาโดยตรงที่ LINE IMPACT
-                    Catering ได้เลยค่ะ
+                    โปรดกรอกชื่อ ,เบอร์โทร, จำนวนแขก แล้วเลือกถัดไปค่ะ
                   </p>
                 </div>
                 {/*footer*/}

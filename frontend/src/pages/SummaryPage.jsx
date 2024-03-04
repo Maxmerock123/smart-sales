@@ -1,14 +1,16 @@
-import React, { useContext, useState, useRef } from "react";
+import React, { useContext, useState, useRef, useEffect } from "react";
 import FormDataContext from "../FormDataContext";
 import html2canvas from "html2canvas";
 import { useNavigate } from "react-router-dom";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { MdAttachEmail } from "react-icons/md";
 import { IoIosContacts } from "react-icons/io";
+import GeneralForm from "../components/GeneralForm";
 import axios from "axios";
 
 const SummaryPage = () => {
   const [showModal, setShowModal] = React.useState(false);
+  const [showFormModal, setFormModal] = React.useState(false);
   const { formData } = useContext(FormDataContext);
   const navigate = useNavigate();
 
@@ -22,6 +24,20 @@ const SummaryPage = () => {
       link.download = "summary_page_impact_catering.png";
       link.click();
     });
+  };
+
+  useEffect(() => {
+    checkIsSkip();
+  }, []);
+
+  const checkIsSkip = () => {
+    if (formData.generalForm.isSkip == true) {
+      alert("โปรดกรอกรายละเอียด แล้วเลือกถัดไปค่ะ");
+      navigate("/");
+      console.log(formData.generalForm.isSkip);
+    } else {
+      console.log(formData.generalForm.isSkip);
+    }
   };
 
   const onLinkTree = () => {
