@@ -1,5 +1,7 @@
 # smart-sales
 
+### Live Preview: https://symphonious-salmiakki-ce518c.netlify.app/
+
 how to run:
 
 ```
@@ -21,40 +23,21 @@ npm run dev
 - **Platform Complexity:** Simplifying the existing Impact-catering website.
 - **Communication Gaps:** Streamlining communication for customer satisfaction.
 
-## Goals & Features 🚀
-
-1. **Efficient Presentation:**
-    - Instantly showcase products and services.
-
-2. **Enhanced Customization:**
-    - Simplify user and seller customization processes.
-
-3. **Communication Improvement:**
-    - Reduce response times with direct contact options.
-
-4. **Data Collection & Analysis:**
-    - Collect and analyze customer interactions.
-
-5. **Convenient Customer Input:**
-    - Simplify data gathering with a single-button input.
 
 ## Presentation Focus:
 
 1. **Streamlined Display:**
     - Present packages and products concisely.
 
-2. **Quick Customization:**
-    - Implement automatic customization and price display.
-
-3. **Reduced Communication Time:**
+2. **Reduced Communication Time:**
     - Include an instant "Call Sales" button.
+    - Include instant send summary data to Sales and Marketing mail using "nodemailer" tools.
 
-4. **Efficient Data Handling:**
-    - Store data in an "Order Summary" for analysis.
+3. **Aesthetic Design**
+    - Respondsive design for everypage
+    - Animation for good looking website
+  
+## Example images:
+![Alt main page](https://i.ibb.co/8KLfKVP/Screenshot-2567-03-07-at-13-44-58.png" alt="Screenshot-2567-03-07-at-13-44-58)
 
-5. **Customer Info Convenience:**
-    - Enable single-button customer data input.
 
-## Closing Thoughts 🌟
-
-SmartSales is our strategic tool to overcome challenges and redefine event catering sales. Let's revolutionize together! 💼🌐
