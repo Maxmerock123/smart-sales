@@ -24,7 +24,7 @@ npm run dev
 - **Communication Gaps:** Streamlining communication for customer satisfaction.
 
 
-## Presentation Focus:
+## Main Function:
 
 1. **Streamlined Display:**
     - Present packages and products concisely.
@@ -38,6 +38,6 @@ npm run dev
     - Animation for good looking website
   
 ## Example images:
-![Alt main page](https://i.ibb.co/8KLfKVP/Screenshot-2567-03-07-at-13-44-58.png" alt="Screenshot-2567-03-07-at-13-44-58)
+![Alt main page](https://i.ibb.co/9nMn1cT/Smart-Catering-journey.png)
 
 
