@@ -1,4 +1,4 @@
-# smart-sales
+# Smart Catering (IMPACT Catering)
 
 ### Live Preview: https://symphonious-salmiakki-ce518c.netlify.app/
 
@@ -13,7 +13,7 @@ npm run dev
 
 # SmartSales - Elevating IMPACT Catering Sales 🚀
 
-## Example images:
+### Example images:
 ![Alt main page](https://i.ibb.co/9nMn1cT/Smart-Catering-journey.png)
 
 ### Challenges We Tackle 🎯
@@ -31,12 +31,13 @@ npm run dev
     - Present packages and products concisely.
 
 2. **Reduced Communication Time:**
+    - Calculate the price for different options based on Place > Event Type > Menu, depending on the pricing formula that IMPACT Catering uses.
     - Include an instant "Call Sales" button.
     - Include instant send summary data to Sales and Marketing mail using "nodemailer" tools.
 
 3. **Aesthetic Design**
-    - Respondsive design for everypage
-    - Animation for good looking website
+   - Responsive design for all devices
+   - Incorporation of animations for an appealing website
   
 
 
