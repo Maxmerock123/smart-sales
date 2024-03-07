@@ -11,9 +11,10 @@ cd frontend/
 npm run dev
 ```
 
-# SmartSales - Elevating Event Catering Sales 🚀
+# SmartSales - Elevating IMPACT Catering Sales 🚀
 
-## Introduction
+## Example images:
+![Alt main page](https://i.ibb.co/9nMn1cT/Smart-Catering-journey.png)
 
 ### Challenges We Tackle 🎯
 
@@ -37,7 +38,6 @@ npm run dev
     - Respondsive design for everypage
     - Animation for good looking website
   
-## Example images:
-![Alt main page](https://i.ibb.co/9nMn1cT/Smart-Catering-journey.png)
+
 
 
