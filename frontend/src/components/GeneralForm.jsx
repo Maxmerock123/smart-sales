@@ -180,7 +180,7 @@ const GeneralForm = () => {
               onChange={handleChange}
             />
           </div>
-          <div className="flex justify-between gap-5">
+          <div className="flex items-end justify-between gap-5">
             <div>
               <label className="text-black" htmlFor="name">
                 จำนวนผู้เข้าร่วมงาน
