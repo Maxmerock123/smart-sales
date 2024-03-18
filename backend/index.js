@@ -26,6 +26,22 @@ function receiveData() {
   });
 }
 
+function formatDataForEmail(jsonData) {
+  let formattedText =
+    "สรุปรายการจาก application Smart Catering ของ Impact Catering\n\n";
+  formattedText += `ชื่อ-นามสกุล: ${jsonData.name}\n`;
+  formattedText += `เบอร์โทร: ${jsonData.number}\n`;
+  formattedText += `อีเมลล์: ${jsonData.email}\n`;
+  formattedText += `สถานที่: ${jsonData.place}\n`;
+  formattedText += `ประเภทงาน: ${jsonData.eventType}\n`;
+  formattedText += `เมนู: ${jsonData.eventName}\n`;
+  formattedText += `จำนวนผู้เข้าร่วมงาน: ${jsonData.people}\n`;
+  formattedText += `วันที่จัดงาน: ${jsonData.date}\n`;
+  formattedText += `สถานที่: ${jsonData.address}\n`;
+  formattedText += `ราคาโดยประมาณ: ${jsonData.price}\n`;
+  return formattedText;
+}
+
 async function sendEmail(data) {
   const transporter = nodemailer.createTransport({
     service: "Gmail",
@@ -38,11 +54,12 @@ async function sendEmail(data) {
     },
   });
 
+  const emailBody = formatDataForEmail(data);
   const mailOptions = {
     from: "impactdevmailer@gmail.com",
     to: "maxmerock@gmail.com",
     subject: "Hello from Nodemailer",
-    text: JSON.stringify(data),
+    text: emailBody,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
