@@ -75,7 +75,7 @@ const Meeting = () => {
             img={chineseTableImg}
             body="โต๊ะจีน-ไทย"
             url={"/summaryPage"}
-            price={4900}
+            price={490}
             isFixedPackage={false}
           />
         </div>

@@ -87,7 +87,7 @@ const CardItem = ({
           {isHidePrice
             ? " "
             : price && (
-                <h3 className="font-bold">{price.toLocaleString()} บาท</h3>
+                <h3 className="font-bold">{price.toLocaleString()} บาท/คน</h3>
               )}
         </h3>
       </div>

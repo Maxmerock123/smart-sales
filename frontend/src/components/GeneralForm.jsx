@@ -144,8 +144,8 @@ const GeneralForm = () => {
 
             <br />
             <input
-              className="h-8 min-w-[250px] rounded-[15px] border-[1px] border-stone-300 shadow-2xl"
-              type="text"
+              className="h-8 min-w-[250px] rounded-[15px] border-[1px] border-stone-300 shadow-2xl [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+              type="number"
               id="number"
               name="number"
               value={formData.generalForm.number}
