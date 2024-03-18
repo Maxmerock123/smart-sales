@@ -1,7 +1,8 @@
-import React, { useContext } from "react"; // Add useContext
+import React, { useContext, useEffect } from "react"; // Add useContext
 import style from "./GeneralForm.module.css";
 import { Navigate, useNavigate } from "react-router-dom";
 import FormDataContext from "../FormDataContext";
+import PdpaModal from "./PdpaModal";
 
 const GeneralForm = () => {
   const { formData, setFormData } = useContext(FormDataContext); // Use context
@@ -21,13 +22,19 @@ const GeneralForm = () => {
   function isValidInput() {
     const { name, email, number, people, address } = formData.generalForm;
     if (name && number && people) {
-      setFormData({
-        ...formData,
-        generalForm: {
-          ...formData.generalForm,
-          isInput: true,
-        },
-      });
+      if (number.length == 10) {
+        setFormData({
+          ...formData,
+          generalForm: {
+            ...formData.generalForm,
+            isInput: true,
+          },
+        });
+      } else {
+        alert("กรุณาใส่เลขเบอร์โทร ให้ครบ 10 หลักค่ะ");
+        return false;
+      }
+
       return true;
     } else {
       return false;
@@ -66,6 +73,8 @@ const GeneralForm = () => {
 
   return (
     <>
+      <PdpaModal />
+
       {showModal ? (
         <>
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
@@ -87,7 +96,8 @@ const GeneralForm = () => {
                 {/*body*/}
                 <div className="relative flex-auto p-6">
                   <p className="text-blueGray-500 my-4 text-lg leading-relaxed">
-                    โปรดกรอกชื่อ ,เบอร์โทร, จำนวนแขก แล้วเลือกถัดไปค่ะ
+                    โปรดกรอกชื่อ ,เบอร์โทร (เลข 10 หลัก), จำนวนแขก
+                    ให้ครบถ้วนและถูกต้อง แล้วเลือกถัดไปค่ะ
                   </p>
                 </div>
                 {/*footer*/}
@@ -173,7 +183,7 @@ const GeneralForm = () => {
           <div className="flex justify-between gap-5">
             <div>
               <label className="text-black" htmlFor="name">
-                จำนวนแขก
+                จำนวนผู้เข้าร่วมงาน
               </label>
               <label className="text-red-500"> *</label>
               <br />
