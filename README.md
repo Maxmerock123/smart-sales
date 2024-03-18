@@ -1,6 +1,6 @@
 # Smart Catering (IMPACT Catering)
 
-### Live Preview: https://symphonious-salmiakki-ce518c.netlify.app/
+### Live Preview: https://smart.impact-catering.com/
 
 how to run:
 
