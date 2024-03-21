@@ -28,6 +28,7 @@ const InsideWedding = () => {
             body="งานเลี้ยง ฉลองมงคลสมรส"
             url="WeddingCeremony"
             id="WeddingCeremony"
+            leastPeopleSize={100}
           />
         </div>
       </div>

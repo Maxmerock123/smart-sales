@@ -6,7 +6,6 @@ import thaiBuffet from "../../img/inside/thai-chinese-table.jpg";
 import internationalBuffet from "../../img/inside/international-buffet.jpg";
 import chineseTable from "../../img/inside/chinese-table.png";
 import cocktail from "../../img/food/cocktail.jpg";
-import { getChineseTablePrice } from "../../script/priceFormular";
 
 const WeddingCeremony = () => {
   return (

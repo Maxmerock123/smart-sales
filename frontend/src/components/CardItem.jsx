@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import FormDataContext from "../FormDataContext";
 import { useNavigate } from "react-router-dom";
+import { checkPeople } from "../script/checkPeople";
 
 const CardItem = ({
   id,
@@ -15,6 +16,7 @@ const CardItem = ({
   isHidePrice,
   place,
   checkIsSkip,
+  leastPeopleSize,
 }) => {
   const navigate = useNavigate();
   const { formData, setFormData } = useContext(FormDataContext);
@@ -41,9 +43,15 @@ const CardItem = ({
   }
 
   function onClickHandler(e) {
-    //console.log(`clicked on ${e.target.id}`);
+    if (leastPeopleSize) {
+      if (formData.generalForm.people < leastPeopleSize) {
+        navigate("/");
+        alert(`บริการนี้ กำหนดขั้นต่า ${leastPeopleSize} ไว้ที่คนค่ะ`);
+        console.log("navigating to /");
+        return 0;
+      }
+    }
 
-    //console.log("this man is not skip");
     setFormData({
       ...formData,
       generalForm: {
