@@ -75,6 +75,7 @@ const ProductLaunching = () => {
             img={chineseTableImg}
             body="โต๊ะจีน-ไทย"
             url={"/summaryPage"}
+            customPrice={"4,900 บาท/โต๊ะ"}
             price={490}
             isFixedPackage={false}
           />
