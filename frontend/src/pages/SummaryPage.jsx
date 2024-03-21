@@ -204,12 +204,16 @@ const SummaryPage = () => {
             </tbody>
           </table>
           <div className="flex items-center justify-center">
-            <div className="my-5 w-[400px] text-center text-sm">
+            <div className="my-5 w-[450px] text-center text-sm">
               <br />
-              <p className="m-3 underline ">หมายเหตุ</p>
+              <p className="m-3 font-bold underline ">หมายเหตุ</p>
               <div>
                 <p className="underline">กรณีจัดงานในอิมแพ็ค เมืองทองธานี</p>
                 <div className="flex-start flex flex-wrap">
+                  <p>
+                    • ราคาดังกล่าวเป็นราคาเริ่มต้น ไม่รวมค่าขนส่ง
+                    และไม่รวมภาษีมูลค่าเพิ่ม 7%
+                  </p>
                   <p>
                     • สำหรับงานประชุม ราคาโดยประมาณที่คำนวณจากราคาประชุมเต็มวัน
                   </p>
@@ -222,9 +226,10 @@ const SummaryPage = () => {
               </div>
               <div className="flex-center flex flex-col items-center">
                 <p className="underline">กรณีจัดงานนอกสถานที่</p>
-                <div className="flex-start flex w-[350px] flex-wrap">
+                <div className="flex-start flex w-[450px] flex-wrap">
                   <p>
-                    • ราคาดังกล่าวเป็นราคาเริ่มต้น ไม่รวมค่าขนส่ง และไม่รวม VAT
+                    • ราคาดังกล่าวเป็นราคาเริ่มต้น ไม่รวมค่าขนส่ง
+                    และไม่รวมภาษีมูลค่าเพิ่ม 7%
                   </p>
                   <p>• เงื่อนไขเป็นไปตามที่บริษัทกำหนด</p>
                 </div>
