@@ -9,6 +9,7 @@ const CardItem = ({
   img,
   body,
   price,
+  customPrice,
   isFixedPackage,
   dataType,
   isHidePrice,
@@ -87,7 +88,9 @@ const CardItem = ({
           {isHidePrice
             ? " "
             : price && (
-                <h3 className="font-bold">{price.toLocaleString()} บาท</h3>
+                <h3 className="font-bold">
+                  {customPrice ? customPrice : price.toLocaleString() + "บาท"}
+                </h3>
               )}
         </h3>
       </div>
